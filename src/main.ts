@@ -1,12 +1,10 @@
-/* eslint-disable no-constant-condition */
-/* eslint-disable no-console */
 import { createApp } from 'vue';
-import './style.css';
 import App from './App.vue';
+import router from '@/router/index';
 
-createApp(App).mount('#app');
+// reset css
+import 'modern-normalize';
 
-// test
-if (true) {
-  console.log('!');
-}
+const app = createApp(App);
+app.use(router);
+app.mount('#app');
