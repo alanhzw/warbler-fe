@@ -30,6 +30,7 @@ module.exports = {
     // 标签</>前后不换行
     'vue/singleline-html-element-content-newline': 0,
     'vue/multiline-html-element-content-newline': 0,
+    'vue/html-closing-bracket-newline': 0,
     // 强制每行的最大属性数
     'vue/max-attributes-per-line': [
       'error',
@@ -43,13 +44,7 @@ module.exports = {
       },
     ],
     // 第一个属性的位置
-    'vue/first-attribute-linebreak': [
-      'error',
-      {
-        singleline: 'beside',
-        multiline: 'beside',
-      },
-    ],
+    'vue/first-attribute-linebreak': 0,
     // 标签自关闭
     'vue/html-self-closing': 0,
     // 组件命名方式

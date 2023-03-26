@@ -2,8 +2,8 @@
  * @Author: 一尾流莺
  * @Description:代码提交规范
  * @Date: 2022-12-07 21:02:13
- * @LastEditTime: 2022-12-08 20:32:50
- * @FilePath: \warbler-cli\.cz-config.js
+ * @LastEditTime: 2023-03-24 14:12:32
+ * @FilePath: \warbler-fe\.cz-config.js
  */
 module.exports = {
   types: [

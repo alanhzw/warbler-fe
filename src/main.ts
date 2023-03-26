@@ -4,6 +4,7 @@ import router from '@/router/index';
 
 // reset css
 import 'modern-normalize';
+import '@/style/style.css';
 
 const app = createApp(App);
 app.use(router);

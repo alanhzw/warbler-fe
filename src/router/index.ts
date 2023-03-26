@@ -1,10 +1,22 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Navigation from '@v/navigation/index.vue';
 
 const routes = [
   {
     path: '/',
-    component: Navigation,
+    name: 'homepage',
+    component: () => import(/* webpackChunkName: "homepage" */ '@v/homepage/index.vue'),
+    children: [],
+  },
+  {
+    path: '/navigation',
+    name: 'navigation',
+    component: () => import(/* webpackChunkName: "navigation" */ '@v/navigation/index.vue'),
+    children: [],
+  },
+  {
+    path: '/warbler/js',
+    name: 'warblerJS',
+    component: () => import(/* webpackChunkName: "warblerJS" */ '@v/warbler/index.vue'),
     children: [],
   },
 ];
