@@ -2,7 +2,7 @@
  * @Author: 一尾流莺
  * @Description:头部导航菜单
  * @Date: 2023-03-24 14:21:26
- * @LastEditTime: 2023-03-26 18:15:13
+ * @LastEditTime: 2023-03-26 20:27:41
  * @FilePath: \warbler-fe\src\components\nav-menu.vue
 -->
 
@@ -19,7 +19,7 @@
         :key="index"
         :class="{ active: index === currentNav }"
         class="nav cp"
-        @click="changeCurrentNab(index)">
+        @click="changeCurrentNab(index, nav.path)">
         {{ nav.title }}
       </div>
     </div>
@@ -28,32 +28,35 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 const currentNav = ref(-1);
-const changeCurrentNab = (clickIndex: number) => {
-  if (![1, 2].includes(clickIndex)) currentNav.value = clickIndex;
+const changeCurrentNab = (clickIndex: number, path: string) => {
+  currentNav.value = clickIndex;
+  router.push({ path });
 };
 
 const navs = [
   {
     title: '前端导航',
-    link: '',
+    path: '/navigation',
   },
   {
     title: 'warbler-cli',
-    link: '',
+    path: '/warbler/cli',
   },
   {
     title: 'warbler-js',
-    link: '',
+    path: '/warbler/js',
   },
   {
     title: '数据中心',
-    link: '',
+    path: '',
   },
   {
     title: '一尾流莺',
-    link: '',
+    path: '',
   },
 ];
 </script>

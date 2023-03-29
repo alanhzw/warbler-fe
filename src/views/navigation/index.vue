@@ -6,7 +6,7 @@
  * @FilePath: \warbler-fe\src\views\navigation\index.vue
 -->
 <template>
-  <div class="navigation-view">
+  <div ref="navigation" class="navigation-view">
     <div class="container">
       <div class="sidebar-list">
         <div
@@ -49,6 +49,8 @@ import data from './data';
 const MARGIN_HEIGHT = 32;
 // header 的高度
 const HEADER_HEIGHT = 64;
+// 获取整个页面元素(除header外)
+const navigation = ref<null | HTMLDivElement>(null);
 // 获取所有的导航块
 const navBlockItem = ref<Array<null | HTMLDivElement>>([]);
 // 保存所有的导航块需要滚动的高度
@@ -59,8 +61,8 @@ const currentIndex = ref<number>(0);
 const sidebarList = data.map((item) => item.title);
 
 // 页面监听的滚动事件
-const handleScroll = () => {
-  const { scrollTop } = document.documentElement;
+const handleScroll = (e: Event) => {
+  const { scrollTop } = e.target as HTMLDivElement;
   // 节流函数
   requestAnimationFrame(() => {
     // 根据当前滚动的高度和每个导航块需要滚动的高度进行对比, 获取当前激活的导航块索引
@@ -81,7 +83,7 @@ const jumpToClickNavBlock = (clickIndex: number) => {
   // 保存下点击的 index
   currentIndex.value = clickIndex;
   // 跳转到对应的导航块
-  window.scrollTo({
+  navigation.value?.scrollTo({
     // 平滑过渡
     behavior: 'smooth',
     // 加上一个 margin 的距离比较好看
@@ -90,13 +92,13 @@ const jumpToClickNavBlock = (clickIndex: number) => {
 };
 onMounted(() => {
   // 监听 navigation 的滚动事件
-  window.addEventListener('scroll', handleScroll, false);
+  navigation.value?.addEventListener('scroll', handleScroll, false);
   // 在页面渲染完成后计算所有导航块需要滚动的高度
   getScrollHeightArr();
 });
 onBeforeUnmount(() => {
   // 在页面销毁的时候移除监听的事件
-  window.removeEventListener('scroll', handleScroll, false);
+  navigation.value?.removeEventListener('scroll', handleScroll, false);
 });
 </script>
 
@@ -105,6 +107,7 @@ onBeforeUnmount(() => {
   padding-top: var(--warbler-header-height);
   width: 100%;
   height: 100%;
+  overflow: auto;
 
   .container {
     width: 100%;

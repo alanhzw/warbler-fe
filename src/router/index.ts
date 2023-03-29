@@ -16,7 +16,13 @@ const routes = [
   {
     path: '/warbler/js',
     name: 'warblerJS',
-    component: () => import(/* webpackChunkName: "warblerJS" */ '@v/warbler/index.vue'),
+    component: () => import(/* webpackChunkName: "warblerJS" */ '@v/warblerJs/index.vue'),
+    children: [],
+  },
+  {
+    path: '/warbler/cli',
+    name: 'warblerCli',
+    component: () => import(/* webpackChunkName: "warblerCli" */ '@v/warblerCli/index.vue'),
     children: [],
   },
 ];

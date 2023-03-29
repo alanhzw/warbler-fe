@@ -42,10 +42,15 @@ body,
 }
 
 /* 边框颜色 */
-
 :root {
   --warbler-border-color-1: rgba(82, 82, 89, 0.32);
   --warbler-border-1: 1px solid var(--warbler-border-color-1);
+}
+
+/* 滚动条相关颜色 */
+:root {
+  --warbler-scroll-thumb-color: #686868;
+  --warbler-scroll-track-color: #424242;
 }
 
 /* 字体 */
@@ -55,6 +60,25 @@ body,
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --warbler-font-family-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace;
+}
+
+::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 8px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+}
+
+::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  background-color: var(--warbler-scroll-thumb-color);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  /* 阴影 */
+  -webkit-box-shadow: inset 0 0 5px var(--warbler-black);
+  background: var(--warbler-scroll-track-color);
 }
 
 .fs12 {

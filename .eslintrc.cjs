@@ -19,6 +19,8 @@ module.exports = {
     'import/extensions': 0,
     // 关闭文件解析
     'import/no-unresolved': 0,
+    // 禁用首选默认导出
+    'import/prefer-default-export': 0,
     // 关闭函数名后面必须有空格的验证
     'space-before-function-paren': 0,
     // 关闭强制不变的变量使用 const, 因为自动格式化 有时候会把 let 变成 const
@@ -49,5 +51,7 @@ module.exports = {
     'vue/html-self-closing': 0,
     // 组件命名方式
     'vue/multi-word-component-names': 0,
+    // 允许非空操作符
+    '@typescript-eslint/no-non-null-assertion': 0,
   },
 };
