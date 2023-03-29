@@ -25,6 +25,18 @@ const routes = [
     component: () => import(/* webpackChunkName: "warblerCli" */ '@v/warblerCli/index.vue'),
     children: [],
   },
+  {
+    path: '/dataCenter',
+    name: 'dataCenter',
+    component: () => import(/* webpackChunkName: "dataCenter" */ '@v/dataCenter/index.vue'),
+    children: [],
+  },
+  {
+    path: '/warblerCenter',
+    name: 'warblerCenter',
+    component: () => import(/* webpackChunkName: "warblerCenter" */ '@v/warblerCenter/index.vue'),
+    children: [],
+  },
 ];
 
 const router = createRouter({

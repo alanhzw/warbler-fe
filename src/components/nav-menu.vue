@@ -2,14 +2,14 @@
  * @Author: 一尾流莺
  * @Description:头部导航菜单
  * @Date: 2023-03-24 14:21:26
- * @LastEditTime: 2023-03-26 20:27:41
+ * @LastEditTime: 2023-03-29 10:57:59
  * @FilePath: \warbler-fe\src\components\nav-menu.vue
 -->
 
 <template>
   <div class="nav-menu">
     <div class="mask"></div>
-    <div class="logo cp">
+    <div class="logo cp" @click="goToHome">
       <img src="https://turbo.build/images/docs/repo/repo-hero-logo-dark.svg" class="logo-img" />
       <div class="logo-title fwb">Warbler-FE</div>
     </div>
@@ -31,12 +31,19 @@ import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
+// 当前激活的 Tab
 const currentNav = ref(-1);
+// 点击 Tab 切换页面
 const changeCurrentNab = (clickIndex: number, path: string) => {
   currentNav.value = clickIndex;
   router.push({ path });
 };
+// 回到首页
+const goToHome = () => {
+  router.push({ path: '/' });
+};
 
+// 导航列表
 const navs = [
   {
     title: '前端导航',
@@ -52,11 +59,11 @@ const navs = [
   },
   {
     title: '数据中心',
-    path: '',
+    path: '/dataCenter',
   },
   {
     title: '一尾流莺',
-    path: '',
+    path: '/warblerCenter',
   },
 ];
 </script>
