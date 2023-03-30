@@ -2,7 +2,7 @@
  * @Author: 一尾流莺
  * @Description:头部导航菜单
  * @Date: 2023-03-24 14:21:26
- * @LastEditTime: 2023-03-29 10:57:59
+ * @LastEditTime: 2023-03-30 15:27:02
  * @FilePath: \warbler-fe\src\components\nav-menu.vue
 -->
 
@@ -10,7 +10,9 @@
   <div class="nav-menu">
     <div class="mask"></div>
     <div class="logo cp" @click="goToHome">
-      <img src="https://turbo.build/images/docs/repo/repo-hero-logo-dark.svg" class="logo-img" />
+      <div class="logo-img-box">
+        <img src="https://turbo.build/images/docs/repo/repo-hero-logo-dark.svg" class="logo-img" />
+      </div>
       <div class="logo-title fwb">Warbler-FE</div>
     </div>
     <div class="navs">
@@ -41,6 +43,7 @@ const changeCurrentNab = (clickIndex: number, path: string) => {
 // 回到首页
 const goToHome = () => {
   router.push({ path: '/' });
+  currentNav.value = -1;
 };
 
 // 导航列表
@@ -50,12 +53,12 @@ const navs = [
     path: '/navigation',
   },
   {
-    title: 'warbler-cli',
-    path: '/warbler/cli',
-  },
-  {
     title: 'warbler-js',
     path: '/warbler/js',
+  },
+  {
+    title: 'warbler-cli',
+    path: '/warbler/cli',
   },
   {
     title: '数据中心',
@@ -89,8 +92,14 @@ const navs = [
     top: 50%;
     transform: translateY(-50%);
     left: 32px;
-    .logo-img {
+
+    .logo-img-box {
+      width: 32px;
       height: 32px;
+    }
+    .logo-img {
+      width: 100%;
+      height: 100%;
     }
     .logo-title {
       font-size: 24px;

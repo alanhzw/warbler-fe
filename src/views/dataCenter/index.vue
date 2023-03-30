@@ -2,7 +2,7 @@
  * @Author: 一尾流莺
  * @Description:数据中心
  * @Date: 2023-03-29 10:55:40
- * @LastEditTime: 2023-03-29 11:00:17
+ * @LastEditTime: 2023-03-30 13:45:51
  * @FilePath: \warbler-fe\src\views\dataCenter\index.vue
 -->
 <template>
