@@ -4,6 +4,7 @@
     style="display: block"
     :src="domain"
     width="100%"
+    allow="clipboard-read;clipboard-write"
     height="100%"
     frameborder="0"
     background="transparent"></iframe>

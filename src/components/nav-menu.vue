@@ -2,7 +2,7 @@
  * @Author: 一尾流莺
  * @Description:头部导航菜单
  * @Date: 2023-03-24 14:21:26
- * @LastEditTime: 2023-03-30 15:27:02
+ * @LastEditTime: 2023-03-31 16:00:45
  * @FilePath: \warbler-fe\src\components\nav-menu.vue
 -->
 
@@ -19,9 +19,9 @@
       <div
         v-for="(nav, index) in navs"
         :key="index"
-        :class="{ active: index === currentNav }"
+        :class="{ active: index === currentIndex }"
         class="nav cp"
-        @click="changeCurrentNab(index, nav.path)">
+        @click="changeCurrentNab(nav.path)">
         {{ nav.title }}
       </div>
     </div>
@@ -29,22 +29,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
-
-const router = useRouter();
-// 当前激活的 Tab
-const currentNav = ref(-1);
-// 点击 Tab 切换页面
-const changeCurrentNab = (clickIndex: number, path: string) => {
-  currentNav.value = clickIndex;
-  router.push({ path });
-};
-// 回到首页
-const goToHome = () => {
-  router.push({ path: '/' });
-  currentNav.value = -1;
-};
+import { computed } from 'vue';
+import { useRouter, useRoute } from 'vue-router';
 
 // 导航列表
 const navs = [
@@ -69,6 +55,20 @@ const navs = [
     path: '/warblerCenter',
   },
 ];
+
+const router = useRouter();
+const route = useRoute();
+
+// 点击 Tab 切换页面
+const changeCurrentNab = (path: string) => {
+  router.push({ path });
+};
+// 回到首页
+const goToHome = () => {
+  router.push({ path: '/' });
+};
+// 动态计算当前激活的导航，用来高亮当前导航
+const currentIndex = computed(() => navs.findIndex((nav) => nav.path === route.path));
 </script>
 
 <style lang="scss" scoped>

@@ -5,6 +5,7 @@
     style="display: block"
     background="transparent"
     width="100%"
+    allow="clipboard-read;clipboard-write"
     height="100%"
     frameborder="0"></iframe>
   <div v-if="loading" class="spinner-box">
