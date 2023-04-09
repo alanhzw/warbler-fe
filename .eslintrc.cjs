@@ -53,5 +53,11 @@ module.exports = {
     'vue/multi-word-component-names': 0,
     // 允许非空操作符
     '@typescript-eslint/no-non-null-assertion': 0,
+    // 强制类方法使用 this
+    'class-methods-use-this': 0,
+    // 换行
+    'object-curly-newline': 0,
+    // 禁用特定的语法
+    'no-restricted-syntax': 0,
   },
 };

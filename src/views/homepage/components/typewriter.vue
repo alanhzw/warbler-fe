@@ -1,10 +1,9 @@
 <template>
-  <!-- Warbler-FE，让前端简单一点。 -->
   <div class="typewriter-box">
     <div class="typewriter">
       <h1>
         Warbler-FE，
-        <span class="Chinese">让前端简单一点。</span>
+        <span class="Chinese">让前端再简单一点。</span>
       </h1>
     </div>
   </div>

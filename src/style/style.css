@@ -26,6 +26,7 @@ body,
 /* 背景颜色 */
 :root {
   --warbler-bg: #1e1e20;
+  --warbler-bg-soft: #161618;
   --warbler-bg-half-opacity: RGBA(30, 30, 32, 0.5);
 }
 

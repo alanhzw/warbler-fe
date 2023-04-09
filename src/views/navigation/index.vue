@@ -2,7 +2,7 @@
  * @Author: 一尾流莺
  * @Description:页面导航
  * @Date: 2023-03-24 11:03:09
- * @LastEditTime: 2023-03-26 17:59:11
+ * @LastEditTime: 2023-04-03 14:50:27
  * @FilePath: \warbler-fe\src\views\navigation\index.vue
 -->
 <template>
@@ -29,9 +29,16 @@
             <div
               v-for="(navItem, navIndex) in blockItem.list"
               :key="navIndex"
-              class="nav-instance-item text-over-flow cp">
-              <img :src="navItem.icon" class="icon" />
-              <span class="name"> {{ navItem.name }}</span>
+              class="nav-instance-item text-over-flow">
+              <div class="curser-part cp" @click="handleGoToLink(navItem.link)">
+                <img
+                  v-if="!navItem.iconErrorText"
+                  :src="navItem.icon"
+                  class="icon"
+                  @error="handlerImgError(navBlockIndex, navIndex, navItem.name)" />
+                <div v-else class="icon-error-text">{{ navItem.iconErrorText }}</div>
+                <span class="name"> {{ navItem.name }}</span>
+              </div>
             </div>
           </div>
         </div>
@@ -42,7 +49,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref, onMounted, onBeforeUnmount, computed, nextTick } from 'vue';
 import data from './data';
 
 // margin 的高度
@@ -58,7 +65,7 @@ const scrollHeightArr = ref<number[]>([]);
 // 当前激活的导航块
 const currentIndex = ref<number>(0);
 // 侧边栏列表
-const sidebarList = data.map((item) => item.title);
+const sidebarList = computed(() => data.value.map((item) => item.title));
 
 // 页面监听的滚动事件
 const handleScroll = (e: Event) => {
@@ -90,11 +97,25 @@ const jumpToClickNavBlock = (clickIndex: number) => {
     top: scrollHeightArr.value[currentIndex.value] - MARGIN_HEIGHT,
   });
 };
+
+// 图片发生错误的时候替换词名字的第一个字
+const handlerImgError = (navBlockIndex: number, navIndex: number, name: string) => {
+  const [changeName] = name;
+  data.value[navBlockIndex].list[navIndex].iconErrorText = changeName;
+};
+
+// 跳转到对应的连接
+const handleGoToLink = (link: string) => {
+  window.open(link);
+};
+
 onMounted(() => {
   // 监听 navigation 的滚动事件
   navigation.value?.addEventListener('scroll', handleScroll, false);
   // 在页面渲染完成后计算所有导航块需要滚动的高度
-  getScrollHeightArr();
+  nextTick(() => {
+    getScrollHeightArr();
+  });
 });
 onBeforeUnmount(() => {
   // 在页面销毁的时候移除监听的事件
@@ -114,12 +135,21 @@ onBeforeUnmount(() => {
     display: flex;
 
     .sidebar-list {
-      @media (max-width: 640px) {
+      @media (max-width: 900px) {
         display: none;
       }
       position: fixed;
+      width: 100px;
+      height: 80vh;
+      overflow: auto;
       top: 96px;
       left: 32px;
+
+      &::-webkit-scrollbar {
+        // 隐藏滚动条
+        display: none;
+      }
+
       .sidebar-item {
         margin-bottom: 8px;
         font-size: 14px;
@@ -134,10 +164,11 @@ onBeforeUnmount(() => {
 
     .nav-block-list {
       flex: 1;
-      padding-right: 48px;
-      padding-left: 150px;
-      @media (max-width: 640px) {
-        padding-left: 48px;
+      padding-right: 15%;
+      padding-left: 15%;
+      @media (max-width: 900px) {
+        padding-left: 5%;
+        padding-right: 5%;
       }
       display: flex;
       flex-direction: column;
@@ -145,9 +176,9 @@ onBeforeUnmount(() => {
       .nav-block-item {
         width: 100%;
         min-height: 100px;
-        border: var(--warbler-border-1);
         border-radius: 10px;
         margin-top: 32px;
+        background-color: var(--warbler-bg-soft);
         .nav-block-title {
           border-bottom: var(--warbler-border-1);
           padding: 16px 32px;
@@ -156,19 +187,33 @@ onBeforeUnmount(() => {
           padding: 8px 32px;
           display: grid;
           justify-content: space-between;
-          grid-template-columns: repeat(auto-fill, 160px);
+          grid-template-columns: repeat(auto-fill, 200px);
           grid-gap: 16px;
         }
         .nav-instance-item {
-          width: 160px;
           height: 32px;
           display: flex;
           justify-content: flex-start;
           align-items: center;
+          .curser-part {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+          }
           .icon {
             width: 20px;
             height: 20px;
             margin-right: 8px;
+          }
+          .icon-error-text {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            text-align: center;
+            line-height: 20px;
+            background-color: var(--warbler-brand-dark);
+            border-radius: 50%;
+            font-size: 12px;
           }
           .name {
             &:hover {
