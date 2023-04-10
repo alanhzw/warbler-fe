@@ -2,7 +2,7 @@
  * @Author: 一尾流莺
  * @Description:头部导航菜单
  * @Date: 2023-03-24 14:21:26
- * @LastEditTime: 2023-03-31 16:00:45
+ * @LastEditTime: 2023-04-09 20:04:20
  * @FilePath: \warbler-fe\src\components\nav-menu.vue
 -->
 
@@ -46,10 +46,10 @@ const navs = [
     title: 'warbler-cli',
     path: '/warbler/cli',
   },
-  {
-    title: '数据中心',
-    path: '/dataCenter',
-  },
+  // {
+  //   title: '数据中心',
+  //   path: '/dataCenter',
+  // },
   {
     title: '一尾流莺',
     path: '/warblerCenter',

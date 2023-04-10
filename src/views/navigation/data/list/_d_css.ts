@@ -110,6 +110,12 @@ const list: NavList = [
     link: 'https://cssvalues.com/',
     iconErrorText: '',
   },
+  {
+    icon: 'https://bennettfeely.com/clippy/pics/favicon.png',
+    name: 'CSS clip-path maker',
+    link: 'https://www.techbrood.com/tool?p=css-clip-path',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

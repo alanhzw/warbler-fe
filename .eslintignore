@@ -28,3 +28,4 @@ dist-ssr
 package.json
 tsconfig.json
 tsconfig.node.json
+src/assets/iconfont
