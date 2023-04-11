@@ -7,3 +7,5 @@ RUN npm run build
 
 FROM nginx:1.20
 COPY docker/nginx/ /etc/nginx/
+COPY dist /usr/share/nginx/html
+
