@@ -2,11 +2,11 @@
  * @Author: 一尾流莺
  * @Description:
  * @Date: 2023-04-10 15:10:48
- * @LastEditTime: 2023-04-10 20:59:55
- * @FilePath: \warbler-fe\src\views\warblerCenter\component\left-vue.vue
+ * @LastEditTime: 2023-04-11 15:16:00
+ * @FilePath: \warbler-fe\src\views\warblerCenter\component\resume-warbler.vue
 -->
 <template>
-  <div class="left-vue">
+  <div class="resume-warbler">
     <div class="header">
       <div class="avatar"></div>
       <div class="job">前端工程师</div>
@@ -25,19 +25,10 @@
 <script setup lang="ts"></script>
 
 <style lang="scss" scoped>
-.left-vue {
-  width: 250px;
-  height: 100%;
-  background-color: var(--warbler-bg-soft);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 16px;
-
+.resume-warbler {
+  width: 100%;
   .header {
-    width: 218px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,10 +51,17 @@
 
   .info {
     margin-top: 8px;
-    display: flex;
-    flex-direction: column;
     box-shadow: 0 -1px 0 hsla(0, 0%, 100%, 0.1) inset;
     padding-bottom: 16px;
+    @media (min-width: 900px) {
+      display: flex;
+      flex-direction: column;
+    }
+    @media (max-width: 900px) {
+      display: grid;
+      justify-content: space-between;
+      grid-template-columns: repeat(auto-fill, 220px);
+    }
 
     .info-item {
       margin-top: 8px;

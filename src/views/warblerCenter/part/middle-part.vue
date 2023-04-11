@@ -1,0 +1,54 @@
+<!--
+ * @Author: 一尾流莺
+ * @Description:
+ * @Date: 2023-04-11 14:42:05
+ * @LastEditTime: 2023-04-11 15:25:24
+ * @FilePath: \warbler-fe\src\views\warblerCenter\part\middle-part.vue
+-->
+<template>
+  <div class="middle-part">
+    <resume-warbler class="resume-warbler-component"></resume-warbler>
+    <resume-skills class="resume-skills-component"></resume-skills>
+    <resume-job></resume-job>
+    <resume-link class="resume-link-component"></resume-link>
+  </div>
+</template>
+
+<script setup lang="ts">
+import resumeWarbler from '../component/resume-warbler.vue';
+import resumeSkills from '../component/resume-skills.vue';
+import resumeJob from '../component/resume-job.vue';
+import resumeLink from '../component/resume-link.vue';
+</script>
+
+<style lang="scss" scoped>
+.resume-skills-component,
+.resume-link-component {
+  @media (min-width: 1500px) {
+    display: none;
+  }
+}
+.resume-warbler-component {
+  @media (min-width: 900px) {
+    display: none;
+  }
+}
+.middle-part {
+  height: 100%;
+  @media (max-width: 1500px) {
+    flex: 1;
+  }
+  background-color: var(--warbler-bg-soft);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 16px;
+  margin-left: 16px;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    // 隐藏滚动条
+    display: none;
+  }
+}
+</style>

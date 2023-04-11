@@ -2,31 +2,26 @@
  * @Author: 一尾流莺
  * @Description:一尾流莺
  * @Date: 2023-03-29 10:55:54
- * @LastEditTime: 2023-04-10 22:03:48
+ * @LastEditTime: 2023-04-11 14:43:19
  * @FilePath: \warbler-fe\src\views\warblerCenter\index.vue
 -->
 <template>
   <div class="warbler-center">
     <div class="layout">
-      <left-vue></left-vue>
-      <middle-vue></middle-vue>
-      <right-vue class="right-vue"></right-vue>
+      <left-part></left-part>
+      <middle-part></middle-part>
+      <right-part></right-part>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import leftVue from './component/left-vue.vue';
-import middleVue from './component/middle-vue.vue';
-import rightVue from './component/right-vue.vue';
+import leftPart from './part/left-part.vue';
+import middlePart from './part/middle-part.vue';
+import rightPart from './part/right-part.vue';
 </script>
 
 <style lang="scss" scoped>
-@media (max-width: 1500px) {
-  .right-vue {
-    display: none;
-  }
-}
 .warbler-center {
   display: flex;
   padding-top: var(--warbler-header-height);
