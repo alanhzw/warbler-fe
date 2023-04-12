@@ -9,13 +9,7 @@
   <div class="resume-link">
     <div class="title">相关连接</div>
     <div class="link-box">
-      <div class="link-content-item">
-        <span>·</span>熟悉<strong> Vue </strong>，有多个实际项目开发经验，包括
-        <strong> Vue2 </strong>，<strong> Vue3 </strong>，<strong> Nuxt </strong>，<strong>
-          VitePress
-        </strong>
-        等；
-      </div>
+      <div class="link-content-item"><span>·</span>123</div>
     </div>
   </div>
 </template>
