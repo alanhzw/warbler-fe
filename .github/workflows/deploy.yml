@@ -34,5 +34,5 @@ jobs:
           ssh root@82.156.231.91 "
             cd /home/work/warbler-fe/warbler-fe;
             git pull;
-            docker cp dist 7475501d0da5:/usr/share/nginx/fe/;
+            docker cp dist/. 7475501d0da5:/usr/share/nginx/fe/;
           "
