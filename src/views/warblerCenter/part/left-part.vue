@@ -2,7 +2,7 @@
  * @Author: 一尾流莺
  * @Description:
  * @Date: 2023-04-11 14:42:05
- * @LastEditTime: 2023-04-11 15:25:35
+ * @LastEditTime: 2023-04-12 21:25:57
  * @FilePath: \warbler-fe\src\views\warblerCenter\part\left-part.vue
 -->
 <template>
@@ -30,6 +30,7 @@ import resumeWarbler from '../component/resume-warbler.vue';
   justify-content: flex-start;
   padding: 16px;
   overflow: auto;
+  position: relative;
   &::-webkit-scrollbar {
     // 隐藏滚动条
     display: none;

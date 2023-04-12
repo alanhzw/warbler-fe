@@ -2,7 +2,7 @@
  * @Author: 一尾流莺
  * @Description:
  * @Date: 2023-04-11 14:42:05
- * @LastEditTime: 2023-04-11 15:25:24
+ * @LastEditTime: 2023-04-12 19:28:33
  * @FilePath: \warbler-fe\src\views\warblerCenter\part\middle-part.vue
 -->
 <template>
@@ -38,13 +38,16 @@ import resumeLink from '../component/resume-link.vue';
   @media (max-width: 1500px) {
     flex: 1;
   }
+  @media (max-width: 900px) {
+    margin-left: 0px;
+  }
+  margin-left: 16px;
   background-color: var(--warbler-bg-soft);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding: 16px;
-  margin-left: 16px;
   overflow: auto;
   &::-webkit-scrollbar {
     // 隐藏滚动条

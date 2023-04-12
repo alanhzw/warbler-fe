@@ -32,6 +32,17 @@ body,
   --warbler-brand-dimm: rgba(100, 108, 255, 0.08);
 }
 
+/* 页面两边的空白距离 */
+:root {
+  --page-padding: 32px;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --page-padding: 16px;
+  }
+}
+
 /* 背景颜色 */
 :root {
   --warbler-bg: #1e1e20;

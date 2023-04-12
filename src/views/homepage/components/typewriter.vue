@@ -1,10 +1,10 @@
 <template>
   <div class="typewriter-box">
     <div class="typewriter">
-      <h1>
+      <div class="text">
         Warbler-FE，
         <span class="Chinese">让前端再简单一点。</span>
-      </h1>
+      </div>
     </div>
   </div>
 </template>
@@ -25,10 +25,18 @@
   pointer-events: none;
 }
 
-h1 {
+.text {
   overflow: hidden;
   white-space: nowrap;
   animation: typeEffect 1s steps(70);
+  font-size: 36px;
+  @media (max-width: 900px) {
+    font-size: 24px;
+  }
+  @media (max-width: 500px) {
+    font-size: 16px;
+  }
+  font-weight: bold;
 }
 
 .Chinese {

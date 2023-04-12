@@ -2,7 +2,7 @@
  * @Author: 一尾流莺
  * @Description:
  * @Date: 2023-04-10 15:10:48
- * @LastEditTime: 2023-04-11 15:16:00
+ * @LastEditTime: 2023-04-12 21:35:26
  * @FilePath: \warbler-fe\src\views\warblerCenter\component\resume-warbler.vue
 -->
 <template>
@@ -18,15 +18,44 @@
       <div class="info-item">坐标：成都</div>
       <div class="info-item">邮箱：1741847465@qq.com</div>
       <div class="info-item">微信：yiweiliuying0309</div>
+      <div class="info-item">学校：大连大学</div>
+      <div class="info-item">专业：软件工程</div>
+    </div>
+    <div class="contact">
+      <div class="words">
+        一尾流莺是一个前端开发工程师，性格开朗，热爱分享和书写技术博客，
+        平时玩的游戏有明日方舟，英雄联盟手游，金铲铲之战，
+        <strong>目前正在寻找坐标成都的工作</strong>，如果你对我或我的技术感兴趣 ， 请联系我
+      </div>
+    </div>
+    <div class="icons">
+      <i class="iconfont icon icon-juejin" @click="goToLink('juejin')"></i>
+      <i class="iconfont icon icon-huaban88" @click="goToLink('github')"></i>
+      <i class="iconfont icon icon-weixin" @click="goToLink('wechat')"></i>
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const goToLink = (type: string) => {
+  if (type === 'juejin') window.open('https://juejin.cn/post/6963945204965441550');
+  if (type === 'github') window.open('https://github.com/alanhzw');
+  if (type === 'wechat') router.push({ path: '/wechat/qrcode' });
+};
+</script>
 
 <style lang="scss" scoped>
 .resume-warbler {
   width: 100%;
+
+  strong {
+    color: var(--warbler-brand);
+    margin: 0 5px;
+  }
   .header {
     width: 100%;
     display: flex;
@@ -50,7 +79,7 @@
   }
 
   .info {
-    margin-top: 8px;
+    margin: 8px 0 16px 0;
     box-shadow: 0 -1px 0 hsla(0, 0%, 100%, 0.1) inset;
     padding-bottom: 16px;
     @media (min-width: 900px) {
@@ -65,6 +94,26 @@
 
     .info-item {
       margin-top: 8px;
+    }
+  }
+
+  .contact {
+    .words {
+      line-height: 1.4;
+      letter-spacing: 1px;
+    }
+  }
+  .icons {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    .icon {
+      cursor: pointer;
+      font-size: 24px;
+      margin: 8px;
+      &:hover {
+        color: var(--warbler-brand);
+      }
     }
   }
 }

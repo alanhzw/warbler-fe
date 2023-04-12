@@ -2,7 +2,7 @@
  * @Author: 一尾流莺
  * @Description:页面导航
  * @Date: 2023-03-24 11:03:09
- * @LastEditTime: 2023-04-03 14:50:27
+ * @LastEditTime: 2023-04-12 19:15:56
  * @FilePath: \warbler-fe\src\views\navigation\index.vue
 -->
 <template>
@@ -167,8 +167,8 @@ onBeforeUnmount(() => {
       padding-right: 15%;
       padding-left: 15%;
       @media (max-width: 900px) {
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: 16px;
+        padding-right: 16px;
       }
       display: flex;
       flex-direction: column;

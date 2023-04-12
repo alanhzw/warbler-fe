@@ -2,7 +2,7 @@
  * @Author: 一尾流莺
  * @Description:一尾流莺
  * @Date: 2023-03-29 10:55:54
- * @LastEditTime: 2023-04-11 14:43:19
+ * @LastEditTime: 2023-04-12 19:30:25
  * @FilePath: \warbler-fe\src\views\warblerCenter\index.vue
 -->
 <template>
@@ -33,6 +33,9 @@ import rightPart from './part/right-part.vue';
     height: 100%;
     display: flex;
     padding: 32px;
+    @media (max-width: 900px) {
+      padding: 16px;
+    }
   }
 }
 </style>

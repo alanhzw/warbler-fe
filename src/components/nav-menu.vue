@@ -2,7 +2,7 @@
  * @Author: 一尾流莺
  * @Description:头部导航菜单
  * @Date: 2023-03-24 14:21:26
- * @LastEditTime: 2023-04-09 20:04:20
+ * @LastEditTime: 2023-04-12 20:42:47
  * @FilePath: \warbler-fe\src\components\nav-menu.vue
 -->
 
@@ -15,7 +15,7 @@
       </div>
       <div class="logo-title fwb">Warbler-FE</div>
     </div>
-    <div class="navs">
+    <div class="navs show-title">
       <div
         v-for="(nav, index) in navs"
         :key="index"
@@ -23,6 +23,20 @@
         class="nav cp"
         @click="changeCurrentNab(nav.path)">
         {{ nav.title }}
+      </div>
+    </div>
+    <div class="navs show-icon">
+      <div class="icon-bg" title="前端导航" @click="router.push({ path: '/navigation' })">
+        <i class="iconfont icon-daohang"></i>
+      </div>
+      <div class="icon-bg" title="warbler-cli" @click="router.push({ path: '/warbler/cli' })">
+        <div>cli</div>
+      </div>
+      <div class="icon-bg" title="warbler-js" @click="router.push({ path: '/warbler/js' })">
+        <div>js</div>
+      </div>
+      <div class="icon-bg" title="一尾流莺" @click="router.push({ path: '/warblerCenter' })">
+        <i class="iconfont icon-jianli"></i>
       </div>
     </div>
   </div>
@@ -77,6 +91,29 @@ const currentIndex = computed(() => navs.findIndex((nav) => nav.path === route.p
   height: var(--warbler-header-height);
   position: fixed;
   top: 0;
+
+  .show-title {
+    @media (max-width: 700px) {
+      display: none !important;
+    }
+  }
+  .show-icon {
+    @media (min-width: 700px) {
+      display: none !important;
+    }
+    .icon-bg {
+      width: 32px;
+      height: 32px;
+      font-size: 14px;
+      background-color: var(--warbler-bg-soft);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 4px;
+      cursor: pointer;
+    }
+  }
   .mask {
     width: 100%;
     height: 100%;
@@ -91,7 +128,7 @@ const currentIndex = computed(() => navs.findIndex((nav) => nav.path === route.p
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 32px;
+    left: var(--page-padding);
 
     .logo-img-box {
       width: 32px;
@@ -116,7 +153,7 @@ const currentIndex = computed(() => navs.findIndex((nav) => nav.path === route.p
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 48px;
+    right: var(--page-padding);
     .nav {
       margin-left: 16px;
       &:hover {

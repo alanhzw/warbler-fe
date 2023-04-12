@@ -7,7 +7,7 @@ import 'modern-normalize';
 import '@/style/style.css';
 
 // 阿里图标库
-import './assets/iconfont/iconfont.js';
+import './assets/iconfont/iconfont.css';
 
 const app = createApp(App);
 app.use(router);
