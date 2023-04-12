@@ -17,8 +17,6 @@
 FROM nginx
 
 COPY ./dist/ /usr/share/nginx/fe/
-COPY ../warbler-js/dist/ /usr/share/nginx/js/
-COPY ../warbler-cli/dist/ /usr/share/nginx/cli/
 
 COPY Docker/nginx/nginx.conf /etc/nginx/nginx.conf
 
