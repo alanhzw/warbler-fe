@@ -1,18 +1,32 @@
-name: Docker Image CI
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+# github actions 中文文档 https://docs.github.com/cn/actions/getting-started-with-github-actions
+name: deploy for warbler-fe
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches:
+      - 'main' # 只针对 main 分支
+    paths:
+      - 'dist/**'
+      - '.github/workflows/*'
+      # - 'husky/**'
+      # - '.vscode/**'
+      # - 'Docker/**'
+      # - 'public/**'
+      # - 'src/**'
 
 jobs:
-
-  build:
-
+  deploy-dev:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      - uses: actions/checkout@v2
+      - name: deploy # 部署
+        run: |
+          ssh root@82.156.231.91 "
+            cd /home/work/warbler-fe/warbler-fe;
+            git pull; # 重新下载最新代码
+            # 启动 docker
+            docker cp dist 7475501d0da5:/usr/share/nginx/fe/;
+          "
