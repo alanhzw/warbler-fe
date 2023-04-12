@@ -26,7 +26,7 @@ jobs:
       - name: set ssh key # 临时设置 ssh key
         run: |
           mkdir -p ~/.ssh/
-          echo "123123123" > ~/.ssh/id_rsa
+          echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC+jLLmqpzmSTQs/hibFZnpOHYJdmdL3Fhmsa8Kn25dIgepVFv6l8csYWb58ir/j5NegKKCykH7BthGBjVlCKx8ns1sErFNYVe9Ngp1jd3r/7qhnpYZcVBBeGNLcd7VTL+3mG3iT5MYlh4x/Wxq9AtzWh2ti3A97fAuZ7ZEp1o5kPI7zX7WK7c/cm3XMndj8KnrU2B6iCeAtE/p0Qs9jlqFSDLATSKi/KuHhj/UvrRR14IlKln/YPwkxD4CewVPh5yRWhgtigYmxeK7r5CV2BNyfv2Qh6YnEygmK75vE6PNCfinoHGcuzVuAXNjA0wxQizoUxZ7Bi+YeB+2Z8wqjbbYpPfg5gJsJAbZMPnXHGmOBbO5SwkNDBy7An+hCB1sVgwL/8yjvJRjMwzuUCmE+0JiwY9/J//+ZUwqmNkgbS+EDYTWnAeDEb7feriN1CmhbPRIObTRKODdvte6iuBQwRmzg/SbebKrHJpnxSmr+R//igSmbzkhP78CtvD6SoCqga8= alanHzw@1741847465@qq.com" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan "82.156.231.91" >> ~/.ssh/known_hosts
       - name: deploy # 部署
