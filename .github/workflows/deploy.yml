@@ -22,6 +22,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - name: set ssh key # 临时设置 ssh key
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{secrets.WFP_ID_RSA}}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan "82.156.231.91" >> ~/.ssh/known_hosts
       - name: deploy # 部署
         run: |
           ssh root@82.156.231.91 "
