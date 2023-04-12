@@ -16,9 +16,9 @@
 # 拉取 nginx 镜像
 FROM nginx
 
-COPY /home/work/warbler-fe/warbler-fe/dist/ /usr/share/nginx/fe/
-COPY /home/work/warbler-fe/warbler-js/dist/ /usr/share/nginx/js/
-COPY /home/work/warbler-fe/warbler-cli/dist/ /usr/share/nginx/cli/
+COPY ./dist/ /usr/share/nginx/fe/
+COPY ../warbler-js/dist/ /usr/share/nginx/js/
+COPY ../warbler-cli/dist/ /usr/share/nginx/cli/
 
 COPY Docker/nginx/nginx.conf /etc/nginx/nginx.conf
 
