@@ -50,12 +50,6 @@ const list: NavList = [
     iconErrorText: '',
   },
   {
-    icon: 'https://printjs.crabbly.com/assets/favicon.ico',
-    name: 'Print.js',
-    link: 'https://printjs.crabbly.com/',
-    iconErrorText: '',
-  },
-  {
     icon: 'http://mozilla.github.io/pdf.js/images/favicon.ico',
     name: 'PDF.js',
     link: 'http://mozilla.github.io/pdf.js/',
