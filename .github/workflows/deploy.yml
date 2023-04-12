@@ -26,14 +26,13 @@ jobs:
       - name: set ssh key # 临时设置 ssh key
         run: |
           mkdir -p ~/.ssh/
-          echo "${{secrets.WFP_ID_RSA}}" > ~/.ssh/id_rsa
+          echo "123123123" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan "82.156.231.91" >> ~/.ssh/known_hosts
       - name: deploy # 部署
         run: |
           ssh root@82.156.231.91 "
             cd /home/work/warbler-fe/warbler-fe;
-            git pull; # 重新下载最新代码
-            # 启动 docker
+            git pull;
             docker cp dist 7475501d0da5:/usr/share/nginx/fe/;
           "
