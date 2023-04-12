@@ -32,14 +32,7 @@ jobs:
       - name: deploy # 部署
         run: |
           ssh root@82.156.231.91 "
-            cd /home/work/imooc-lego/biz-editer-server;
-            git remote add origin https://${{secrets.WFP_TOKEN}}@github.com/alanhzw/biz-editer-server.git;
-            git checkout dev;
-            git pull origin dev; # 重新下载最新代码
-            git remote remove origin; # 删除 origin ，否则会暴露 github 密码
-            # 启动 docker
-            docker compose build editor-server; # 和 docker-compose.yml service 名字一致
-            docker compose up -d;
+            cd /home/work/warbler-fe/warbler-fe;
+            git pull;
+            docker cp dist 7475501d0da5:/usr/share/nginx/fe/;
           "
-      - name: delete ssh key # 删除 ssh key
-        run: rm -rf ~/.ssh/id_rsa
