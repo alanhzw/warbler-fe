@@ -2,7 +2,7 @@
  * @Author: 一尾流莺
  * @Description:
  * @Date: 2023-04-10 21:50:04
- * @LastEditTime: 2023-04-12 21:32:34
+ * @LastEditTime: 2023-04-13 09:18:36
  * @FilePath: \warbler-fe\src\views\warblerCenter\component\resume-link.vue
 -->
 <template>
@@ -38,8 +38,8 @@ const map: Array<Link> = [
   },
   {
     name: 'Github',
-    nameLink: 'https://github.com/alanhzw/warbler-homepage',
-    online: 'https://github.com/alanhzw/warbler-homepage',
+    nameLink: 'https://github.com/alanhzw',
+    online: 'https://github.com/alanhzw',
   },
   {
     name: '掘金社区',
