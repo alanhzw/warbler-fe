@@ -28,7 +28,7 @@ const list: NavList = [
   {
     icon: 'https://www.highcharts.com/docs/img/favicon.png',
     name: 'Highcharts',
-    link: 'http://fabricjs.com/',
+    link: 'https://www.hcharts.cn/',
     iconErrorText: '',
   },
   {
