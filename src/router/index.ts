@@ -37,6 +37,12 @@ const routes = [
     component: () => import(/* webpackChunkName: "warblerCenter" */ '@v/warblerCenter/index.vue'),
     children: [],
   },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () => import(/* webpackChunkName: "contact" */ '@v/contact/index.vue'),
+    children: [],
+  },
 ];
 
 const router = createRouter({

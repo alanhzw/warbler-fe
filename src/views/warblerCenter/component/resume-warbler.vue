@@ -2,7 +2,7 @@
  * @Author: 一尾流莺
  * @Description:
  * @Date: 2023-04-10 15:10:48
- * @LastEditTime: 2023-04-12 21:35:26
+ * @LastEditTime: 2023-04-13 09:13:06
  * @FilePath: \warbler-fe\src\views\warblerCenter\component\resume-warbler.vue
 -->
 <template>
@@ -44,7 +44,7 @@ const router = useRouter();
 const goToLink = (type: string) => {
   if (type === 'juejin') window.open('https://juejin.cn/post/6963945204965441550');
   if (type === 'github') window.open('https://github.com/alanhzw');
-  if (type === 'wechat') router.push({ path: '/wechat/qrcode' });
+  if (type === 'wechat') router.push({ path: '/contact' });
 };
 </script>
 
