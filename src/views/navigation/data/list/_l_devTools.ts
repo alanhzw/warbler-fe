@@ -26,6 +26,12 @@ const list: NavList = [
     iconErrorText: '',
   },
   {
+    icon: 'https://www.yalijuda.com/qfy-content/uploads/2020/05/81a83783c78bbe2002d50d4a16c55e21.png',
+    name: 'yalijuda 图片压缩',
+    link: 'https://www.yalijuda.com/',
+    iconErrorText: '',
+  },
+  {
     icon: 'http://www.aseoe.com/favicon.ico',
     name: 'Emmet快捷方式查询',
     link: 'http://www.aseoe.com/special/emmet/',
