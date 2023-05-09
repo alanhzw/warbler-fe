@@ -55,6 +55,12 @@ const list: NavList = [
     link: 'http://mozilla.github.io/pdf.js/',
     iconErrorText: '',
   },
+  {
+    icon: 'http://cdn.dooring.cn/dr/xijs.png',
+    name: 'xijs',
+    link: 'http://h5.dooring.cn/xijs',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

@@ -10,7 +10,7 @@ const list: NavList = [
   {
     icon: 'https://ai.imiku.me/favicon-32x32.png',
     name: 'CatGPT',
-    link: 'https://ai.imiku.me/',
+    link: 'https://catgpt.run/',
     iconErrorText: '',
   },
   {
@@ -22,7 +22,13 @@ const list: NavList = [
   {
     icon: 'https://static-public.infinitytab.com/sites-resource/extfans/61ea85a31aec3f3365dbe165/icon_1642759665914.jpg',
     name: 'Chrome插件下载',
-    link: 'https://www.extfans.com/',
+    link: 'https://www.extfans.com/favicon.ico',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://www.yutu.cn/favicon.ico',
+    name: '羽兔网软件下载',
+    link: 'https://www.yutu.cn/',
     iconErrorText: '',
   },
 ];
