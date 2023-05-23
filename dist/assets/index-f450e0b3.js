@@ -1,0 +1,1 @@
+import{_ as c,o as t,c as o,p as _,a,b as s}from"./index-950e57d3.js";const d="/assets/wechat-86ade148.jpg";const n={},p=e=>(_("data-v-8bf177b5"),e=e(),a(),e),i={class:"contact"},r=p(()=>s("div",{class:"wechat"},[s("img",{src:d})],-1)),f=[r];function h(e,l){return t(),o("div",i,f)}const m=c(n,[["render",h],["__scopeId","data-v-8bf177b5"]]);export{m as default};

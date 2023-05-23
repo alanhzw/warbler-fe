@@ -2,46 +2,47 @@
  * @Author: 一尾流莺
  * @Description:页面导航
  * @Date: 2023-03-24 11:03:09
- * @LastEditTime: 2023-04-12 19:15:56
+ * @LastEditTime: 2023-05-23 14:00:09
  * @FilePath: \warbler-fe\src\views\navigation\index.vue
 -->
 <template>
-  <div ref="navigation" class="navigation-view">
+  <div ref="navigation"
+       class="navigation-view">
     <div class="container">
       <div class="sidebar-list">
-        <div
-          v-for="(sidebarItem, sidebarIndex) in sidebarList"
-          :key="sidebarIndex"
-          class="sidebar-item cp"
-          :class="{ active: sidebarIndex === currentIndex }"
-          @click="jumpToClickNavBlock(sidebarIndex)">
+        <div v-for="(sidebarItem, sidebarIndex) in sidebarList"
+             :key="sidebarIndex"
+             class="sidebar-item cp"
+             :class="{ active: sidebarIndex === currentIndex }"
+             @click="jumpToClickNavBlock(sidebarIndex)">
           {{ sidebarItem }}
         </div>
       </div>
       <div class="nav-block-list">
-        <div
-          v-for="(blockItem, navBlockIndex) in data"
-          ref="navBlockItem"
-          :key="navBlockIndex"
-          class="nav-block-item">
-          <div class="nav-block-title fwb">{{ blockItem.title }}</div>
-          <div class="nav-instance-list">
-            <div
-              v-for="(navItem, navIndex) in blockItem.list"
-              :key="navIndex"
-              class="nav-instance-item text-over-flow">
-              <div class="curser-part cp" @click="handleGoToLink(navItem.link)">
-                <img
-                  v-if="!navItem.iconErrorText"
-                  :src="navItem.icon"
-                  class="icon"
-                  @error="handlerImgError(navBlockIndex, navIndex, navItem.name)" />
-                <div v-else class="icon-error-text">{{ navItem.iconErrorText }}</div>
-                <span class="name"> {{ navItem.name }}</span>
+        <template v-for="(blockItem, navBlockIndex) in data">
+          <div v-if="!blockItem.isPrivate || isShowPrivate"
+               ref="navBlockItem"
+               :key="navBlockIndex"
+               class="nav-block-item">
+            <div class="nav-block-title fwb">{{ blockItem.title }}</div>
+            <div class="nav-instance-list">
+              <div v-for="(navItem, navIndex) in blockItem.list"
+                   :key="navIndex"
+                   class="nav-instance-item text-over-flow">
+                <div class="curser-part cp"
+                     @click="handleGoToLink(navItem.link)">
+                  <img v-if="!navItem.iconErrorText"
+                       :src="navItem.icon"
+                       class="icon"
+                       @error="handlerImgError(navBlockIndex, navIndex, navItem.name)" />
+                  <div v-else
+                       class="icon-error-text">{{ navItem.iconErrorText }}</div>
+                  <span class="name"> {{ navItem.name }}</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </template>
       </div>
     </div>
     <div class="footer"></div>
@@ -49,78 +50,90 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount, computed, nextTick } from 'vue';
-import data from './data';
+import { ref, onMounted, onBeforeUnmount, computed, nextTick } from 'vue'
+import { useRoute } from 'vue-router'
+import data from './data'
 
+const route = useRoute()
 // margin 的高度
-const MARGIN_HEIGHT = 32;
+const MARGIN_HEIGHT = 32
 // header 的高度
-const HEADER_HEIGHT = 64;
+const HEADER_HEIGHT = 64
 // 获取整个页面元素(除header外)
-const navigation = ref<null | HTMLDivElement>(null);
+const navigation = ref<null | HTMLDivElement>(null)
 // 获取所有的导航块
-const navBlockItem = ref<Array<null | HTMLDivElement>>([]);
+const navBlockItem = ref<Array<null | HTMLDivElement>>([])
 // 保存所有的导航块需要滚动的高度
-const scrollHeightArr = ref<number[]>([]);
+const scrollHeightArr = ref<number[]>([])
 // 当前激活的导航块
-const currentIndex = ref<number>(0);
+const currentIndex = ref<number>(0)
 // 侧边栏列表
-const sidebarList = computed(() => data.value.map((item) => item.title));
+const sidebarList = computed(() => data.value.map((item) => item.title))
+
+// 是否显示私有部分
+const isShowPrivate = computed(() => route.query.private || false)
+console.log('🚀🚀 ~ isShowPrivate:', isShowPrivate)
 
 // 页面监听的滚动事件
 const handleScroll = (e: Event) => {
-  const { scrollTop } = e.target as HTMLDivElement;
+  const { scrollTop } = e.target as HTMLDivElement
   // 节流函数
   requestAnimationFrame(() => {
     // 根据当前滚动的高度和每个导航块需要滚动的高度进行对比, 获取当前激活的导航块索引
-    currentIndex.value = scrollHeightArr.value.findIndex((item) => scrollTop < item);
-  });
-};
+    currentIndex.value = scrollHeightArr.value.findIndex(
+      (item) => scrollTop < item,
+    )
+  })
+}
 // 计算所有导航块需要滚动的高度
 const getScrollHeightArr = () => {
   navBlockItem.value.forEach((item) => {
     // 通过 getBoundingClientRect 方法, 获取每个导航块到顶部的距离
-    const { top } = JSON.parse(JSON.stringify(item?.getBoundingClientRect()));
+    const { top } = JSON.parse(JSON.stringify(item?.getBoundingClientRect()))
     // 因为只需要滚动到 header 下面就算切换, 而不需要完全滚动到页面之外, 所以需要去掉 header 的高度
-    scrollHeightArr.value.push(top - HEADER_HEIGHT);
-  });
-};
+    scrollHeightArr.value.push(top - HEADER_HEIGHT)
+  })
+}
 // 跳转到点击的导航块
 const jumpToClickNavBlock = (clickIndex: number) => {
   // 保存下点击的 index
-  currentIndex.value = clickIndex;
+  currentIndex.value = clickIndex
   // 跳转到对应的导航块
   navigation.value?.scrollTo({
     // 平滑过渡
     behavior: 'smooth',
     // 加上一个 margin 的距离比较好看
     top: scrollHeightArr.value[currentIndex.value] - MARGIN_HEIGHT,
-  });
-};
+  })
+}
 
 // 图片发生错误的时候替换词名字的第一个字
-const handlerImgError = (navBlockIndex: number, navIndex: number, name: string) => {
-  const [changeName] = name;
-  data.value[navBlockIndex].list[navIndex].iconErrorText = changeName;
-};
+const handlerImgError = (
+  navBlockIndex: number,
+  navIndex: number,
+  name: string,
+) => {
+  const [changeName] = name
+  data.value[navBlockIndex].list[navIndex].iconErrorText = changeName
+}
 
 // 跳转到对应的连接
 const handleGoToLink = (link: string) => {
-  window.open(link);
-};
+  window.open(link)
+}
 
 onMounted(() => {
   // 监听 navigation 的滚动事件
-  navigation.value?.addEventListener('scroll', handleScroll, false);
+  navigation.value?.addEventListener('scroll', handleScroll, false)
   // 在页面渲染完成后计算所有导航块需要滚动的高度
   nextTick(() => {
-    getScrollHeightArr();
-  });
-});
+    getScrollHeightArr()
+  })
+})
 onBeforeUnmount(() => {
   // 在页面销毁的时候移除监听的事件
-  navigation.value?.removeEventListener('scroll', handleScroll, false);
-});
+  navigation.value?.removeEventListener('scroll', handleScroll, false)
+})
 </script>
 
 <style lang="scss" scoped>

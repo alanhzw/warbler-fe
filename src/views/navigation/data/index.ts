@@ -12,6 +12,7 @@ export type NavList = Array<NavItem>;
 export interface NavGroup {
   title: string;
   list: NavList;
+  isPrivate?: boolean;
 }
 
 export type NavData = Array<NavGroup>;
@@ -34,11 +35,12 @@ export class NavListGetter {
     Object.keys(dataDirPath).forEach((data) => {
       // 动态添加数据
       const {
-        default: { title, list },
+        default: { title, list, isPrivate = false },
       } = dataDirPath[data];
       completeList.value.push({
         title,
         list,
+        isPrivate,
       });
     });
     return completeList;

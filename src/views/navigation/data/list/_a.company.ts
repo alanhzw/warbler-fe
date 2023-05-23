@@ -27,21 +27,40 @@ const list: NavList = [
   },
   {
     icon: 'https://shopkeeper-plus-sit.baozun.com/favicon.ico',
-    name: 'pioneer 测试',
+    name: 'pioneer sit',
     link: 'http://shopkeeper-plus-sit.baozun.com/',
     iconErrorText: '',
   },
   {
+    icon: 'https://shopkeeper-plus-sit.baozun.com/favicon.ico',
+    name: 'pioneer uat',
+    link: 'https://pioneer-uat.baozun.com ',
+    iconErrorText: '',
+  },
+  {
     icon: '',
-    name: 'light 测试',
+    name: 'light sit',
     link: 'https://light-sit.baozun.com/',
-    iconErrorText: 'L',
+    iconErrorText: '',
+  },
+  {
+    icon: '',
+    name: 'light uat',
+    link: 'https://light-uat.baozun.com/',
+    iconErrorText: '',
+  },
+  {
+    icon: '',
+    name: 'jira',
+    link: 'https://jira.baozun.cn/',
+    iconErrorText: '',
   },
 ];
 
 const listData = {
   title: '宝尊电商',
   list,
+  isPrivate: true,
 };
 
 export default listData;
