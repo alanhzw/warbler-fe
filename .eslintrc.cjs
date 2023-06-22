@@ -59,5 +59,7 @@ module.exports = {
     'object-curly-newline': 0,
     // 禁用特定的语法
     'no-restricted-syntax': 0,
+    // 取消 lf 和 crlf 的报错
+    'linebreak-style': [0, 'error', 'windows'],
   },
 };
