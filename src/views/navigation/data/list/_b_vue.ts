@@ -74,6 +74,12 @@ const list: NavList = [
     iconErrorText: '',
   },
   {
+    icon: 'https://nuxt.com/icon.png',
+    name: 'Nuxt3 中文',
+    link: 'https://nuxt.com.cn/',
+    iconErrorText: '',
+  },
+  {
     icon: 'https://pinia.vuejs.org/logo.svg',
     name: 'Pinia',
     link: 'https://pinia.vuejs.org/zh/',
@@ -107,6 +113,18 @@ const list: NavList = [
     icon: 'https://www.naiveui.com/assets/naivelogo-93278402.svg',
     name: 'Naive UI',
     link: 'https://www.naiveui.com/zh-CN/light',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://vxetable.cn/v4/logo.png',
+    name: 'vxe-table',
+    link: 'https://vxetable.cn/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://res.hc-cdn.com/tinyui-design/1.0.7.20230818162939/home/favicon.ico',
+    name: 'OpenTiny',
+    link: 'https://opentiny.design/',
     iconErrorText: '',
   },
 ];

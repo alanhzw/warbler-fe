@@ -103,6 +103,12 @@ const list: NavList = [
     link: 'https://www.pixilart.com/draw',
     iconErrorText: '',
   },
+  {
+    icon: 'https://c-ssl.dtstatic.com/uploads/icons/duitang_favicon.ico',
+    name: '堆糖',
+    link: 'https://www.duitang.com/',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

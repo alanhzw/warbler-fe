@@ -20,7 +20,7 @@ const list: NavList = [
     iconErrorText: '',
   },
   {
-    icon: 'hhttps://img-blog.csdnimg.cn/img_convert/291ca37b2f33b30ec6db6f2f9762d6e8.png',
+    icon: 'https://img-blog.csdnimg.cn/img_convert/291ca37b2f33b30ec6db6f2f9762d6e8.png',
     name: 'swiper',
     link: 'https://www.swiper.com.cn/',
     iconErrorText: '',

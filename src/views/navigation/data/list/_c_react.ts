@@ -61,6 +61,12 @@ const list: NavList = [
     link: 'https://recoiljs.org/zh-hans/',
     iconErrorText: '',
   },
+  {
+    icon: 'https://lf9-static.semi.design/obj/semi-tos/images/favicon.ico',
+    name: 'Semi Design',
+    link: 'https://semi.design/zh-CN/',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

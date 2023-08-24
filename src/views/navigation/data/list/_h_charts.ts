@@ -26,19 +26,19 @@ const list: NavList = [
     iconErrorText: '',
   },
   {
-    icon: 'https://www.highcharts.com/docs/img/favicon.png',
+    icon: 'https://s1.jscdn.com.cn/highcharts/images/favicon.ico',
     name: 'Highcharts',
     link: 'https://www.hcharts.cn/',
     iconErrorText: '',
   },
   {
-    icon: 'https://antv.gitee.io/favicon-32x32.png?v=9772447a8d07a8fe19894b5176c6cb0d',
+    icon: 'https://mdn.alipayobjects.com/huamei_qa8qxu/afts/img/A*7svFR6wkPMoAAAAAAAAAAAAADmJ7AQ/original',
     name: 'AntV',
-    link: 'https://antv.gitee.io/zh',
+    link: 'https://antv.vision/',
     iconErrorText: '',
   },
   {
-    icon: 'https://d3js.org/favicon.png',
+    icon: 'https://d3js.org/logo.png',
     name: 'D3.js',
     link: 'https://d3js.org/',
     iconErrorText: '',
@@ -47,6 +47,12 @@ const list: NavList = [
     icon: 'https://apexcharts.com/wp-content/themes/apexcharts/favicon.ico',
     name: 'ApexCharts',
     link: 'https://apexcharts.com/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'http://ppchart.com/favicon.ico',
+    name: 'PPChart',
+    link: 'http://ppchart.com/#/',
     iconErrorText: '',
   },
 ];

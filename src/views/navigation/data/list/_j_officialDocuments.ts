@@ -91,6 +91,12 @@ const list: NavList = [
     link: 'https://www.dartcn.com/',
     iconErrorText: '',
   },
+  {
+    icon: 'https://quarkc.hellobike.com/assets/favicon.7b83b3c2.ico',
+    name: 'Quarkc',
+    link: 'https://quarkc.hellobike.com/#/',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

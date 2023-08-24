@@ -38,12 +38,6 @@ const list: NavList = [
     iconErrorText: '',
   },
   {
-    icon: 'http://www.gjw123.com/favicon.ico',
-    name: '工具123',
-    link: 'http://www.gjw123.com/',
-    iconErrorText: '',
-  },
-  {
     icon: 'https://tool.lu/favicon.ico',
     name: '在线工具',
     link: 'https://tool.lu/',
@@ -59,6 +53,12 @@ const list: NavList = [
     icon: 'https://www.aconvert.com/favicon.ico',
     name: '格式转换',
     link: 'https://www.aconvert.com/cn/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://tools.pdf24.org/static/img/pdf24.png?v=5cf19973',
+    name: 'PDF24 Tools',
+    link: 'https://tools.pdf24.org/zh/all-tools',
     iconErrorText: '',
   },
 ];

@@ -27,7 +27,7 @@ const list: NavList = [
     iconErrorText: '',
   },
   {
-    icon: 'https://www.tailwindcss.cn/favicon.ico',
+    icon: 'https://www.tailwindcss.cn/favicons/favicon-16x16.png?v=3',
     name: 'Tailwind CSS',
     link: 'https://www.tailwindcss.cn/',
     iconErrorText: '',
@@ -63,7 +63,7 @@ const list: NavList = [
     iconErrorText: '',
   },
   {
-    icon: 'hhttps://error404.fun/img/favicon-32x32.png',
+    icon: 'https://error404.fun/img/favicon-32x32.png',
     name: '404 Illustrations',
     link: 'https://error404.fun/',
     iconErrorText: '',

@@ -4,7 +4,7 @@ const list: NavList = [
   {
     icon: 'https://1loc.dev/assets/favicon.png',
     name: '1loc',
-    link: 'https://1loc.dev/',
+    link: 'https://phuoc.ng/collection/1-loc/',
     iconErrorText: '',
   },
   {

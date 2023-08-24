@@ -2,7 +2,7 @@
  * @Author: 一尾流莺
  * @Description:页面导航
  * @Date: 2023-03-24 11:03:09
- * @LastEditTime: 2023-06-22 14:43:13
+ * @LastEditTime: 2023-08-24 10:06:19
  * @FilePath: \warbler-fe\src\views\navigation\index.vue
 -->
 <template>
@@ -70,7 +70,6 @@ const scrollHeightArr = ref<number[]>([]);
 const currentIndex = ref<number>(0);
 // 是否显示私有部分
 const isShowPrivate = computed(() => route.query.private || false);
-console.log('🚀🚀 ~ isShowPrivate:', isShowPrivate);
 // 侧边栏列表
 const sidebarList = computed(() => {
   let res = [];

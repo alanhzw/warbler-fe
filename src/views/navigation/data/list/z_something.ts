@@ -8,9 +8,9 @@ const list: NavList = [
     iconErrorText: '',
   },
   {
-    icon: 'https://ai.imiku.me/favicon-32x32.png',
-    name: 'CatGPT',
-    link: 'https://catgpt.run/',
+    icon: 'https://cat2.imiku.me/favicon-32x32.png',
+    name: '文心AI',
+    link: 'https://cat2.imiku.me/',
     iconErrorText: '',
   },
   {
@@ -29,6 +29,12 @@ const list: NavList = [
     icon: 'https://www.yutu.cn/favicon.ico',
     name: '羽兔网软件下载',
     link: 'https://www.yutu.cn/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://codeium.com/favicon.ico',
+    name: 'codeium',
+    link: 'https://codeium.com/',
     iconErrorText: '',
   },
 ];
