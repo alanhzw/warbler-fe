@@ -67,6 +67,12 @@ const list: NavList = [
     link: 'https://semi.design/zh-CN/',
     iconErrorText: '',
   },
+  {
+    icon: 'https://remix.run/favicon-192.png',
+    name: 'Remix',
+    link: 'https://remix.run/',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

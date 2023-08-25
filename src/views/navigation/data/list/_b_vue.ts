@@ -50,6 +50,12 @@ const list: NavList = [
     iconErrorText: '',
   },
   {
+    icon: 'https://cn.vuejs.org/logo.svg',
+    name: 'Vue Test Utils',
+    link: 'https://test-utils.vuejs.org/',
+    iconErrorText: '',
+  },
+  {
     icon: 'https://vueuse.org/favicon-32x32.png',
     name: 'VueUse 官网',
     link: 'https://vueuse.org/',
@@ -125,6 +131,12 @@ const list: NavList = [
     icon: 'https://res.hc-cdn.com/tinyui-design/1.0.7.20230818162939/home/favicon.ico',
     name: 'OpenTiny',
     link: 'https://opentiny.design/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://cdn.quasar.dev/logo-v2/favicon/favicon-128x128.png',
+    name: 'Quasar',
+    link: 'https://quasar.dev/',
     iconErrorText: '',
   },
 ];

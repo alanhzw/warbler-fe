@@ -31,6 +31,12 @@ const list: NavList = [
     link: 'https://wujie-micro.github.io/doc/',
     iconErrorText: '',
   },
+  {
+    icon: 'https://lf3-static.bytednsdoc.com/obj/eden-cn/dhozeh7vhpebvog/open-garfish/icons/icon.png',
+    name: 'Garfish',
+    link: 'https://www.garfishjs.org/',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

@@ -97,6 +97,30 @@ const list: NavList = [
     link: 'https://quarkc.hellobike.com/#/',
     iconErrorText: '',
   },
+  {
+    icon: 'https://jestjs.io/zh-Hans/img/favicon/favicon.ico',
+    name: 'Jest',
+    link: 'https://jestjs.io/zh-Hans/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://astro.build/favicon.svg',
+    name: 'Astro',
+    link: 'https://astro.build/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://qwik.builder.io/favicons/favicon.svg',
+    name: 'Qwik',
+    link: 'https://qwik.builder.io/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://www.rust-lang.org/static/images/rust-logo-blk.svg',
+    name: 'Rust',
+    link: 'https://www.rust-lang.org/zh-CN/',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

@@ -37,6 +37,12 @@ const list: NavList = [
     link: 'https://codeium.com/',
     iconErrorText: '',
   },
+  {
+    icon: 'https://search.tiangong.cn/favicon.ico',
+    name: '天工AI搜索',
+    link: 'https://search.tiangong.cn/',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

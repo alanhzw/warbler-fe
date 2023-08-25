@@ -33,6 +33,12 @@ const list: NavList = [
     iconErrorText: '',
   },
   {
+    icon: 'https://unocss.dev/favicon.svg',
+    name: 'UnoCSS',
+    link: 'https://unocss.dev/',
+    iconErrorText: '',
+  },
+  {
     icon: 'https://windicss.org/assets/logo.svg',
     name: 'Windi CSS',
     link: 'https://windicss.org/',
