@@ -16,6 +16,11 @@
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanhzw/warbler-fe"
+  },
+  "homepage": "http://www.warblerfe.top",
   "devDependencies": {
     "@commitlint/config-conventional": "^17.4.4",
     "@typescript-eslint/eslint-plugin": "^5.56.0",

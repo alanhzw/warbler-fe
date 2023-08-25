@@ -2,7 +2,7 @@
  * @Author: 一尾流莺
  * @Description:
  * @Date: 2023-04-10 15:10:48
- * @LastEditTime: 2023-04-13 09:17:16
+ * @LastEditTime: 2023-08-25 17:54:02
  * @FilePath: \warbler-fe\src\views\warblerCenter\component\resume-warbler.vue
 -->
 <template>
@@ -15,7 +15,7 @@
       <div class="info-item">姓名：韩志伟</div>
       <div class="info-item">昵称：一尾流莺</div>
       <div class="info-item">年龄：25</div>
-      <div class="info-item">坐标：成都</div>
+      <div class="info-item">坐标：北京</div>
       <div class="info-item">邮箱：1741847465@qq.com</div>
       <div class="info-item">微信：yiweiliuying0309</div>
       <div class="info-item">学校：大连大学</div>
@@ -25,7 +25,7 @@
       <div class="words">
         一尾流莺是一个前端开发工程师，性格开朗，热爱分享和书写技术博客，
         平时玩的游戏有明日方舟，英雄联盟手游，金铲铲之战，
-        <strong>目前正在寻找坐标成都的工作</strong>，如果你对我或我的技术感兴趣 ， 请联系我
+        <strong>目前正在北京理想汽车研发总部工作</strong>，如果你对我或我的技术感兴趣 ， 欢迎联系我
       </div>
     </div>
     <div class="icons">

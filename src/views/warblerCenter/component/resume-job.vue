@@ -2,16 +2,25 @@
  * @Author: 一尾流莺
  * @Description:
  * @Date: 2023-04-10 16:16:57
- * @LastEditTime: 2023-04-11 15:23:55
+ * @LastEditTime: 2023-08-25 17:58:52
  * @FilePath: \warbler-fe\src\views\warblerCenter\component\resume-job.vue
 -->
 <template>
   <div class="projects">
     <div class="title">工作经历</div>
-    <div class="job">
+    <div class="job mt8">
+      <div class="header">
+        <div class="company">北京理想研发总部（组员）</div>
+        <div class="time">2023 年 6 月至今</div>
+      </div>
+      <div class="job-content">
+        <div class="job-content-item"><span>·</span>负责页面开发；</div>
+      </div>
+    </div>
+    <div class="job mt8">
       <div class="header">
         <div class="company">大连远舢科技 - 文龙AIoT（团队负责人，3人）</div>
-        <div class="time">2022 年 3 月至今</div>
+        <div class="time">2022 年 3 月至 2023 年 6月</div>
       </div>
       <div class="job-content">
         <div class="job-content-item">
@@ -72,7 +81,7 @@
     <div class="job">
       <div class="header">
         <div class="company">Warbler-FE</div>
-        <div class="time">加入前端开发工程师至今</div>
+        <div class="time">成为前端开发工程师至今</div>
       </div>
       <div class="job-content">
         <div class="job-content-item">
