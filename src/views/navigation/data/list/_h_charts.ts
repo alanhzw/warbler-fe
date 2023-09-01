@@ -8,6 +8,12 @@ const list: NavList = [
     iconErrorText: '',
   },
   {
+    icon: 'https://chart.nodejs.cn/favicon.ico',
+    name: 'Chart.js',
+    link: 'https://chart.nodejs.cn/',
+    iconErrorText: '',
+  },
+  {
     icon: 'https://www.isqqw.com/favicon.ico',
     name: 'ECharts 图表集',
     link: 'https://www.isqqw.com/',

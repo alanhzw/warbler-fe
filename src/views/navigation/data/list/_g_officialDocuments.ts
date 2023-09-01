@@ -7,24 +7,14 @@ const list: NavList = [
     link: 'https://developer.mozilla.org/zh-CN/',
     iconErrorText: '',
   },
-  {
-    icon: 'https://zh-hans.eslint.org/favicon.ico',
-    name: 'ESlint',
-    link: 'https://zh-hans.eslint.org/',
-    iconErrorText: '',
-  },
+
   {
     icon: 'https://static.sitestack.cn/uploads/icons/2851629677557.png',
     name: 'Socket.IO',
-    link: 'https://socket.io/zh-CN/',
+    link: 'https://socket.nodejs.cn/',
     iconErrorText: '',
   },
-  {
-    icon: '',
-    name: 'localForage',
-    link: 'https://localforage.docschina.org/',
-    iconErrorText: '',
-  },
+
   {
     icon: 'https://www.sveltejs.cn/favicon.ico',
     name: 'Svelte',
@@ -80,9 +70,16 @@ const list: NavList = [
     iconErrorText: '',
   },
   {
-    icon: 'https://www.typescriptlang.org/favicon-32x32.png?v=8944a05a8b601855de116c8a56d3b3ae',
-    name: 'TypeScript',
-    link: 'https://www.typescriptlang.org/zh/',
+    icon: 'https://npm.nodejs.cn/favicon-32x32.png?v=f44ec608ba91563f864a30a276cd9065',
+    name: 'NPM 中文网',
+    link: 'https://npm.nodejs.cn/',
+    iconErrorText: '',
+  },
+
+  {
+    icon: 'https://flow.nodejs.cn/img/favicon.png',
+    name: 'FLOW',
+    link: 'https://flow.nodejs.cn/',
     iconErrorText: '',
   },
   {
@@ -97,12 +94,7 @@ const list: NavList = [
     link: 'https://quarkc.hellobike.com/#/',
     iconErrorText: '',
   },
-  {
-    icon: 'https://jestjs.io/zh-Hans/img/favicon/favicon.ico',
-    name: 'Jest',
-    link: 'https://jestjs.io/zh-Hans/',
-    iconErrorText: '',
-  },
+
   {
     icon: 'https://astro.build/favicon.svg',
     name: 'Astro',
@@ -119,6 +111,18 @@ const list: NavList = [
     icon: 'https://www.rust-lang.org/static/images/rust-logo-blk.svg',
     name: 'Rust',
     link: 'https://www.rust-lang.org/zh-CN/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://mdx.nodejs.cn/icon.svg',
+    name: 'MDX',
+    link: 'https://mdx.nodejs.cn/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://assemblyscript.nodejs.cn/favicon.ico',
+    name: 'AssemblyScript',
+    link: 'https://assemblyscript.nodejs.cn/',
     iconErrorText: '',
   },
 ];

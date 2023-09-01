@@ -142,7 +142,7 @@ const list: NavList = [
 ];
 
 const listData = {
-  title: 'vue',
+  title: 'Vue',
   list,
 };
 

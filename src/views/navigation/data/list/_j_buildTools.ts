@@ -16,7 +16,7 @@ const list: NavList = [
   {
     icon: 'https://www.gulpjs.com.cn/img/favicon.png',
     name: 'gulp',
-    link: 'https://www.gulpjs.com.cn/',
+    link: 'https://gulp.nodejs.cn/',
     iconErrorText: '',
   },
   {
@@ -28,7 +28,7 @@ const list: NavList = [
   {
     icon: 'https://www.babeljs.cn/img/favicon.png',
     name: 'Babel',
-    link: 'https://www.babeljs.cn/',
+    link: 'https://babel.nodejs.cn/',
     iconErrorText: '',
   },
   {
@@ -40,7 +40,7 @@ const list: NavList = [
   {
     icon: 'https://parceljs.org/favicon.fe6f9d11.ico',
     name: 'Parcel',
-    link: 'https://parceljs.org/',
+    link: 'https://parcel.nodejs.cn/',
     iconErrorText: '',
   },
 ];

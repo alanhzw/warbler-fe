@@ -43,24 +43,7 @@ const list: NavList = [
     link: 'https://leetcode.cn/',
     iconErrorText: '',
   },
-  {
-    icon: 'https://ts.xcatliu.com/favicon.png',
-    name: 'TypeScript 入门教程',
-    link: 'https://ts.xcatliu.com/',
-    iconErrorText: '',
-  },
-  {
-    icon: 'https://ts.xcatliu.com/favicon.png',
-    name: 'TypeScript 入门教程',
-    link: 'https://ts.xcatliu.com/',
-    iconErrorText: '',
-  },
-  {
-    icon: 'https://tsch.js.org/favicon.svg',
-    name: 'TypeScript 类型挑战',
-    link: 'https://tsch.js.org/',
-    iconErrorText: '',
-  },
+
   {
     icon: 'https://www.runoob.com/favicon.ico',
     name: '菜鸟教程',

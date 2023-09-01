@@ -8,15 +8,27 @@ const list: NavList = [
     iconErrorText: '',
   },
   {
+    icon: 'https://smartprocure.github.io/futil-js/icon.svg',
+    name: 'Futil',
+    link: 'https://smartprocure.github.io/futil-js/#overNone',
+    iconErrorText: '',
+  },
+  {
     icon: 'https://es6.ruanyifeng.com/favicon.ico',
     name: '阮一峰ES6',
     link: 'https://es6.ruanyifeng.com/#docs/style',
     iconErrorText: '',
   },
   {
+    icon: 'https://moment.nodejs.cn/static/img/moment-favicon.png',
+    name: 'Moment.js',
+    link: 'https://moment.nodejs.cn/',
+    iconErrorText: '',
+  },
+  {
     icon: 'https://dayjs.fenxianglu.cn/assets/favicon.png',
     name: 'Day.js',
-    link: 'https://dayjs.gitee.io/zh-CN/',
+    link: 'https://day.nodejs.cn/',
     iconErrorText: '',
   },
   {
@@ -38,6 +50,18 @@ const list: NavList = [
     iconErrorText: '',
   },
   {
+    icon: 'https://handlebars.nodejs.cn/images/favicon.png',
+    name: 'Handlebars',
+    link: 'https://handlebars.nodejs.cn/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://pug.nodejs.cn/images/favicon-32x32.png',
+    name: 'Pug',
+    link: 'https://pug.nodejs.cn/',
+    iconErrorText: '',
+  },
+  {
     icon: 'https://mathjs.org/favicon.ico',
     name: 'Math.js',
     link: 'https://mathjs.org/',
@@ -56,9 +80,45 @@ const list: NavList = [
     iconErrorText: '',
   },
   {
+    icon: 'https://xlsx.nodejs.cn/img/favicon.ico',
+    name: 'SheetJS',
+    link: 'https://xlsx.nodejs.cn/',
+    iconErrorText: '',
+  },
+  {
     icon: 'http://cdn.dooring.cn/dr/xijs.png',
     name: 'xijs',
     link: 'http://h5.dooring.cn/xijs',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://axios.nodejs.cn/assets/favicon.ico',
+    name: 'Axios',
+    link: 'https://axios.nodejs.cn/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://rx.nodejs.cn/assets/images/favicons/favicon.ico',
+    name: 'RxJS',
+    link: 'https://rx.nodejs.cn/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://floating-ui.com/favicon.ico',
+    name: 'Floating UI',
+    link: 'https://floating.nodejs.cn/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://cheerio.nodejs.cn/img/favicon.ico',
+    name: 'Cheerio',
+    link: 'https://cheerio.nodejs.cn/',
+    iconErrorText: '',
+  },
+  {
+    icon: '',
+    name: 'localForage',
+    link: 'https://localforage.docschina.org/',
     iconErrorText: '',
   },
 ];

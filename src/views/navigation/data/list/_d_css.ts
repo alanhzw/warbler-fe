@@ -2,34 +2,34 @@ import type { NavList } from '../index';
 
 const list: NavList = [
   {
-    icon: 'https://sass-guidelin.es/assets/images/favicon.png',
+    icon: 'https://sass.nodejs.cn/icon.png',
     name: 'Sass',
-    link: 'https://sass-guidelin.es/zh/',
+    link: 'https://sass.nodejs.cn/',
     iconErrorText: '',
   },
   {
-    icon: 'https://less.bootcss.com/public/ico/favicon.ico',
+    icon: 'https://less.nodejs.cn/public/ico/favicon.ico',
     name: 'Less',
-    link: 'https://less.bootcss.com/',
+    link: 'https://less.nodejs.cn/',
     iconErrorText: '',
   },
   {
     icon: 'https://www.stylus-lang.cn/favicon.ico',
     name: 'Stylus',
-    link: 'https://www.stylus-lang.cn/',
+    link: 'https://stylus.nodejs.cn/',
     iconErrorText: '',
   },
 
   {
     icon: 'http://postcss.docschina.org/_/web_modules/LayoutContainer/favicon-192x192.png',
     name: 'PostCSS',
-    link: 'http://postcss.docschina.org/',
+    link: 'https://postcss.nodejs.cn/',
     iconErrorText: '',
   },
   {
     icon: 'https://www.tailwindcss.cn/favicons/favicon-16x16.png?v=3',
     name: 'Tailwind CSS',
-    link: 'https://www.tailwindcss.cn/',
+    link: 'https://tailwind.nodejs.cn/',
     iconErrorText: '',
   },
   {
@@ -51,9 +51,9 @@ const list: NavList = [
     iconErrorText: '',
   },
   {
-    icon: 'https://v5.bootcss.com/docs/5.3/assets/img/favicons/favicon-32x32.png',
+    icon: 'https://bootstrap.nodejs.cn/docs/5.3/assets/img/favicons/favicon-32x32.png',
     name: 'Bootstrap',
-    link: 'https://v5.bootcss.com/',
+    link: 'https://bootstrap.nodejs.cn/',
     iconErrorText: '',
   },
   {
@@ -125,7 +125,7 @@ const list: NavList = [
 ];
 
 const listData = {
-  title: 'css',
+  title: 'Css',
   list,
 };
 

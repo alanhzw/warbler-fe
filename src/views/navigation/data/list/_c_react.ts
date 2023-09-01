@@ -9,8 +9,20 @@ const list: NavList = [
   },
   {
     icon: 'https://react.zcopy.site/favicon.ico',
+    name: 'React 中文网',
+    link: 'https://react.nodejs.cn/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://react.zcopy.site/favicon.ico',
     name: 'React Native',
     link: 'https://www.react-native.cn/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://react.zcopy.site/favicon.ico',
+    name: 'Create React App',
+    link: 'https://cra.nodejs.cn/',
     iconErrorText: '',
   },
   {
@@ -73,10 +85,34 @@ const list: NavList = [
     link: 'https://remix.run/',
     iconErrorText: '',
   },
+  {
+    icon: 'https://docusaurus.nodejs.cn/img/docusaurus.ico',
+    name: 'Docusaurus',
+    link: 'https://docusaurus.nodejs.cn/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://preact.nodejs.cn/favicon.ico',
+    name: 'Preact',
+    link: 'https://preact.nodejs.cn/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://mobx.nodejs.cn/img/favicon.png',
+    name: 'MobX',
+    link: 'https://mobx.nodejs.cn/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://swr.nodejs.cn/favicon/favicon-32x32.png',
+    name: 'SWR',
+    link: 'https://swr.nodejs.cn/',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {
-  title: 'react',
+  title: 'React',
   list,
 };
 

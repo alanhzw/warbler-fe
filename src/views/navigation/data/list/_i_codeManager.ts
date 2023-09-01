@@ -46,13 +46,37 @@ const list: NavList = [
   {
     icon: 'https://www.yarnpkg.cn/favicon-32x32.png?v=6143f50112ddba9fdb635b0af2f32aff',
     name: 'Yarn',
-    link: 'https://www.yarnpkg.cn/',
+    link: 'https://yarn.nodejs.cn/',
     iconErrorText: '',
   },
   {
     icon: 'https://d33wubrfki0l68.cloudfront.net/2f3acb83b7d2349f2194bc38c0f22f295908dc33/6a6e6/zh/img/pnpm-no-name-with-frame.svg',
     name: 'pnpm',
     link: 'https://pnpm.io/zh/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://lerna.nodejs.cn/images/favicon.ico',
+    name: 'Lerna',
+    link: 'https://lerna.nodejs.cn/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://zh-hans.eslint.org/favicon.ico',
+    name: 'ESlint',
+    link: 'https://zh-hans.eslint.org/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://prettier.nodejs.cn/icon.png',
+    name: 'Prettier',
+    link: 'https://prettier.nodejs.cn/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://stylelint.nodejs.cn/img/favicon.ico',
+    name: 'Stylelint',
+    link: 'https://stylelint.nodejs.cn/',
     iconErrorText: '',
   },
 ];
