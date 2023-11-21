@@ -22,7 +22,7 @@ const list: NavList = [
   {
     icon: '',
     name: '网页转换助手',
-    link: 'http://www.html22.com/zh/',
+    link: 'http://www.mmhtml.com/zh/',
     iconErrorText: '',
   },
   {

@@ -2,6 +2,7 @@
   <div class="contact">
     <div class="wechat">
       <img src="@/assets/image/wechat.jpg" />
+      <img src="@/assets/image/group.jpg" />
     </div>
   </div>
 </template>
@@ -17,6 +18,7 @@
   align-items: center;
   .wechat img {
     width: 300px;
+    margin: 20px;
   }
 }
 </style>

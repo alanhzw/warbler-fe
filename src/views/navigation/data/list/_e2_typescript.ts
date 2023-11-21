@@ -28,7 +28,7 @@ const list: NavList = [
 ];
 
 const listData = {
-  title: 'Typescript',
+  title: 'TypeScript',
   list,
 };
 
