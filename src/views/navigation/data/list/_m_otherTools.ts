@@ -61,6 +61,12 @@ const list: NavList = [
     link: 'https://tools.pdf24.org/zh/all-tools',
     iconErrorText: '',
   },
+  {
+    icon: 'https://cilishenqi.icu/wp-content/themes/webstackpro/images/favicon.png',
+    name: '磁力神器',
+    link: 'https://cilishenqi.icu/',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

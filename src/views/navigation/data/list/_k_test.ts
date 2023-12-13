@@ -19,6 +19,12 @@ const list: NavList = [
     link: 'https://playwright.nodejs.cn/',
     iconErrorText: '',
   },
+  {
+    icon: 'https://cn.vitest.dev/favicon.ico',
+    name: 'Vitest',
+    link: 'https://cn.vitest.dev/',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

@@ -7,24 +7,14 @@ const list: NavList = [
     link: 'https://www.nkvod.com/',
     iconErrorText: '',
   },
-  {
-    icon: '',
-    name: 'Listen1',
-    link: 'https://listen1.github.io/listen1/',
-    iconErrorText: '',
-  },
+
   {
     icon: '',
     name: 'VIP视频在线解析',
     link: 'https://www.yijingying.com/html/video/',
     iconErrorText: '',
   },
-  {
-    icon: 'https://lxmusic.toside.cn/img/favicon.ico',
-    name: 'LX Music',
-    link: 'https://lxmusic.toside.cn/',
-    iconErrorText: '',
-  },
+
   {
     icon: 'https://www.manmankan.com/favicon.ico',
     name: '漫漫看',
@@ -89,6 +79,30 @@ const list: NavList = [
     icon: '//img10.360buyimg.com/imgzone/jfs/t1/196801/11/5211/8955/60b0bc77Ed6fa9536/c2bc9d6ec1217ee0.png',
     name: '斗鱼直播',
     link: 'https://www.douyu.com',
+    iconErrorText: '',
+  },
+  {
+    icon: '',
+    name: 'Listen1',
+    link: 'https://listen1.github.io/listen1/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://lxmusic.toside.cn/img/favicon.ico',
+    name: 'LX Music',
+    link: 'https://lxmusic.toside.cn/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://flac.life/favicon.png',
+    name: '无损音乐下载',
+    link: 'https://flac.life/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://www.hifini.com/view/img/favicon.ico',
+    name: 'HiFiNi - 音乐磁场',
+    link: 'https://www.hifini.com/',
     iconErrorText: '',
   },
 ];

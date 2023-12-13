@@ -2,7 +2,7 @@
  * @Author: 一尾流莺
  * @Description:
  * @Date: 2023-04-10 21:50:04
- * @LastEditTime: 2023-04-13 09:18:36
+ * @LastEditTime: 2023-12-05 16:08:00
  * @FilePath: \warbler-fe\src\views\warblerCenter\component\resume-link.vue
 -->
 <template>
@@ -30,12 +30,6 @@ interface Link {
 }
 
 const map: Array<Link> = [
-  {
-    name: '流莺书签',
-    nameLink: 'http://warbler.duwanyu.com/',
-    online: 'http://warbler.duwanyu.com/',
-    source: 'https://github.com/alanhzw/warbler-homepage',
-  },
   {
     name: 'Github',
     nameLink: 'https://github.com/alanhzw',
@@ -65,9 +59,10 @@ const map: Array<Link> = [
     source: 'https://github.com/alanhzw/warbler-js',
   },
   {
-    name: '个人主页(旧版)',
-    nameLink: 'http://www.duwanyu.com/#',
-    online: 'http://www.duwanyu.com/#',
+    name: '流莺书签',
+    nameLink: 'https://alanhzw.github.io/',
+    online: 'https://alanhzw.github.io/',
+    source: 'https://github.com/alanhzw/warbler-homepage',
   },
 ];
 
