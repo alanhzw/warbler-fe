@@ -2,7 +2,7 @@
  * @Author: 一尾流莺
  * @Description:
  * @Date: 2023-04-10 16:16:57
- * @LastEditTime: 2023-08-25 17:58:52
+ * @LastEditTime: 2024-02-23 09:18:38
  * @FilePath: \warbler-fe\src\views\warblerCenter\component\resume-job.vue
 -->
 <template>
@@ -10,11 +10,25 @@
     <div class="title">工作经历</div>
     <div class="job mt8">
       <div class="header">
-        <div class="company">北京理想研发总部（组员）</div>
-        <div class="time">2023 年 6 月至今</div>
+        <div class="company">北京理想研发总部</div>
+        <div class="time">2023 年 6 月至 2024 年 3月</div>
       </div>
       <div class="job-content">
-        <div class="job-content-item"><span>·</span>负责页面开发；</div>
+        <div class="job-content-item">
+          <span>·</span>独立完成项目的搭建，页面开发和维护；书写并完善项目的代码规范；
+        </div>
+        <div class="job-content-item">
+          <span>·</span>参与需求评审，原型设计，UI 评审；书写技术方案文档，并参与技术方案评审 ；
+        </div>
+        <div class="job-content-item">
+          <span>·</span
+          >负责维护公司内部组件库，封装人员选择，文件上传，批量操作，定制下拉选择等通用业务组
+          件，并书写使用文档。
+        </div>
+        <div class="job-content-item">
+          <span>·</span>接入第三方平台，如用户中心，sentry，MDN，埋点；
+        </div>
+        <div class="job-content-item"><span>·</span>负责使用 vue3 重构 vue2 的老旧项目。</div>
       </div>
     </div>
     <div class="job mt8">

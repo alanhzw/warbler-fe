@@ -2,7 +2,7 @@
  * @Author: 一尾流莺
  * @Description:
  * @Date: 2023-04-10 15:10:48
- * @LastEditTime: 2023-08-25 17:54:02
+ * @LastEditTime: 2024-02-23 09:15:49
  * @FilePath: \warbler-fe\src\views\warblerCenter\component\resume-warbler.vue
 -->
 <template>
@@ -14,7 +14,7 @@
     <div class="info">
       <div class="info-item">姓名：韩志伟</div>
       <div class="info-item">昵称：一尾流莺</div>
-      <div class="info-item">年龄：25</div>
+      <div class="info-item">年龄：26</div>
       <div class="info-item">坐标：北京</div>
       <div class="info-item">邮箱：1741847465@qq.com</div>
       <div class="info-item">微信：yiweiliuying0309</div>
