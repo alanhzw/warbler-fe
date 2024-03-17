@@ -4,6 +4,8 @@
     "target": "ESNext",
     // 是否保留 class 未赋值的属性
     "useDefineForClassFields": true,
+    // 如果您使用 Volar，请在 tsconfig.json 中通过 compilerOptions.type 指定全局组件类型。
+    "types": ["element-plus/global"],
     // 编译之后的文件采用的模块规范
     "module": "ESNext",
     /*
@@ -25,6 +27,8 @@
     // 有些依赖库底层 为了在CommonJs、AMD这二者的规范中相互兼容，使用了 export =，将二者规范统一。
     // 表示允许依赖库中出现 export = 这种兼容规范导出的格式，TS 可以用 import from 导入
     "esModuleInterop": true,
+    // Allow 'import x from y' when a module doesn't have a default export.
+    "allowSyntheticDefaultImports": true,
     // 允许访问的底层依赖库
     "lib": ["ESNext", "DOM"],
     // 对声明文件不进行类型检查
