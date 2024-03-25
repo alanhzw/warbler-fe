@@ -37,6 +37,7 @@ defineProps<IPropType>();
       background-color: var(--warbler-white);
     }
     &__text {
+      font-size: 16px;
       margin-left: 8px;
     }
   }

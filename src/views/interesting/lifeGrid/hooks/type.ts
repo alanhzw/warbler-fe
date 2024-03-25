@@ -1,3 +1,4 @@
+/** 配置每一项类型 */
 export interface IFormItem {
   /** 频率 */
   frequency: string;
@@ -11,6 +12,7 @@ export interface IFormItem {
   backgroundColor: string;
 }
 
+/** 表单数据 */
 export interface Iform {
   /** 出生日期 */
   birthday: string;
@@ -20,4 +22,21 @@ export interface Iform {
   gridNum: string;
   /** 表单配置数据 */
   formData: Array<IFormItem>;
+}
+
+/** 人生时间 */
+export interface ILifeTime {
+  /** 年 */
+  year: string;
+  /** 月 */
+  month: string;
+  /** 日 */
+  day: string;
+  /** 时 */
+  hour: string;
+  /** 分 */
+  minute: string;
+  /** 秒 */
+  second: string;
+  [key: string]: any;
 }

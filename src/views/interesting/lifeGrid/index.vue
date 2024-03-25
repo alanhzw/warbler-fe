@@ -1,17 +1,16 @@
 <template>
   <div class="life-grid">
     <div class="life-grid__content">
-      {{ pastTime }}
-
-      {{ remainTime }}
       <!-- 分配人生 -->
       <block-item title="分配人生">
         <div class="config-life">
+          <!-- 日期选择器 -->
           <el-date-picker
             v-model="formData.birthday"
             style="width: 100%"
             type="datetime"
             placeholder="选择你的生日" />
+          <!-- 配置按钮 点击打开配置弹窗-->
           <el-icon
             style="margin-left: 8px; cursor: pointer; font-size: 20px"
             @click="handleClickConfigBtn">
@@ -21,7 +20,8 @@
       </block-item>
       <!-- 你的人生 -->
       <block-item title="你的人生">
-        <div class="your-life"></div>
+        <your-life :life-time="pastTime" title="过去的时光"></your-life>
+        <your-life :life-time="remainTime" title="剩余的时光"></your-life>
       </block-item>
       <!-- 人生小格 -->
       <block-item title="人生小格">
@@ -40,11 +40,12 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { Operation } from '@element-plus/icons-vue';
+import type { Iform } from './hooks/type';
+import core from './hooks/core';
 import ConfigLifeDrawer from './components/config-life-drawer.vue';
 import BlockItem from './components/block-item.vue';
 import GridLife from './components/grid-life.vue';
-import type { Iform } from './hooks/type';
-import core from './hooks/core';
+import YourLife from './components/your-life.vue';
 
 const formData = ref<Iform>({
   /** 出生日期 */
@@ -87,10 +88,24 @@ const formData = ref<Iform>({
       timeUnit: '时',
       backgroundColor: '#e3a6ab',
     },
+    {
+      frequency: '天',
+      event: '陪伴爱人',
+      time: '5',
+      timeUnit: '时',
+      backgroundColor: '#ff00ff',
+    },
   ],
 });
 
-const { pastTime, remainTime, grids } = core(formData);
+const {
+  /** 过去的时间 */
+  pastTime,
+  /** 剩余时间 */
+  remainTime,
+  /** 格子数据 */
+  grids,
+} = core(formData);
 
 /** 抽屉组件实例 */
 const configDrawer = ref();

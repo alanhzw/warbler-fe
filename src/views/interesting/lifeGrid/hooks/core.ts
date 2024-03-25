@@ -1,17 +1,21 @@
 import { Ref, computed, ref } from 'vue';
 import dayjs from 'dayjs';
-import { Iform } from './type';
+import type { Iform, ILifeTime } from './type';
 
 /*
  * @Author: 一尾流莺
  * @Description:人生小格核心算法
  * @Date: 2024-03-17 19:36:20
- * @LastEditTime: 2024-03-17 21:39:34
+ * @LastEditTime: 2024-03-24 18:57:02
  * @FilePath: \warbler-fe\src\views\interesting\lifeGrid\hooks\core.ts
  */
 const core = (formData: Ref<Iform>) => {
   // 当前时间的dayjs对象
   const now = ref(dayjs());
+
+  setInterval(() => {
+    now.value = dayjs();
+  });
 
   // 生日日期的dayjs对象
   const birthday = computed(() => dayjs(formData.value.birthday));
@@ -19,27 +23,27 @@ const core = (formData: Ref<Iform>) => {
   // 去世日期的dayjs对象
   const deathTime = computed(() => birthday.value.add(Number(formData.value.age), 'year'));
 
-  // 整合人生的时间
+  // 整个人生的时间
   // const whileLife = computed(() => deathTime.value.diff(birthday.value, 'millisecond'));
 
   // 已经过去的时间
-  const pastTime = computed(() => ({
+  const pastTime = computed<ILifeTime>(() => ({
     year: now.value.diff(birthday.value, 'year', true).toFixed(1),
     month: now.value.diff(birthday.value, 'month', true).toFixed(1),
     day: now.value.diff(birthday.value, 'day', true).toFixed(1),
     hour: now.value.diff(birthday.value, 'hour', true).toFixed(1),
     minute: now.value.diff(birthday.value, 'minute', true).toFixed(1),
-    second: now.value.diff(birthday.value, 'second'),
+    second: now.value.diff(birthday.value, 'second', true).toFixed() || '-',
   }));
 
   // 剩余的时间
-  const remainTime = computed(() => ({
+  const remainTime = computed<ILifeTime>(() => ({
     year: deathTime.value.diff(now.value, 'year', true).toFixed(1),
     month: deathTime.value.diff(now.value, 'month', true).toFixed(1),
     day: deathTime.value.diff(now.value, 'day', true).toFixed(1),
     hour: deathTime.value.diff(now.value, 'hour', true).toFixed(1),
     minute: deathTime.value.diff(now.value, 'minute', true).toFixed(1),
-    second: deathTime.value.diff(now.value, 'second'),
+    second: deathTime.value.diff(now.value, 'second', true).toFixed(),
   }));
 
   // 计算小方格的背景颜色
