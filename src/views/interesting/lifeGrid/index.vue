@@ -49,9 +49,9 @@ import YourLife from './components/your-life.vue';
 
 const formData = ref<Iform>({
   /** 出生日期 */
-  birthday: '',
+  birthday: '1998-03-09',
   /** 年龄 */
-  age: '80',
+  age: '60',
   /** 格子数量 */
   gridNum: '400',
   /** 表单配置数据  */
@@ -121,16 +121,16 @@ function handleClickConfigBtn() {
 .life-grid {
   display: flex;
   padding-top: var(--warbler-header-height);
+  justify-content: center;
   width: 100%;
   height: 100%;
+  overflow: auto;
 
   &__content {
-    width: 100%;
+    // 1080 刚好是四百个格子铺满整行
+    width: 1080px;
     height: 100%;
     padding-bottom: 16px;
-    padding-right: 10%;
-    padding-left: 10%;
-    overflow: auto;
 
     .config-life {
       display: flex;

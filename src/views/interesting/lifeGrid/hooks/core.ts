@@ -1,14 +1,8 @@
+// 人生小格核心算法
 import { Ref, computed, ref } from 'vue';
 import dayjs from 'dayjs';
 import type { Iform, ILifeTime } from './type';
 
-/*
- * @Author: 一尾流莺
- * @Description:人生小格核心算法
- * @Date: 2024-03-17 19:36:20
- * @LastEditTime: 2024-03-24 18:57:02
- * @FilePath: \warbler-fe\src\views\interesting\lifeGrid\hooks\core.ts
- */
 const core = (formData: Ref<Iform>) => {
   // 当前时间的dayjs对象
   const now = ref(dayjs());
