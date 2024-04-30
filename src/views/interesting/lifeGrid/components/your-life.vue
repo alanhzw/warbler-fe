@@ -26,7 +26,7 @@ defineProps<IPropType>();
 const timeMapObj: ILifeTime = {
   year: '年',
   month: '月',
-  day: '日',
+  day: '天',
   hour: '时',
   minute: '分',
   second: '秒',
@@ -42,17 +42,18 @@ const timeMap = Object.keys(timeMapObj);
   height: 100%;
   .title {
     display: inline-block;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     padding: 4px 0;
     border-bottom: 1px solid #fff;
   }
   .lifeTime-box {
+    margin: 12px 0;
     padding: 16px 0;
-    display: flex;
+    display: grid;
     justify-content: space-between;
-    // grid-template-columns: repeat(auto-fill, 150px);
-    // grid-gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
     .content {
       display: flex;
       justify-content: center;
@@ -69,25 +70,5 @@ const timeMap = Object.keys(timeMapObj);
       }
     }
   }
-  // /* 当屏幕宽度大于等于 1200px 时，一行六个 */
-  // @media (min-width: 1200px) {
-  //   .lifeTime-box {
-  //     grid-template-columns: repeat(6, 1fr);
-  //   }
-  // }
-
-  // /* 当屏幕宽度介于 768px 至 1199px 之间时，一行三个 */
-  // @media (min-width: 768px) and (max-width: 1199px) {
-  //   .lifeTime-box {
-  //     grid-template-columns: repeat(3, 1fr);
-  //   }
-  // }
-
-  // /* 当屏幕宽度小于等于 767px 时，一行一个 */
-  // @media (max-width: 767px) {
-  //   .lifeTime-box {
-  //     grid-template-columns: 1fr;
-  //   }
-  // }
 }
 </style>

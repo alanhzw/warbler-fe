@@ -1,10 +1,12 @@
 <template>
   <div class="grid-life">
-    <div
-      v-for="i in props.grids"
-      :key="i.id"
-      class="grid"
-      :style="{ backgroundColor: i.backgroundColor }"></div>
+    <div class="grid-container">
+      <div
+        v-for="i in props.grids"
+        :key="i.id"
+        class="grid"
+        :style="{ backgroundColor: i.backgroundColor }"></div>
+    </div>
   </div>
 </template>
 
@@ -24,14 +26,19 @@ const props = defineProps<IPropType>();
 <style lang="scss" scoped>
 .grid-life {
   width: 100%;
-  height: 100%;
   display: flex;
-  flex-wrap: wrap;
-  .grid {
-    width: 20px;
-    height: 20px;
-    margin: 3px;
-    border-radius: 2px;
+  justify-content: center;
+  align-items: center;
+  .grid-container {
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(20, 20px);
+    gap: 6px;
+    .grid {
+      width: 100%;
+      padding-top: 100%;
+      border-radius: 2px;
+    }
   }
 }
 </style>

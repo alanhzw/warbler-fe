@@ -4,6 +4,7 @@
       <!-- 分配人生 -->
       <block-item title="分配人生">
         <div class="config-life">
+          <div style="margin-right: 16px; white-space: nowrap">选择你的生日</div>
           <!-- 日期选择器 -->
           <el-date-picker
             v-model="formData.birthday"
@@ -12,7 +13,7 @@
             placeholder="选择你的生日" />
           <!-- 配置按钮 点击打开配置弹窗-->
           <el-icon
-            style="margin-left: 8px; cursor: pointer; font-size: 20px"
+            style="margin-left: 16px; cursor: pointer; font-size: 20px"
             @click="handleClickConfigBtn">
             <Operation />
           </el-icon>
@@ -20,8 +21,8 @@
       </block-item>
       <!-- 你的人生 -->
       <block-item title="你的人生">
-        <your-life :life-time="pastTime" title="过去的时光"></your-life>
-        <your-life :life-time="remainTime" title="剩余的时光"></your-life>
+        <your-life :life-time="pastTime" title="已经过去了"></your-life>
+        <your-life :life-time="remainTime" title="剩余的时间"></your-life>
       </block-item>
       <!-- 人生小格 -->
       <block-item title="人生小格">
@@ -31,6 +32,7 @@
       <block-item title="格子含义">
         <div class="grid-meaning"></div>
       </block-item>
+      <div style="height: 32px"></div>
     </div>
     <!-- 分配人生抽屉 -->
     <config-life-drawer ref="configDrawer" :form-data="formData"></config-life-drawer>
@@ -128,7 +130,7 @@ function handleClickConfigBtn() {
 
   &__content {
     // 1080 刚好是四百个格子铺满整行
-    width: 1080px;
+    width: 1000px;
     height: 100%;
     padding-bottom: 16px;
 

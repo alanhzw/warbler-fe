@@ -33,11 +33,12 @@ defineProps<IPropType>();
     align-items: center;
     &__line {
       width: 4px;
-      height: 16px;
+      height: 20px;
       background-color: var(--warbler-white);
     }
     &__text {
-      font-size: 16px;
+      font-size: 20px;
+      font-weight: bold;
       margin-left: 8px;
     }
   }
