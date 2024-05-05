@@ -34,7 +34,7 @@
           <!-- 切换 400 格和 900 格 -->
           <template #option>
             <div style="display: flex; gap: 8px; align-items: baseline">
-              <div>{{ `当前格子数量: ${formData.gridNum}` }}</div>
+              <div>{{ `格子数量: ${formData.gridNum}` }}</div>
               <i
                 class="iconfont icon-category cp"
                 :style="{
@@ -125,13 +125,13 @@ const formData = ref<Iform>({
       timeUnit: 'day',
       backgroundColor: '#e7a23f',
     },
-    {
-      frequency: 'month',
-      event: '陪伴孩子',
-      time: '2',
-      timeUnit: 'day',
-      backgroundColor: '#43b244',
-    },
+    // {
+    //   frequency: 'month',
+    //   event: '陪伴孩子',
+    //   time: '2',
+    //   timeUnit: 'day',
+    //   backgroundColor: '#43b244',
+    // },
   ],
 });
 
