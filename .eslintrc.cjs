@@ -5,6 +5,7 @@ module.exports = {
     defineExpose: 'readonly',
     defineEmits: 'readonly',
     withDefaults: 'readonly',
+    ElMessage: 'readonly',
   },
   extends: ['plugin:@typescript-eslint/recommended', 'plugin:vue/vue3-recommended', 'airbnb-base'],
   parserOptions: {

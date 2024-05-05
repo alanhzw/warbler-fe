@@ -23,7 +23,7 @@ interface IPropType {
 defineProps<IPropType>();
 
 /** 用于建立起中文和英文日期的对应关系 */
-const timeMapObj: ILifeTime = {
+const timeMapObj: { [key: string]: string } = {
   year: '年',
   month: '月',
   day: '天',
@@ -45,7 +45,7 @@ const timeMap = Object.keys(timeMapObj);
     font-size: 16px;
     font-weight: bold;
     padding: 4px 0;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid var(--warbler-text-2);
   }
   .lifeTime-box {
     margin: 12px 0;

@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3948807 */
-  src: url('iconfont.woff2?t=1681302822777') format('woff2'),
-       url('iconfont.woff?t=1681302822777') format('woff'),
-       url('iconfont.ttf?t=1681302822777') format('truetype');
+  src: url('iconfont.woff2?t=1714903854303') format('woff2'),
+       url('iconfont.woff?t=1714903854303') format('woff'),
+       url('iconfont.ttf?t=1714903854303') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,18 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-9Grids_video:before {
+  content: "\e61f";
+}
+
+.icon-category:before {
+  content: "\e63d";
+}
+
+.icon-shanchu:before {
+  content: "\100b1";
 }
 
 .icon-juejin:before {
@@ -27,6 +39,10 @@
 
 .icon-jianli:before {
   content: "\e609";
+}
+
+.icon-aixin:before {
+  content: "\e648";
 }
 
 .icon-weixin:before {
