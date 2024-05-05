@@ -13,6 +13,7 @@
               type="date"
               format="YYYY-MM-DD"
               value-format="YYYY-MM-DD"
+              :clearable="false"
               :disabled-date="disabledDate"
               placeholder="选择你的生日" />
             <!-- 配置按钮 点击打开配置弹窗-->

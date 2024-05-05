@@ -13,6 +13,7 @@
             style="width: 240px"
             type="date"
             format="YYYY-MM-DD"
+            :clearable="false"
             :disabled-date="disabledDate"
             value-format="YYYY-MM-DD"
             placeholder="请选择" />
