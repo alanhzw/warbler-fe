@@ -13,6 +13,7 @@
             style="width: 240px"
             type="date"
             format="YYYY-MM-DD"
+            :editable="false"
             :clearable="false"
             :disabled-date="disabledDate"
             value-format="YYYY-MM-DD"
