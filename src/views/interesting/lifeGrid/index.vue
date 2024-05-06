@@ -65,9 +65,12 @@
         <!-- 分享链接 -->
         <block-item title="分享链接">
           <div class="share-link">
-            <el-input v-model="currentUrl" readonly></el-input>
+            <el-input id="text-to-copy" v-model="currentUrl" readonly></el-input>
             <el-tooltip effect="dark" content="复制链接" placement="top">
-              <el-icon class="cp" style="font-size: 20px" @click="copyToClipboard(currentUrl)">
+              <el-icon
+                class="cp copy"
+                style="font-size: 20px"
+                data-clipboard-target="#text-to-copy">
                 <CopyDocument />
               </el-icon>
             </el-tooltip>
@@ -89,6 +92,7 @@
 import { ref, watch, onMounted, computed } from 'vue';
 import { Operation, CopyDocument } from '@element-plus/icons-vue';
 import { useRouter } from 'vue-router';
+import ClipboardJS from 'clipboard';
 import type { Iform } from './hooks/type';
 import core from './hooks/core';
 import ConfigLifeDrawer from './components/config-life-drawer.vue';
@@ -96,7 +100,7 @@ import BlockItem from './components/block-item.vue';
 import GridLife from './components/grid-life.vue';
 import YourLife from './components/your-life.vue';
 import GridMeaning from './components/grid-meaning.vue';
-import { disabledDate, copyToClipboard } from './hooks/utils';
+import { disabledDate } from './hooks/utils';
 
 const router = useRouter();
 
@@ -204,6 +208,19 @@ onMounted(() => {
   if (config) {
     formData.value = JSON.parse(decodeURI(config as string));
   }
+});
+
+// 初始化剪切板功能
+onMounted(() => {
+  const clipboard = new ClipboardJS('.copy');
+  // 可选：监听成功或失败的回调
+  clipboard.on('success', (e) => {
+    ElMessage.success('复制成功!');
+    e.clearSelection(); // 清除选中状态
+  });
+  clipboard.on('error', () => {
+    ElMessage.success('复制失败!');
+  });
 });
 </script>
 

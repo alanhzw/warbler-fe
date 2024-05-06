@@ -39,7 +39,6 @@ export async function copyToClipboard(text: string) {
     await navigator.clipboard.writeText(text);
     ElMessage.success('复制成功');
   } catch (err) {
-    console.log('🚀🚀 ~ copyToClipboard ~ err:', err);
     ElMessage.error('复制失败');
   }
 }
