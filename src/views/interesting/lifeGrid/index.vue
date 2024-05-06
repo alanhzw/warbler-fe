@@ -18,11 +18,13 @@
               :disabled-date="disabledDate"
               placeholder="选择你的生日" />
             <!-- 配置按钮 点击打开配置弹窗-->
-            <el-icon
-              style="margin-left: 16px; cursor: pointer; font-size: 20px"
-              @click="handleClickConfigBtn">
-              <Operation />
-            </el-icon>
+            <el-tooltip effect="dark" content="配置人生" placement="top">
+              <el-icon
+                style="margin-left: 16px; cursor: pointer; font-size: 20px"
+                @click="handleClickConfigBtn">
+                <Operation />
+              </el-icon>
+            </el-tooltip>
           </div>
         </block-item>
         <!-- 你的人生 -->
@@ -60,6 +62,17 @@
         <block-item title="格子含义">
           <grid-meaning :form-data="formData"></grid-meaning>
         </block-item>
+        <!-- 分享链接 -->
+        <block-item title="分享链接">
+          <div class="share-link">
+            <el-input v-model="currentUrl" readonly></el-input>
+            <el-tooltip effect="dark" content="复制链接" placement="top">
+              <el-icon class="cp" style="font-size: 20px" @click="copyToClipboard(currentUrl)">
+                <CopyDocument />
+              </el-icon>
+            </el-tooltip>
+          </div>
+        </block-item>
         <div style="height: 32px"></div>
       </div>
       <!-- 分配人生抽屉 -->
@@ -73,8 +86,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { Operation } from '@element-plus/icons-vue';
+import { ref, watch, onMounted, computed } from 'vue';
+import { Operation, CopyDocument } from '@element-plus/icons-vue';
+import { useRouter } from 'vue-router';
 import type { Iform } from './hooks/type';
 import core from './hooks/core';
 import ConfigLifeDrawer from './components/config-life-drawer.vue';
@@ -82,7 +96,9 @@ import BlockItem from './components/block-item.vue';
 import GridLife from './components/grid-life.vue';
 import YourLife from './components/your-life.vue';
 import GridMeaning from './components/grid-meaning.vue';
-import { disabledDate } from './hooks/utils';
+import { disabledDate, copyToClipboard } from './hooks/utils';
+
+const router = useRouter();
 
 const formData = ref<Iform>({
   /** 出生日期 */
@@ -164,6 +180,31 @@ const handleChangeGridNum = (num: number) => {
 const handleChangeConfig = (newFormData: Iform) => {
   formData.value = newFormData;
 };
+
+// 当前页面的url
+const currentUrl = computed(() => window.location.host + router.currentRoute.value.fullPath);
+
+// 监听配置的变化, 放在url上
+watch(
+  () => formData.value,
+  () => {
+    router.replace({
+      query: {
+        ...router.currentRoute.value.query,
+        config: encodeURI(JSON.stringify(formData.value)),
+      },
+    });
+  },
+  { deep: true },
+);
+
+// 页面初始化的时候获取配置
+onMounted(() => {
+  const { config } = router.currentRoute.value.query;
+  if (config) {
+    formData.value = JSON.parse(decodeURI(config as string));
+  }
+});
 </script>
 
 <style lang="scss" scoped>
@@ -192,6 +233,11 @@ const handleChangeConfig = (newFormData: Iform) => {
       justify-content: center;
       align-items: center;
     }
+  }
+  .share-link {
+    display: flex;
+    gap: 8px;
+    align-items: center;
   }
 }
 </style>

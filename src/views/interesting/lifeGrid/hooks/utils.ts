@@ -32,3 +32,13 @@ export const realTimeRefresh = (callback: () => void) => {
   }
   requestAnimationFrame(fn);
 };
+
+// 复制到粘贴板
+export async function copyToClipboard(text: string) {
+  try {
+    await navigator.clipboard.writeText(text);
+    ElMessage.success('复制成功');
+  } catch (err) {
+    ElMessage.error('复制失败');
+  }
+}
