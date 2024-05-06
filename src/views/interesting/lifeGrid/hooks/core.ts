@@ -68,6 +68,12 @@ const core = (formData: Ref<Iform>) => {
       // 计算每个事件对应的总毫秒数 每年的毫秒数 * 剩余生命的年数
       millisecond: getPerEventMillisecond(item) * Number(remainTime.value.year),
     }));
+
+    // 添加过去的生命的毫秒数
+    const pastMillisecond = lifeDataMillisecond.reduce(
+      (total, event) => total - Number(event.millisecond),
+      whileLife.value,
+    );
     lifeDataMillisecond.unshift({
       /** 频率 */
       frequency: '',
@@ -80,7 +86,7 @@ const core = (formData: Ref<Iform>) => {
       /** 格子颜色 */
       backgroundColor: formData.value.pastBackgroundColor,
       // 已经度过的生命的总毫秒数
-      millisecond: Number(pastTime.value.millisecond),
+      millisecond: pastMillisecond,
       // className
       className: 'past',
     });
@@ -89,9 +95,9 @@ const core = (formData: Ref<Iform>) => {
     // 遍历所有事件
     lifeDataMillisecond.forEach((event) => {
       // 计算每个事件占整个人生命的百分比
-      const eventPercentage = Number((event.millisecond / whileLife.value).toFixed(2));
+      const eventPercentage = Number(event.millisecond / whileLife.value);
       // 根据百分比计算出该事件应该占多少格子
-      const gridsForEvent = Math.floor(eventPercentage * gridsData.length);
+      const gridsForEvent = Math.round(eventPercentage * gridsData.length);
       // 遍历该事件应该占多少格子，将当前格子的背景颜色设置为该事件的背景颜色
       Array.from({ length: gridsForEvent }).forEach(() => {
         if (currentGridIndex < gridsData.length) {

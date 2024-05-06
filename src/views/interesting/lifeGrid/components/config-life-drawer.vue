@@ -41,7 +41,7 @@
         <div class="config-life-body_life-item" style="color: #fc1717">
           <div class="config-life-body_life-item__no">注:</div>
           <div class="config-life-body_life-item__text">
-            所有事件会换算成 【小时/天】 来计算，平均总时长不可以超过 【24小时/天】
+            所有时间会换算成 【小时/天】 来计算，平均总时长不可以超过 【24小时/天】
           </div>
         </div>
         <el-button @click="addLifeItem">新增一行</el-button>
