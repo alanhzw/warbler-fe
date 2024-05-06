@@ -25,7 +25,7 @@ export const timeUnitOptions = [
     value: 'hour',
   },
   {
-    label: '分',
+    label: '分种',
     value: 'minute',
   },
   {

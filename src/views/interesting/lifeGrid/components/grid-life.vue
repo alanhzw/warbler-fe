@@ -8,7 +8,7 @@
       <div
         v-for="i in props.grids"
         :key="i.id"
-        class="grid"
+        class="grid cp"
         :class="i.className"
         :style="{ backgroundColor: i.backgroundColor }">
         <i v-if="isLove(i.event)" class="iconfont icon-aixin love"> </i>

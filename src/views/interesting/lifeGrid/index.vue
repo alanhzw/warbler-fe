@@ -32,7 +32,7 @@
         </block-item>
         <!-- 人生小格 -->
         <block-item title="人生小格">
-          <grid-life :grids="grids"></grid-life>
+          <grid-life :grids="grids" @click="handleClickConfigBtn"></grid-life>
           <!-- 切换 400 格和 900 格 -->
           <template #option>
             <div style="display: flex; gap: 8px; align-items: baseline">
@@ -101,7 +101,7 @@ const formData = ref<Iform>({
       /** 事件 */
       event: '睡觉',
       /** 耗时 */
-      time: '8',
+      time: '7',
       /** 耗时单位 */
       timeUnit: 'hour',
       backgroundColor: '#2486b9',
@@ -109,7 +109,7 @@ const formData = ref<Iform>({
     {
       frequency: 'day',
       event: '工作',
-      time: '8',
+      time: '9.5',
       timeUnit: 'hour',
       backgroundColor: '#ab9f93',
     },

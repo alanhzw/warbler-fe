@@ -35,8 +35,10 @@ export const validate = (formData: Iform) => {
     }
     // 校验颜色是否重复
     const isColorRepeat = formData.lifeData.some((event, index) => {
-      return formData.lifeData.some(
-        (event2, index2) => index !== index2 && event.backgroundColor === event2.backgroundColor,
+      return (
+        formData.lifeData.some(
+          (event2, index2) => index !== index2 && event.backgroundColor === event2.backgroundColor,
+        ) || event.backgroundColor === formData.pastBackgroundColor
       );
     });
     if (isColorRepeat) {
