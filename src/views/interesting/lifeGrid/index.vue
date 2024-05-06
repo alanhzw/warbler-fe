@@ -186,7 +186,7 @@ const handleChangeConfig = (newFormData: Iform) => {
 };
 
 // 当前页面的url
-const currentUrl = computed(() => window.location.host + router.currentRoute.value.fullPath);
+const currentUrl = computed(() => window.location.origin + router.currentRoute.value.fullPath);
 
 // 监听配置的变化, 放在url上
 watch(
@@ -215,7 +215,7 @@ onMounted(() => {
   const clipboard = new ClipboardJS('.copy');
   // 可选：监听成功或失败的回调
   clipboard.on('success', (e) => {
-    ElMessage.success('复制成功!');
+    ElMessage.success('已复制到剪切板，有点长，告诉你要转发的人不是诈骗链接！');
     e.clearSelection(); // 清除选中状态
   });
   clipboard.on('error', () => {
