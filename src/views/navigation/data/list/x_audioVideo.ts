@@ -105,6 +105,12 @@ const list: NavList = [
     link: 'https://www.hifini.com/',
     iconErrorText: '',
   },
+  {
+    icon: 'http://morin.vin/logo.png',
+    name: '方格音乐',
+    link: 'http://morin.vin/',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

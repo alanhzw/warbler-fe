@@ -97,6 +97,12 @@ const list: NavList = [
     link: 'https://www.toptal.com/developers/css/sprite-generator',
     iconErrorText: '',
   },
+  {
+    icon: 'https://v6-static.51.la/user-static/202311221704/favicon.ico',
+    name: '网站访问量统计',
+    link: 'https://user.51.la/',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

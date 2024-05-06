@@ -67,6 +67,12 @@ const list: NavList = [
     link: 'https://sequelize.nodejs.cn/',
     iconErrorText: '',
   },
+  {
+    icon: 'https://img2.baidu.com/it/u=83310884,27671367&fm=253&fmt=auto&app=138&f=PNG?w=256&h=256',
+    name: 'NodeJs 最佳实践',
+    link: 'https://github.com/goldbergyoni/nodebestpractices',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

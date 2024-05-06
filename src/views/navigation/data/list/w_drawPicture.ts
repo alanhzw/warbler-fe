@@ -109,6 +109,18 @@ const list: NavList = [
     link: 'https://www.duitang.com/',
     iconErrorText: '',
   },
+  {
+    icon: 'https://assets-global.website-files.com/5ff596e2ff1e2cb058273601/60266208f66b13176543c178_favicon.png',
+    name: 'IMG.LY',
+    link: 'https://img.ly/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://icon.meiye.art/favicon.ico',
+    name: '美叶UI',
+    link: 'https://ui.meiye.art/album/1/49',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

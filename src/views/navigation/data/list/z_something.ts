@@ -43,6 +43,12 @@ const list: NavList = [
     link: 'https://search.tiangong.cn/',
     iconErrorText: '',
   },
+  {
+    icon: 'https://www.easyspider.cn/favicon.ico',
+    name: 'EasySpider',
+    link: 'https://www.easyspider.cn/',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

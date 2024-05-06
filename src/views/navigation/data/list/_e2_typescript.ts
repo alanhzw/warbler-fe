@@ -25,6 +25,12 @@ const list: NavList = [
     link: 'https://tsch.js.org/',
     iconErrorText: '',
   },
+  {
+    icon: 'http://www.w3.org/2000/svg',
+    name: 'TS 类型挑战通关手册',
+    link: 'https://blog.maxiaobo.com.cn/type-challenge/dist/',
+    iconErrorText: 'TS',
+  },
 ];
 
 const listData = {

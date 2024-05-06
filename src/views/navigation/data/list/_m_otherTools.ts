@@ -67,6 +67,12 @@ const list: NavList = [
     link: 'https://cilishenqi.icu/',
     iconErrorText: '',
   },
+  {
+    icon: 'https://www.ilovepdf.com/img/favicons-pdf/favicon-32x32.png',
+    name: 'i love pdf',
+    link: 'https://www.ilovepdf.com/zh-cn',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

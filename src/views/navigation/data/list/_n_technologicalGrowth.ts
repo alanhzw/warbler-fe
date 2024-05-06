@@ -80,6 +80,18 @@ const list: NavList = [
     link: 'https://eveningwater.github.io/to-offer/#/',
     iconErrorText: '',
   },
+  {
+    icon: 'https://www.hello-algo.com/assets/images/favicon.png',
+    name: 'hello 算法',
+    link: 'https://www.hello-algo.com/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://img2.baidu.com/it/u=83310884,27671367&fm=253&fmt=auto&app=138&f=PNG?w=256&h=256',
+    name: '前端面试每日 3+1',
+    link: 'https://github.com/haizlin/fe-interview',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

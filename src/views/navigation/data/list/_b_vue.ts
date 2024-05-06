@@ -92,9 +92,9 @@ const list: NavList = [
     iconErrorText: '',
   },
   {
-    icon: 'https://element-plus.gitee.io/images/element-plus-logo-small.svg',
+    icon: 'https://element-plus.org/images/element-plus-logo-small.svg',
     name: 'Element Plus',
-    link: 'https://element-plus.gitee.io/zh-CN/',
+    link: 'https://element-plus.org/zh-CN/',
     iconErrorText: '',
   },
   {
@@ -116,7 +116,7 @@ const list: NavList = [
     iconErrorText: '',
   },
   {
-    icon: 'https://www.naiveui.com/assets/naivelogo-93278402.svg',
+    icon: 'https://www.naiveui.com/assets/naivelogo-BdDVTUmz.svg',
     name: 'Naive UI',
     link: 'https://www.naiveui.com/zh-CN/light',
     iconErrorText: '',

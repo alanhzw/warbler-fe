@@ -40,6 +40,12 @@ const list: NavList = [
     iconErrorText: '',
   },
   {
+    icon: 'https://nuejs.org/img/favicon.svg',
+    name: 'nue',
+    link: 'https://nuejs.org/',
+    iconErrorText: '',
+  },
+  {
     icon: 'https://www.electronjs.org/zh/assets/img/favicon.ico',
     name: 'Electron',
     link: 'https://www.electronjs.org/zh/',
