@@ -25,6 +25,14 @@
                 <Operation />
               </el-icon>
             </el-tooltip>
+            <!-- 重置配置 -->
+            <el-tooltip effect="dark" content="重置配置" placement="top">
+              <el-icon
+                style="margin-left: 16px; cursor: pointer; font-size: 20px"
+                @click="handleClickResetBtn">
+                <Refresh />
+              </el-icon>
+            </el-tooltip>
           </div>
         </block-item>
         <!-- 你的人生 -->
@@ -90,7 +98,7 @@
 
 <script setup lang="ts">
 import { ref, watch, onMounted, computed } from 'vue';
-import { Operation, CopyDocument } from '@element-plus/icons-vue';
+import { Operation, CopyDocument, Refresh } from '@element-plus/icons-vue';
 import { useRouter } from 'vue-router';
 import ClipboardJS from 'clipboard';
 import type { Iform } from './hooks/type';
@@ -110,7 +118,7 @@ const formData = ref<Iform>({
   /** 年龄 */
   age: '60',
   /** 已经过去的生命背景颜色 */
-  pastBackgroundColor: '#98c3b9',
+  pastBackgroundColor: '#98C3B9',
   /** 格子数量 */
   gridNum: '400',
   /** 表单配置数据  */
@@ -124,35 +132,35 @@ const formData = ref<Iform>({
       time: '7',
       /** 耗时单位 */
       timeUnit: 'hour',
-      backgroundColor: '#2486b9',
+      backgroundColor: '#2486B9',
     },
     {
       frequency: 'day',
       event: '工作',
       time: '9.5',
       timeUnit: 'hour',
-      backgroundColor: '#ab9f93',
+      backgroundColor: '#AB9F93',
     },
     {
       frequency: 'day',
       event: '陪伴爱人',
       time: '2',
       timeUnit: 'hour',
-      backgroundColor: '#ed3321',
+      backgroundColor: '#ED3321',
     },
     {
       frequency: 'year',
       event: '陪伴父母',
       time: '10',
       timeUnit: 'day',
-      backgroundColor: '#e7a23f',
+      backgroundColor: '#E7A23F',
     },
     // {
     //   frequency: 'month',
     //   event: '陪伴孩子',
     //   time: '2',
     //   timeUnit: 'day',
-    //   backgroundColor: '#43b244',
+    //   backgroundColor: '#43B244',
     // },
   ],
 });
@@ -174,6 +182,16 @@ function handleClickConfigBtn() {
   // 打开抽屉
   configDrawer.value.openDrawer();
 }
+
+// 点击重置图标
+const handleClickResetBtn = () => {
+  router.replace({
+    query: {},
+  });
+  setTimeout(() => {
+    window.location.reload();
+  });
+};
 
 // 切换格子数量
 const handleChangeGridNum = (num: number) => {

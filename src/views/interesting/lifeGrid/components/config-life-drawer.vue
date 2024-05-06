@@ -38,6 +38,12 @@
           :life-item-index="lifeItemIndex"
           :life-item-data="lifeItem"
           @handle-delete="handleDelete"></life-item>
+        <div class="config-life-body_life-item" style="color: #fc1717">
+          <div class="config-life-body_life-item__no">注:</div>
+          <div class="config-life-body_life-item__text">
+            所有事件会换算成 【小时/天】 来计算，平均总时长不可以超过 【24小时/天】
+          </div>
+        </div>
         <el-button @click="addLifeItem">新增一行</el-button>
       </div>
     </template>
@@ -55,7 +61,7 @@ import { ref, watch } from 'vue';
 import LifeItem from './life-item.vue';
 import { Iform } from '../hooks/type';
 import { validate } from '../hooks/validate';
-import { disabledDate } from '../hooks/utils';
+import { disabledDate, getRandomColor } from '../hooks/utils';
 
 interface IPropType {
   formData: Iform;
@@ -121,7 +127,7 @@ const addLifeItem = () => {
     event: '',
     time: '',
     timeUnit: 'hour',
-    backgroundColor: '#ffffff',
+    backgroundColor: getRandomColor(),
   });
 };
 

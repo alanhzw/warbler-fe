@@ -62,5 +62,7 @@ module.exports = {
     'no-restricted-syntax': 0,
     // 取消 lf 和 crlf 的报错
     'linebreak-style': [0, 'error', 'windows'],
+    // 操作符换行的位置
+    'operator-linebreak': 0,
   },
 };

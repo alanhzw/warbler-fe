@@ -42,3 +42,15 @@ export async function copyToClipboard(text: string) {
     ElMessage.error('复制失败');
   }
 }
+
+// 生成随机颜色
+export function getRandomColor() {
+  // 生成0-15的随机数，然后转换为16进制（0-F）
+  function randomHex() {
+    return Math.floor(Math.random() * 16)
+      .toString(16)
+      .toUpperCase();
+  }
+  // 生成6个随机的16进制数并连接成一个字符串
+  return `#${randomHex()}${randomHex()}${randomHex()}${randomHex()}${randomHex()}${randomHex()}`;
+}

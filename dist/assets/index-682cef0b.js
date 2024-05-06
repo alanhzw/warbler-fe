@@ -1,0 +1,1 @@
+import{_ as e,o as _,c}from"./index-465bffb5.js";const t={},n={class:"data-center"};function s(o,a){return _(),c("div",n,"数据中心")}const r=e(t,[["render",s],["__scopeId","data-v-e283e662"]]);export{r as default};
