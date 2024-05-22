@@ -4,10 +4,18 @@
       加群的小伙伴意外的多，二维码已失效，还请各位添加我微信，备注：进群，坑位有限，先到先得 ~
     </div>
     <div style="margin-top: 20px">
-      群内活跃的小伙伴很多，希望各位加群后依然保持活跃偶 ~
-      长期不活跃会被清出群哦(妹子除外，混脸熟的除外) ~
+      本群初衷是给像我一样生活不如意，现实中没什么朋友的人，一个聊天，游戏，分享生活，参加活动的平台
     </div>
-    <div style="margin-top: 20px">成功进群后请看一下群公告，按照格式修改下群昵称 ~</div>
+    <div style="margin-top: 20px">
+      虽然里面都是技术人员，但本群不是技术群，虽然偶尔也会聊技术，但不要抱着学习，解决问题的心态加群
+    </div>
+    <div style="margin-top: 20px; font-size: 40px; color: red; font-weight: bold">
+      所以群里不留闲人，进群后不说话，不看群消息的，就不用加了
+    </div>
+    <div style="margin-top: 20px">
+      群里已经清理三波共几百个僵尸 ~ 所以进群前确认自己加群的目的 ~
+    </div>
+    <div style="margin-top: 20px">成功进群后请看一下群公告 ~</div>
     <div class="wechat">
       <img src="@/assets/image/wechat.jpg" />
       <img src="@/assets/image/full.jpg" />
@@ -23,6 +31,7 @@
   padding-top: 80px;
   width: 100%;
   display: flex;
+  font-size: 24px;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
