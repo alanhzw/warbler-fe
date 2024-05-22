@@ -6,8 +6,9 @@
     <div style="margin-top: 20px">
       本群初衷是给像我一样生活不如意，现实中没什么朋友的人，一个聊天，游戏，分享生活，参加活动的平台
     </div>
+    <div style="margin-top: 20px">永远不开二群，旨在维护好一个活跃，友爱，有归属感的摸鱼群</div>
     <div style="margin-top: 20px">
-      虽然里面都是技术人员，但本群不是技术群，虽然偶尔也会聊技术，但不要抱着学习，解决问题的心态加群
+      本群不是技术群，虽然里面都是技术人员，偶尔也会聊技术，但不要抱着学习，解决问题的心态加群
     </div>
     <div style="margin-top: 20px; font-size: 40px; color: red; font-weight: bold">
       所以群里不留闲人，进群后不说话，不看群消息的，就不用加了
