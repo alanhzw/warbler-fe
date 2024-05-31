@@ -24,7 +24,7 @@
       进群之后不看公告，不看全体成员消息，不参与聊天，不参加线上线下活动，甘于社恐的就不用加群了，免得给彼此造成麻烦
     </div>
     <el-checkbox v-model="checked" style="margin: 20px 0 0 20px">
-      <div class="checked">我已知晓上述内容，并承诺积极发言，参与群活动，不做僵尸</div>
+      <div class="checked">我已知晓上述内容，并承诺积极发言，积极参与群活动，坚决不做僵尸</div>
     </el-checkbox>
     <el-button style="margin: 20px 0 0 20px" @click="showQR">查看好友二维码</el-button>
     <div class="wechat">
@@ -82,21 +82,24 @@ watch(
   .text {
     @media (min-width: 900px) {
       font-size: 24px;
+      line-height: 40px;
     }
     @media (max-width: 900px) {
       font-size: 16px;
+      line-height: 30px;
     }
     padding: 0 20px;
     width: 100%;
     text-align: left;
-    line-height: 50px;
   }
   .warn {
     @media (min-width: 900px) {
       font-size: 40px;
+      line-height: 50px;
     }
     @media (max-width: 900px) {
       font-size: 20px;
+      line-height: 30px;
     }
     color: red;
     font-weight: bold;
@@ -112,6 +115,7 @@ watch(
       font-size: 14px;
     }
     white-space: wrap;
+    line-height: 20px;
   }
 }
 </style>
