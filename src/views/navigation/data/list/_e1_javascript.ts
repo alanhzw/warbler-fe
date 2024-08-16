@@ -121,6 +121,12 @@ const list: NavList = [
     link: 'https://localforage.docschina.org/',
     iconErrorText: '',
   },
+  {
+    icon: 'https://leafletjs.cn/docs/images/favicon.ico',
+    name: 'LeafletJS',
+    link: 'https://leafletjs.cn/reference.html',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

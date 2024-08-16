@@ -2,55 +2,55 @@ import type { NavList } from '../index';
 
 const list: NavList = [
   {
-    icon: 'https://cn.vuejs.org/logo.svg',
+    icon: 'https://vuex.vuejs.org/logo.png',
     name: 'Vue.js',
     link: 'https://cn.vuejs.org/',
     iconErrorText: '',
   },
   {
-    icon: 'https://cn.vuejs.org/logo.svg',
+    icon: 'https://vuex.vuejs.org/logo.png',
     name: 'Vuex',
     link: 'https://vuex.vuejs.org/zh/index.html',
     iconErrorText: '',
   },
   {
-    icon: 'https://cn.vuejs.org/logo.svg',
+    icon: 'https://vuex.vuejs.org/logo.png',
     name: 'Vue Router',
     link: 'https://router.vuejs.org/zh/',
     iconErrorText: '',
   },
   {
-    icon: 'https://cn.vuejs.org/logo.svg',
+    icon: 'https://vuex.vuejs.org/logo.png',
     name: 'Vue CLI',
     link: 'https://cli.vuejs.org/zh/guide/',
     iconErrorText: '',
   },
   {
-    icon: 'https://cn.vuejs.org/logo.svg',
+    icon: 'https://vuex.vuejs.org/logo.png',
     name: 'Vue I18n',
     link: 'https://kazupon.github.io/vue-i18n/zh/',
     iconErrorText: '',
   },
   {
-    icon: 'https://cn.vuejs.org/logo.svg',
+    icon: 'https://vuex.vuejs.org/logo.png',
     name: 'VuePress',
     link: 'https://v2.vuepress.vuejs.org/zh/',
     iconErrorText: '',
   },
   {
-    icon: 'https://cn.vuejs.org/logo.svg',
+    icon: 'https://vuex.vuejs.org/logo.png',
     name: 'VitePress',
     link: 'https://vitepress.dev/',
     iconErrorText: '',
   },
   {
-    icon: 'https://cn.vuejs.org/logo.svg',
+    icon: 'https://vuex.vuejs.org/logo.png',
     name: 'eslint-plugin-vue',
     link: 'https://eslint.vuejs.org/',
     iconErrorText: '',
   },
   {
-    icon: 'https://cn.vuejs.org/logo.svg',
+    icon: 'https://vuex.vuejs.org/logo.png',
     name: 'Vue Test Utils',
     link: 'https://test-utils.vuejs.org/',
     iconErrorText: '',
@@ -119,6 +119,12 @@ const list: NavList = [
     icon: 'https://www.naiveui.com/assets/naivelogo-BdDVTUmz.svg',
     name: 'Naive UI',
     link: 'https://www.naiveui.com/zh-CN/light',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://unpkg.byted-static.com/latest/byted/arco-config/assets/favicon.ico',
+    name: 'Arco Design',
+    link: 'https://arco.design/',
     iconErrorText: '',
   },
   {

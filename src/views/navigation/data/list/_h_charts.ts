@@ -61,6 +61,30 @@ const list: NavList = [
     link: 'http://ppchart.com/#/',
     iconErrorText: '',
   },
+  {
+    icon: 'https://lf-dp.bytetos.com/obj/dp-open-internet-cn/visactor-site/bytedance/client/img/favicon.png',
+    name: 'VisActor',
+    link: 'https://visactor.io/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://madeapie.com/favicon.ico',
+    name: 'Made A Pie',
+    link: 'https://madeapie.com/#/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://www.makeapie.cn/favicon.ico',
+    name: 'echarts案例',
+    link: 'https://www.makeapie.cn/echarts',
+    iconErrorText: '',
+  },
+  {
+    icon: 'http://chart.majh.top/favicon.ico',
+    name: 'echarts作品集',
+    link: 'http://chart.majh.top/',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

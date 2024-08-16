@@ -122,6 +122,24 @@ const list: NavList = [
     link: 'https://www.techbrood.com/tool?p=css-clip-path',
     iconErrorText: '',
   },
+  {
+    icon: 'https://lhammer.cn/You-need-to-know-css/static/favicon.ico',
+    name: 'CSS Tricks',
+    link: 'https://lhammer.cn/You-need-to-know-css/#/zh-cn/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://www.jyshare.com/more/svgeditor/images/favicon.svg',
+    name: 'SVG 在线编辑器',
+    link: 'https://www.jyshare.com/more/svgeditor/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://cms.boardmix.cn/images/board.ico',
+    name: '支持SVG在线查看',
+    link: 'https://boardmix.cn/',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

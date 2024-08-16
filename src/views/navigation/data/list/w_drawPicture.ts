@@ -121,6 +121,12 @@ const list: NavList = [
     link: 'https://ui.meiye.art/album/1/49',
     iconErrorText: '',
   },
+  {
+    icon: 'https://htmlrev.com/images/favicon.png',
+    name: 'HTML参考模板',
+    link: 'https://htmlrev.com/',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

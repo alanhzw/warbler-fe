@@ -2,7 +2,7 @@
  * @Author: 一尾流莺
  * @Description:
  * @Date: 2023-04-10 15:10:48
- * @LastEditTime: 2024-02-23 09:15:49
+ * @LastEditTime: 2024-08-16 13:28:36
  * @FilePath: \warbler-fe\src\views\warblerCenter\component\resume-warbler.vue
 -->
 <template>
@@ -23,9 +23,8 @@
     </div>
     <div class="contact">
       <div class="words">
-        一尾流莺是一个前端开发工程师，性格开朗，热爱分享和书写技术博客，
-        平时玩的游戏有明日方舟，英雄联盟手游，金铲铲之战，
-        <strong>目前正在北京理想汽车研发总部工作</strong>，如果你对我或我的技术感兴趣 ， 欢迎联系我
+        一尾流莺是一个前端开发工程师，性格开朗，热爱分享和书写技术博客，平时玩的游戏有英雄联盟手游，金铲铲之战，
+        <strong>目前正在北京海淀区工作</strong>，如果你对我或我的技术感兴趣 ， 欢迎联系我
       </div>
     </div>
     <div class="icons">

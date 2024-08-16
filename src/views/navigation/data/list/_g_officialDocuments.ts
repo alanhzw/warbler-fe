@@ -131,6 +131,12 @@ const list: NavList = [
     link: 'https://assemblyscript.nodejs.cn/',
     iconErrorText: '',
   },
+  {
+    icon: 'https://kingsora.github.io/OverlayScrollbars/favicon.ico',
+    name: 'OverlayScrollbars',
+    link: 'https://kingsora.github.io/OverlayScrollbars/',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

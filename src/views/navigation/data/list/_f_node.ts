@@ -73,6 +73,18 @@ const list: NavList = [
     link: 'https://github.com/goldbergyoni/nodebestpractices',
     iconErrorText: '',
   },
+  {
+    icon: 'https://img2.baidu.com/it/u=83310884,27671367&fm=253&fmt=auto&app=138&f=PNG?w=256&h=256',
+    name: 'nvm-desktop',
+    link: 'https://github.com/1111mp/nvm-desktop/releases',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://crawlee.dev/img/favicon.ico',
+    name: 'Crawlee 爬虫',
+    link: 'https://crawlee.dev/docs/quick-start',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {
