@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'DaMengTang';
+  src: url('DaMengTang.woff2') format('woff2'), url('DaMengTang.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

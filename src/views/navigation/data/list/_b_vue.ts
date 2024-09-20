@@ -58,7 +58,7 @@ const list: NavList = [
   {
     icon: 'https://vueuse.org/favicon-32x32.png',
     name: 'VueUse 官网',
-    link: 'https://vueuse.org/',
+    link: 'https://vueuse.nodejs.cn/',
     iconErrorText: '',
   },
   {
@@ -82,7 +82,7 @@ const list: NavList = [
   {
     icon: 'https://nuxt.com/icon.png',
     name: 'Nuxt3 中文',
-    link: 'https://nuxt.com.cn/',
+    link: 'https://www.nuxt.com.cn/',
     iconErrorText: '',
   },
   {
@@ -106,7 +106,7 @@ const list: NavList = [
   {
     icon: 'https://fastly.jsdelivr.net/npm/@vant/assets/logo.png',
     name: 'Vant',
-    link: 'https://vant-contrib.gitee.io/vant/#/zh-CN/',
+    link: 'https://vant-ui.github.io/vant/#/zh-CN',
     iconErrorText: '',
   },
   {

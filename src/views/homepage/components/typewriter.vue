@@ -2,8 +2,7 @@
   <div class="typewriter-box">
     <div class="typewriter">
       <div class="text">
-        Warbler-FE，
-        <span class="Chinese">让前端再简单一点。</span>
+        <span class="Chinese"> 一尾流莺，自由，快乐</span>
       </div>
     </div>
   </div>
@@ -13,12 +12,6 @@
 
 <style lang="scss" scoped>
 .typewriter-box {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,14 +22,13 @@
   overflow: hidden;
   white-space: nowrap;
   animation: typeEffect 1s steps(70);
-  font-size: 36px;
+  font-size: 50px;
   @media (max-width: 900px) {
     font-size: 24px;
   }
   @media (max-width: 500px) {
     font-size: 16px;
   }
-  font-weight: bold;
 }
 
 .Chinese {
