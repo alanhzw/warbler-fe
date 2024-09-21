@@ -36,13 +36,6 @@ onMounted(() => {
     isShowNavIcon.value = true;
   }, 1300);
 });
-
-onMounted(() => {
-  // 页面渲染完成的时候把 loading 隐藏掉
-  const ele = document.getElementById('spinner');
-  ele!.style.display = 'none';
-});
-
 </script>
 
 <style lang="scss" scoped>
@@ -74,6 +67,9 @@ canvas {
 }
 .nav-icon {
   z-index: 2;
+  @media (max-width: 700px) {
+    transform: scale(0.8);
+  }
 }
 .copyright {
   cursor: pointer;

@@ -10,7 +10,7 @@ import resumeWarbler from '../component/resume-warbler.vue';
 
 <style lang="scss" scoped>
 .left-part {
-  @media (max-width: 900px) {
+  @media (max-width: 700px) {
     display: none;
   }
   width: 250px;

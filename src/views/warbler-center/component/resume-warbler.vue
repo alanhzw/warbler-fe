@@ -66,7 +66,6 @@ const goToLink = (type: string) => {
     .job {
       font-size: 24px;
       margin: 16px 0;
-      font-weight: bold;
     }
   }
 
@@ -74,11 +73,8 @@ const goToLink = (type: string) => {
     margin: 8px 0 16px 0;
     box-shadow: 0 -1px 0 hsla(0, 0%, 100%, 0.1) inset;
     padding-bottom: 16px;
-    @media (min-width: 900px) {
-      display: flex;
-      flex-direction: column;
-    }
-    @media (max-width: 900px) {
+
+    @media (max-width: 700px) {
       display: grid;
       justify-content: space-between;
       grid-template-columns: repeat(auto-fill, 220px);

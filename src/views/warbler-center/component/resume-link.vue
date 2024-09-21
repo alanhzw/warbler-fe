@@ -113,11 +113,7 @@ const goToLink = (link?: string) => {
     }
     .right {
       display: none;
-      @media (min-width: 1600px) or (max-width: 1500px) {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-      }
+
       .online {
         color: var(--warbler-brand-lighter);
         cursor: pointer;

@@ -17,21 +17,12 @@ import resumeLink from '../component/resume-link.vue';
 <style lang="scss" scoped>
 .resume-skills-component,
 .resume-link-component {
-  @media (min-width: 1500px) {
-    display: none;
-  }
 }
 .resume-warbler-component {
-  @media (min-width: 900px) {
-    display: none;
-  }
 }
 .middle-part {
   height: 100%;
-  @media (max-width: 1500px) {
-    flex: 1;
-  }
-  @media (max-width: 900px) {
+  @media (max-width: 700px) {
     margin-left: 0px;
   }
   margin-left: 16px;

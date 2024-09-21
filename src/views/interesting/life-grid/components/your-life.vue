@@ -43,7 +43,6 @@ const timeMap = Object.keys(timeMapObj);
   .title {
     display: inline-block;
     font-size: 16px;
-    font-weight: bold;
     padding: 4px 0;
     border-bottom: 1px solid var(--warbler-text-2);
   }

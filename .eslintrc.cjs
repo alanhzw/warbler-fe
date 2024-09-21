@@ -33,13 +33,12 @@ module.exports = {
     // 标签</>前后不换行
     'vue/singleline-html-element-content-newline': 0,
     'vue/multiline-html-element-content-newline': 0,
-    'vue/html-closing-bracket-newline': 0,
     // 强制每行的最大属性数
     'vue/max-attributes-per-line': [
       'error',
       {
         singleline: {
-          max: 10,
+          max: 3,
         },
         multiline: {
           max: 1,
@@ -64,5 +63,17 @@ module.exports = {
     'linebreak-style': [0, 'error', 'windows'],
     // 操作符换行的位置
     'operator-linebreak': 0,
+    'vue/html-closing-bracket-newline': [
+      'error',
+      {
+        singleline: 'never',
+        multiline: 'never',
+        selfClosingTag: {
+          singleline: 'never',
+          multiline: 'never',
+        },
+      },
+    ],
+    'implicit-arrow-linebreak': 0,
   },
 };

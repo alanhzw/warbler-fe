@@ -8,11 +8,12 @@
       <div class="logo-title fwb">Warbler-FE</div>
     </div>
     <div class="navs show-title">
-      <div v-for="(nav, index) in navs"
-           :key="index"
-           :class="{ active: index === currentIndex }"
-           class="nav cp"
-           @click="changeCurrentNab(nav.path)">
+      <div
+        v-for="(nav, index) in navs"
+        :key="index"
+        :class="{ active: index === currentIndex }"
+        class="nav cp"
+        @click="changeCurrentNab(nav.path)">
         {{ nav.title }}
       </div>
     </div>
@@ -89,9 +90,6 @@ const currentIndex = computed(() => navs.findIndex((nav) => nav.path === route.p
     }
   }
   .show-icon {
-    @media (min-width: 700px) {
-      display: none !important;
-    }
     .icon-bg {
       width: 32px;
       height: 32px;

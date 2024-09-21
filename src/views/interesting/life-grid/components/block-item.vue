@@ -49,7 +49,6 @@ defineProps<IPropType>();
       }
       &__text {
         font-size: 20px;
-        font-weight: bold;
         margin-left: 8px;
       }
     }

@@ -23,11 +23,8 @@
   white-space: nowrap;
   animation: typeEffect 1s steps(70);
   font-size: 50px;
-  @media (max-width: 900px) {
-    font-size: 24px;
-  }
-  @media (max-width: 500px) {
-    font-size: 16px;
+  @media (max-width: 700px) {
+    font-size: 32px;
   }
 }
 

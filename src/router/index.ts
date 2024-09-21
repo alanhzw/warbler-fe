@@ -61,7 +61,8 @@ const routes = [
   {
     path: '/interesting/life-grid',
     name: 'lifeGrid',
-    component: () => import(/* webpackChunkName: "lifeGrid" */ '@v/interesting/lifeGrid/index.vue'),
+    component: () =>
+      import(/* webpackChunkName: "lifeGrid" */ '@v/interesting/life-grid/index.vue'),
     children: [],
   },
 ];

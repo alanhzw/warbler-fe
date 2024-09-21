@@ -27,9 +27,5 @@ import resumeLink from '../component/resume-link.vue';
     // 隐藏滚动条
     display: none;
   }
-
-  @media (max-width: 1500px) {
-    display: none;
-  }
 }
 </style>

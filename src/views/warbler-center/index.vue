@@ -26,7 +26,7 @@ import rightPart from './part/right-part.vue';
     height: 100%;
     display: flex;
     padding: 32px;
-    @media (max-width: 900px) {
+    @media (max-width: 700px) {
       padding: 16px;
     }
   }

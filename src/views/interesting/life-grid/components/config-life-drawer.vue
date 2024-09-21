@@ -164,7 +164,6 @@ defineExpose({
 <style lang="scss" scoped>
 .config-life-drawer_header {
   color: var(--warbler-white);
-  font-weight: bold;
 }
 .config-life-body {
   display: flex;
