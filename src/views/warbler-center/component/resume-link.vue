@@ -1,10 +1,3 @@
-<!--
- * @Author: 一尾流莺
- * @Description:
- * @Date: 2023-04-10 21:50:04
- * @LastEditTime: 2023-12-05 16:08:00
- * @FilePath: \warbler-fe\src\views\warblerCenter\component\resume-link.vue
--->
 <template>
   <div class="resume-link">
     <div class="title">相关连接</div>

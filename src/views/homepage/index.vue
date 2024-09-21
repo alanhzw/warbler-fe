@@ -1,41 +1,48 @@
-<!--
- * @Author: 一尾流莺
- * @Description:网站首页
- * @Date: 2023-03-24 14:13:01
- * @LastEditTime: 2024-09-20 15:56:17
- * @FilePath: \warbler-fe\src\views\homepage\index.vue
--->
 <template>
   <div class="homepage-view">
+    <!-- 鼠标粒子效果 -->
     <canvas id="canvas" class="canvas"></canvas>
     <div class="box">
-      <Typewriter class="typewriter"></Typewriter>
+      <!-- 打字机效果 -->
+      <TypewriterVue class="TypewriterVue"></TypewriterVue>
+      <!-- 导航图标 -->
       <transition name="fade">
         <NavIcon v-show="isShowNavIcon" type="row" class="nav-icon"></NavIcon>
       </transition>
     </div>
-    <!-- <div class="copyright" @click="gotoLink">辽ICP备2020012862号</div> -->
+    <!-- 备案号 -->
+    <div class="copyright" @click="gotoLink">辽ICP备2020012862号</div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
-import Typewriter from './components/typewriter.vue';
+import TypewriterVue from './components/typewriter-vue.vue';
 import { renderCanvas } from './canvas';
 import NavIcon from '@/components/nav-icon.vue';
 
-// const gotoLink = () => {
-//   window.open('https://beian.miit.gov.cn/');
-// };
+// 备案号
+const gotoLink = () => {
+  window.open('https://beian.miit.gov.cn/');
+};
 
 const isShowNavIcon = ref(false);
 
 onMounted(() => {
+  // 渲染粒子效果
   renderCanvas();
+  // 延时一秒, 等待打字机效果完成,显示导航图标
   setTimeout(() => {
     isShowNavIcon.value = true;
   }, 1300);
 });
+
+onMounted(() => {
+  // 页面渲染完成的时候把 loading 隐藏掉
+  const ele = document.getElementById('spinner');
+  ele!.style.display = 'none';
+});
+
 </script>
 
 <style lang="scss" scoped>
@@ -74,6 +81,7 @@ canvas {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 2;
 }
 
 .fade-enter-active,

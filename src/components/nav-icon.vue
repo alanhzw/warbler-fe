@@ -1,8 +1,10 @@
 <!-- eslint-disable max-len -->
 <template>
+  <!-- 同一个组件， 根据 type 来区分横向还是纵向显示， 默认为 row -->
   <div :class="type === 'row' ? 'flex-direction-row' : 'flex-direction-column'">
     <ul class="example-2">
-      <li class="icon-content">
+      <!-- 前端导航 -->
+      <li class="icon-content" @click="router.push({ path: '/navigation' })">
         <a aria-label="navigation" data-social="navigation">
           <div class="filled"></div>
           <svg
@@ -24,8 +26,8 @@
         </a>
         <div class="tooltip">前端导航</div>
       </li>
-
-      <li class="icon-content">
+      <!-- 流莺大院 -->
+      <li class="icon-content" @click="router.push({ path: '/warbler/chat' })">
         <a aria-label="chatroom" data-social="chatroom">
           <div class="filled"></div>
           <svg height="1.6em" fill="currentColor" xml:space="preserve" viewBox="0 0 1000 1000" y="0px" x="0px" version="1.1">
@@ -35,7 +37,8 @@
         </a>
         <div class="tooltip">流莺大院</div>
       </li>
-      <li class="icon-content">
+      <!-- 个人中心 -->
+      <li class="icon-content" @click="router.push({ path: '/warbler/center' })">
         <a aria-label="warbler" data-social="warbler">
           <div class="filled"></div>
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
@@ -44,7 +47,8 @@
         </a>
         <div class="tooltip">个人中心</div>
       </li>
-      <li class="icon-content">
+      <!-- 脚手架 -->
+      <li class="icon-content" @click="router.push({ path: '/warbler/cli' })">
         <a aria-label="cli" data-social="cli">
           <div class="filled"></div>
           <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
@@ -77,7 +81,8 @@
         </a>
         <div class="tooltip">脚手架</div>
       </li>
-      <li class="icon-content">
+      <!-- 工具库 -->
+      <li class="icon-content" @click="router.push({ path: '/warbler/js' })">
         <a aria-label="js" data-social="js">
           <div class="filled"></div>
           <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
@@ -115,6 +120,10 @@
 </template>
 
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
 interface IPropType {
   type: 'row' | 'column';
 }

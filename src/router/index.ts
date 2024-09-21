@@ -19,40 +19,47 @@ const routes = [
   {
     path: '/warbler/js',
     name: 'warblerJS',
-    component: () => import(/* webpackChunkName: "warblerJS" */ '@v/warblerJs/index.vue'),
+    component: () => import(/* webpackChunkName: "warblerJS" */ '@v/warbler-js/index.vue'),
     children: [],
   },
   // warblerCli 文档
   {
     path: '/warbler/cli',
     name: 'warblerCli',
-    component: () => import(/* webpackChunkName: "warblerCli" */ '@v/warblerCli/index.vue'),
+    component: () => import(/* webpackChunkName: "warblerCli" */ '@v/warbler-cli/index.vue'),
+    children: [],
+  },
+  // 流莺大院
+  {
+    path: '/warbler/chat',
+    name: 'warblerChat',
+    component: () => import(/* webpackChunkName: "warblerChat" */ '@v/warbler-chat/index.vue'),
     children: [],
   },
   // 数据中心
   {
-    path: '/dataCenter',
+    path: '/data/center',
     name: 'dataCenter',
-    component: () => import(/* webpackChunkName: "dataCenter" */ '@v/dataCenter/index.vue'),
+    component: () => import(/* webpackChunkName: "dataCenter" */ '@v/data-center/index.vue'),
     children: [],
   },
   // 个人中心
   {
-    path: '/warblerCenter',
+    path: '/warbler/center',
     name: 'warblerCenter',
-    component: () => import(/* webpackChunkName: "warblerCenter" */ '@v/warblerCenter/index.vue'),
+    component: () => import(/* webpackChunkName: "warblerCenter" */ '@v/warbler-center/index.vue'),
     children: [],
   },
   // 联系我 微信
   {
-    path: '/contact',
-    name: 'contact',
-    component: () => import(/* webpackChunkName: "contact" */ '@v/contact/index.vue'),
+    path: '/contact-me',
+    name: 'contactMe',
+    component: () => import(/* webpackChunkName: "contactMe" */ '@v/contact-me/index.vue'),
     children: [],
   },
   // 人生小格
   {
-    path: '/interesting/lifeGrid',
+    path: '/interesting/life-grid',
     name: 'lifeGrid',
     component: () => import(/* webpackChunkName: "lifeGrid" */ '@v/interesting/lifeGrid/index.vue'),
     children: [],

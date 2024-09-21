@@ -1,10 +1,3 @@
-<!--
- * @Author: 一尾流莺
- * @Description:一尾流莺
- * @Date: 2023-03-29 10:55:54
- * @LastEditTime: 2024-03-16 17:55:42
- * @FilePath: \warbler-fe\src\views\warblerCenter\index.vue
--->
 <template>
   <div class="warbler-center">
     <div class="layout">

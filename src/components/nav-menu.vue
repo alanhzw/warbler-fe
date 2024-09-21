@@ -1,14 +1,6 @@
-<!--
- * @Author: 一尾流莺
- * @Description:头部导航菜单
- * @Date: 2023-03-24 14:21:26
- * @LastEditTime: 2023-04-12 20:42:47
- * @FilePath: \warbler-fe\src\components\nav-menu.vue
--->
-
 <template>
   <div class="nav-menu">
-    <div class="mask"></div>
+    <div class="mask" />
     <div class="logo cp" @click="goToHome">
       <div class="logo-img-box">
         <img src="https://turbo.build/images/docs/repo/repo-hero-logo-dark.svg" class="logo-img" />
@@ -16,18 +8,17 @@
       <div class="logo-title fwb">Warbler-FE</div>
     </div>
     <div class="navs show-title">
-      <div
-        v-for="(nav, index) in navs"
-        :key="index"
-        :class="{ active: index === currentIndex }"
-        class="nav cp"
-        @click="changeCurrentNab(nav.path)">
+      <div v-for="(nav, index) in navs"
+           :key="index"
+           :class="{ active: index === currentIndex }"
+           class="nav cp"
+           @click="changeCurrentNab(nav.path)">
         {{ nav.title }}
       </div>
     </div>
     <div class="navs show-icon">
       <div class="icon-bg" title="前端导航" @click="router.push({ path: '/navigation' })">
-        <i class="iconfont icon-daohang"></i>
+        <i class="iconfont icon-daohang" />
       </div>
       <div class="icon-bg" title="warbler-cli" @click="router.push({ path: '/warbler/cli' })">
         <div>cli</div>
@@ -35,8 +26,8 @@
       <div class="icon-bg" title="warbler-js" @click="router.push({ path: '/warbler/js' })">
         <div>js</div>
       </div>
-      <div class="icon-bg" title="一尾流莺" @click="router.push({ path: '/warblerCenter' })">
-        <i class="iconfont icon-jianli"></i>
+      <div class="icon-bg" title="一尾流莺" @click="router.push({ path: '/warbler/center' })">
+        <i class="iconfont icon-jianli" />
       </div>
     </div>
   </div>
@@ -66,7 +57,7 @@ const navs = [
   // },
   {
     title: '一尾流莺',
-    path: '/warblerCenter',
+    path: '/warbler/center',
   },
 ];
 

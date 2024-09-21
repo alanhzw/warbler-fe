@@ -1,10 +1,3 @@
-<!--
- * @Author: 一尾流莺
- * @Description:页面导航
- * @Date: 2023-03-24 11:03:09
- * @LastEditTime: 2023-08-24 10:06:19
- * @FilePath: \warbler-fe\src\views\navigation\index.vue
--->
 <template>
   <div ref="navigation" class="navigation-view">
     <div class="container">

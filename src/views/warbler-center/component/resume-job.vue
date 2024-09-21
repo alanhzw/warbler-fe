@@ -1,10 +1,3 @@
-<!--
- * @Author: 一尾流莺
- * @Description:
- * @Date: 2023-04-10 16:16:57
- * @LastEditTime: 2024-02-23 09:18:38
- * @FilePath: \warbler-fe\src\views\warblerCenter\component\resume-job.vue
--->
 <template>
   <div class="projects">
     <div class="title">工作经历</div>

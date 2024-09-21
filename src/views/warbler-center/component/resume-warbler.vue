@@ -1,10 +1,3 @@
-<!--
- * @Author: 一尾流莺
- * @Description:
- * @Date: 2023-04-10 15:10:48
- * @LastEditTime: 2024-08-16 13:28:36
- * @FilePath: \warbler-fe\src\views\warblerCenter\component\resume-warbler.vue
--->
 <template>
   <div class="resume-warbler">
     <div class="header">
@@ -43,7 +36,7 @@ const router = useRouter();
 const goToLink = (type: string) => {
   if (type === 'juejin') window.open('https://juejin.cn/user/4099422807393901');
   if (type === 'github') window.open('https://github.com/alanhzw');
-  if (type === 'wechat') router.push({ path: '/contact' });
+  if (type === 'wechat') router.push({ path: '/contact-me' });
 };
 </script>
 
