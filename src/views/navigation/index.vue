@@ -150,7 +150,7 @@ onBeforeUnmount(() => {
 .navigation-view {
   width: 100%;
   height: 100%;
-  padding: 32px 84px 32px 64px;
+  padding: 32px 84px 32px 124px;
   flex-direction: column;
   @media (max-width: 700px) {
     padding: 16px 40px;
