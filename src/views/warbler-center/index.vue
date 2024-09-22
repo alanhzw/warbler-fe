@@ -1,33 +1,58 @@
 <template>
   <div class="warbler-center">
-    <div class="layout">
-      <left-part></left-part>
-      <middle-part></middle-part>
-      <right-part></right-part>
+    <!-- 第一部分 -->
+    <WarblerTop></WarblerTop>
+    <!-- 第二部分 -->
+    <div class="warbler-center-second-part">
+      <div class="warbler-center-second-part-left">
+        <!-- 个人资料部分 -->
+        <WarblerDetail></WarblerDetail>
+      </div>
+      <div class="warbler-center-second-part-right">
+        <!-- 掘金部分 -->
+        <WarblerJuejin> </WarblerJuejin>
+        <!-- github部分 -->
+        <WarblerGithub> </WarblerGithub>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import leftPart from './part/left-part.vue';
-import middlePart from './part/middle-part.vue';
-import rightPart from './part/right-part.vue';
+import WarblerTop from './component/warbler-top.vue';
+import WarblerDetail from './component/warbler-detail.vue';
+import WarblerJuejin from './component/warbler-juejin.vue';
+import WarblerGithub from './component/warbler-github.vue';
 </script>
 
 <style lang="scss" scoped>
 .warbler-center {
-  display: flex;
-  padding-top: var(--warbler-header-height);
   width: 100%;
   height: 100%;
-  min-height: 600px;
-  .layout {
+  padding: 32px 84px 32px 64px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 32px;
+  overflow: overlay;
+  @media (max-width: 700px) {
+    padding: 16px 40px;
+  }
+
+  .warbler-center-second-part {
     width: 100%;
-    height: 100%;
     display: flex;
-    padding: 32px;
-    @media (max-width: 700px) {
-      padding: 16px;
+    flex-direction: row;
+    justify-content: space-between;
+    .warbler-center-second-part-left {
+      flex: 0 0 28%;
+    }
+    .warbler-center-second-part-right {
+      flex: 0 0 70%;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
     }
   }
 }

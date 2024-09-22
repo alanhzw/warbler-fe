@@ -45,6 +45,7 @@
         </div>
       </div>
     </div>
+    <BackTop @handle-back-top="handleBackTop"></BackTop>
   </div>
 </template>
 
@@ -52,6 +53,7 @@
 import { ref, onMounted, onBeforeUnmount, computed, nextTick } from 'vue';
 import { useRoute } from 'vue-router';
 import data from './data';
+import BackTop from '@/components/back-top.vue';
 
 const route = useRoute();
 // margin 的高度
@@ -109,6 +111,16 @@ const jumpToClickNavBlock = (clickIndex: number) => {
   });
 };
 
+// 回到顶部
+const handleBackTop = () => {
+  navigation.value?.scrollTo({
+    // 平滑过渡
+    behavior: 'smooth',
+    // 加上一个 margin 的距离比较好看
+    top: 0,
+  });
+};
+
 // 图片发生错误的时候替换词名字的第一个字
 const handlerImgError = (navBlockIndex: number, navIndex: number, name: string) => {
   const [changeName] = name;
@@ -138,13 +150,22 @@ onBeforeUnmount(() => {
 .navigation-view {
   width: 100%;
   height: 100%;
-  padding: 32px 64px;
+  padding: 32px 84px 32px 64px;
   flex-direction: column;
-
   @media (max-width: 700px) {
     padding: 16px 40px;
   }
 
+  ::v-deep(.back-top) {
+    position: fixed;
+    right: 16px;
+    bottom: 32px;
+    @media (max-width: 700px) {
+      transform: scale(0.6);
+      right: 0px;
+      bottom: 10px;
+    }
+  }
   .container {
     width: 100%;
     height: 100%;
@@ -153,7 +174,7 @@ onBeforeUnmount(() => {
     gap: 32px;
 
     .navigation-type-list {
-      border-radius: 10px;
+      border-radius: 4px;
       background-color: var(--warbler-bg-card);
       padding: 16px;
       display: grid;
@@ -212,12 +233,12 @@ onBeforeUnmount(() => {
 
       .nav-block-item {
         width: 100%;
-        border-radius: 10px;
+        border-radius: 4px;
         background-color: var(--warbler-bg-card);
         .nav-block-title {
           border-bottom: 1px solid rgba(105, 108, 255, 0.3);
           padding: 16px 32px;
-          font-size: 16px;
+          font-size: 18px;
         }
         .nav-instance-list {
           padding: 16px 32px;

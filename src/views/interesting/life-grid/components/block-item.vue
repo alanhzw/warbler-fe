@@ -28,7 +28,7 @@ defineProps<IPropType>();
 .block-item {
   width: 100%;
   min-height: 100px;
-  border-radius: 10px;
+  border-radius: 4px;
   margin-top: 32px;
   background-color: var(--warbler-bg-soft);
   &_title {

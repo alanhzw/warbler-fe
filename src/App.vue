@@ -24,7 +24,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .page-container {
-  padding: 0 60px;
+  padding: 0 0 0 60px;
   @media (max-width: 700px) {
     padding: 0 0px;
   }

@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3948807 */
-  src: url('iconfont.woff2?t=1714903854303') format('woff2'),
-       url('iconfont.woff?t=1714903854303') format('woff'),
-       url('iconfont.ttf?t=1714903854303') format('truetype');
+  src: url('iconfont.woff2?t=1727014122308') format('woff2'),
+       url('iconfont.woff?t=1727014122308') format('woff'),
+       url('iconfont.ttf?t=1727014122308') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,58 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fangke:before {
+  content: "\e85e";
+}
+
+.icon-diannao1:before {
+  content: "\e75e";
+}
+
+.icon-xuexiao_xuexiaoxinxi:before {
+  content: "\e661";
+}
+
+.icon-aihao:before {
+  content: "\e604";
+}
+
+.icon-youxiang1:before {
+  content: "\e908";
+}
+
+.icon-nianling1:before {
+  content: "\e6a8";
+}
+
+.icon-ziyuan48:before {
+  content: "\e605";
+}
+
+.icon-youxi:before {
+  content: "\e637";
+}
+
+.icon-QQ:before {
+  content: "\e667";
+}
+
+.icon-weixin1:before {
+  content: "\e607";
+}
+
+.icon-kaifa:before {
+  content: "\e602";
+}
+
+.icon-gongju-quanqiugongzuoshijian:before {
+  content: "\e727";
+}
+
+.icon-chengshi:before {
+  content: "\e8ad";
 }
 
 .icon-9Grids_video:before {
