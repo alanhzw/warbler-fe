@@ -8,12 +8,10 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     BackTop: typeof import('./src/components/back-top.vue')['default']
-    ElButton: typeof import('element-plus/es')['ElButton']
-    ElCheckbox: typeof import('element-plus/es')['ElCheckbox']
+    ElTable: typeof import('element-plus/es')['ElTable']
+    ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
     NavIcon: typeof import('./src/components/nav-icon.vue')['default']
-    NavMenu: typeof import('./src/components/nav-menu.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    Test: typeof import('./src/components/test.vue')['default']
   }
 }

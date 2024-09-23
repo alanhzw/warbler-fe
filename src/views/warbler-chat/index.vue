@@ -1,8 +1,12 @@
 <template>
-  <div class="warbler-chat">流莺大院</div>
+  <div class="warbler-chat">
+    <VueTable></VueTable>
+  </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import VueTable from './component/vue-table.vue';
+</script>
 
 <style lang="scss" scoped>
 .warbler-chat {
@@ -10,5 +14,8 @@
   width: 100%;
   height: 100%;
   overflow: auto;
+  padding: 32px 84px 32px 124px;
+  display: flex;
+  flex-direction: column;
 }
 </style>
