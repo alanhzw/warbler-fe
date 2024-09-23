@@ -29,7 +29,7 @@ import WarblerGithub from './component/warbler-github.vue';
 .warbler-center {
   width: 100%;
   height: 100%;
-  padding: 32px 84px 32px 124px;
+  padding: 32px 120px 32px 120px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

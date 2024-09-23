@@ -150,7 +150,7 @@ onBeforeUnmount(() => {
 .navigation-view {
   width: 100%;
   height: 100%;
-  padding: 32px 84px 32px 124px;
+  padding: 32px 120px 32px 120px;
   flex-direction: column;
   @media (max-width: 700px) {
     padding: 16px 40px;
@@ -158,7 +158,7 @@ onBeforeUnmount(() => {
 
   ::v-deep(.back-top) {
     position: fixed;
-    right: 16px;
+    right: 40px;
     bottom: 32px;
     @media (max-width: 700px) {
       transform: scale(0.6);
