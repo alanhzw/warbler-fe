@@ -1,5 +1,3 @@
-<!-- eslint-disable max-len -->
-<template>
   <svg
     t="1727014278806"
     class="icon"
@@ -15,12 +13,3 @@
       fill="#F96068"
       p-id="1985"></path>
   </svg>
-</template>
-
-<script setup lang="ts">
-//
-</script>
-
-<style lang="scss" scoped>
-//
-</style>

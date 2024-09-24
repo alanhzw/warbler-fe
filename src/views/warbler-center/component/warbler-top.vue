@@ -33,10 +33,10 @@
 </template>
 
 <script setup lang="ts">
-import SvgCity from '../svg/svg-city.vue';
-import SvgPosition from '../svg/svg-position.vue';
-import SvgWorktime from '../svg/svg-worktime.vue';
-import SvgContact from '../svg/svg-contact.vue';
+import SvgCity from '../svg/city.svg';
+import SvgPosition from '../svg/position.svg';
+import SvgWorktime from '../svg/worktime.svg';
+import SvgContact from '../svg/contact.svg';
 </script>
 
 <style lang="scss" scoped>

@@ -8,10 +8,7 @@
         <div class="emoji">👋🏻</div>
       </div>
       <!-- 介绍 -->
-      <div class="introduction">
-        流莺大院是一个摸鱼、聊天、聚会、游戏、结识新朋友的乌托邦，欢迎每一个积极发言、踊跃活动、遵守群规的小伙伴入住
-        ~
-      </div>
+      <div class="introduction">流莺大院是一个摸鱼、聊天、聚会、游戏、结识新朋友的乌托邦，欢迎每一个积极发言、踊跃活动、遵守群规的小伙伴入住 ~</div>
       <!-- 指标 -->
       <div class="indicator-wrapper">
         <!-- 建群时间 -->
@@ -62,7 +59,7 @@
 </template>
 
 <script setup lang="ts">
-import SvgJoin from '../svg/svg-join.vue';
+import SvgJoin from '../svg/join.svg';
 </script>
 
 <style lang="scss" scoped>
