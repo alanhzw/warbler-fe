@@ -99,15 +99,12 @@ const getScrollHeightArr = () => {
 };
 // 跳转到点击的导航块
 const jumpToClickNavBlock = (clickIndex: number) => {
-  console.log('🚀🚀 ~ jumpToClickNavBlock ~ scrollHeightArr.value:', scrollHeightArr.value);
-  // 保存下点击的 index
-  currentIndex.value = clickIndex;
   // 跳转到对应的导航块
   navigation.value?.scrollTo({
     // 平滑过渡
     behavior: 'smooth',
     // 加上一个 margin 的距离比较好看
-    top: scrollHeightArr.value[currentIndex.value] - MARGIN_HEIGHT,
+    top: scrollHeightArr.value[clickIndex] - MARGIN_HEIGHT,
   });
 };
 

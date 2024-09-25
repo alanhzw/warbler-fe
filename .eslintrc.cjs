@@ -38,7 +38,7 @@ module.exports = {
       'error',
       {
         singleline: {
-          max: 3,
+          max: 10,
         },
         multiline: {
           max: 1,

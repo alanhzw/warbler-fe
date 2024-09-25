@@ -8,7 +8,10 @@
         <div class="emoji">👋🏻</div>
       </div>
       <!-- 介绍 -->
-      <div class="introduction">流莺大院是一个摸鱼、聊天、聚会、游戏、结识新朋友的乌托邦，欢迎每一个积极发言、踊跃活动、遵守群规的小伙伴入住 ~</div>
+      <div class="introduction">
+        流莺大院是一个摸鱼、聊天、聚会、游戏、结识新朋友的乌托邦，欢迎每一个积极发言、踊跃活动、遵守群规的小伙伴入住
+        ~
+      </div>
       <!-- 指标 -->
       <div class="indicator-wrapper">
         <!-- 建群时间 -->
@@ -49,6 +52,10 @@
               <div class="indicator-item-unit">&nbsp;条</div>
             </div>
           </div>
+        </div>
+        <!-- 申请加入 -->
+        <div class="apply-join">
+          <div class="apply-join-btn">申请加入</div>
         </div>
       </div>
     </div>
@@ -108,8 +115,6 @@ import SvgJoin from '../svg/join.svg';
         flex-direction: column;
         padding: 4px 0;
         justify-content: space-between;
-        .indicator-item-key {
-        }
         .indicator-item-value {
           display: flex;
           font-size: 20px;
@@ -118,6 +123,22 @@ import SvgJoin from '../svg/join.svg';
         .indicator-item-unit {
           font-size: 14px;
         }
+      }
+    }
+    .apply-join {
+      cursor: pointer;
+      height: 60px;
+      padding: 0 16px;
+      background-color: #35365f;
+      color: #696cff;
+      border-radius: 4px;
+      line-height: 60px;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        color: #fff !important;
+        background-color: #5f61e6;
+        box-shadow: 0 0.125rem 0.25rem 0 rgba(105, 108, 255, 0.4) !important;
+        transform: translateY(-1px);
       }
     }
   }
