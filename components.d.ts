@@ -8,11 +8,11 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     BackTop: typeof import('./src/components/back-top.vue')['default']
-    ElIcon: typeof import('element-plus/es')['ElIcon']
     ElTable: typeof import('element-plus/es')['ElTable']
     ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
     NavIcon: typeof import('./src/components/nav-icon.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    VueTab: typeof import('./src/components/vue-tab.vue')['default']
   }
 }

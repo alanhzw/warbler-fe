@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <template>
   <div class="table-wrap">
     <div class="title">
@@ -6,7 +8,7 @@
     </div>
     <el-table
       ref="singleTableRef"
-      :data="userChatData"
+      :data="dataStore.userChatData"
       highlight-current-row
       style="width: 100%"
       :height="tableHeight">
@@ -17,12 +19,12 @@
         <template #default="scope">
           <div class="base-info-wrap">
             <div class="avatar">
-              <img v-if="isAuthentication" :src="scope.row.bigHeadImgUrl" />
+              <img v-if="dataStore.isAuthentication" :src="scope.row.bigHeadImgUrl" />
               <img v-else src="../svg/zhanwei.svg" />
             </div>
             <div class="info">
-              <div class="name">{{ authText(scope.row.nickName) }}</div>
-              <div class="roomName">{{ authText(scope.row.roomNickName) }}</div>
+              <div class="name">{{ dataStore.authText(scope.row.nickName) }}</div>
+              <div class="roomName">{{ dataStore.authText(scope.row.roomNickName) }}</div>
             </div>
           </div>
         </template>
@@ -50,9 +52,9 @@
           </div>
         </template>
       </el-table-column>
-      <!-- 平均发言条数 -->
+      <!-- 平均发言数 -->
       <el-table-column
-        label="平均发言条数"
+        label="平均发言数"
         width="180"
         align="center"
         sortable
@@ -149,24 +151,17 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue';
-import warblerChatData from '@/warblerChat.json';
+import { computed } from 'vue';
 import SvgNan from '../svg/nansheng.svg';
 import SvgNv from '../svg/nvsheng.svg';
 import SvgUnknown from '../svg/unkown.svg';
 import VueAuthButton from './vue-auth-button.vue';
+import { useDataStore } from '../store/warbler.js';
+
+const dataStore = useDataStore();
 
 // 获取表格高度  100vh - 64px(上下padding) - 200px(上部) - 60px(群标题)
 const tableHeight = computed(() => 'calc(100vh - 64px - 200px - 60px)');
-
-// 群成员认证
-const isAuthentication = ref(false);
-
-// 权限认证
-const authText = (text: string) => (isAuthentication.value ? text : '口令认证通过后可查看数据');
-
-console.log('🚀🚀 ~ data:', warblerChatData);
-const { userChatData } = warblerChatData;
 </script>
 
 <style lang="scss" scoped>
@@ -175,6 +170,7 @@ const { userChatData } = warblerChatData;
   background-color: var(--warbler-bg-card);
   border-radius: 4px;
   overflow: hidden;
+  flex-shrink: 0;
 
   .title {
     font-size: 18px;
@@ -229,22 +225,27 @@ const { userChatData } = warblerChatData;
   .base-info-wrap {
     display: flex;
     gap: 8px;
+
     .avatar {
       width: 40px;
       height: 40px;
       border-radius: 4px;
       overflow: hidden;
+
       img {
         width: 100%;
         height: 100%;
       }
     }
+
     .info {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
       .name {
       }
+
       .roomName {
         font-size: 12px;
         color: #b2b2c4;

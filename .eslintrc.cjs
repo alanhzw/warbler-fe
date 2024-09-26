@@ -75,5 +75,6 @@ module.exports = {
       },
     ],
     'implicit-arrow-linebreak': 0,
+    'vue/no-side-effects-in-computed-properties': 0,
   },
 };

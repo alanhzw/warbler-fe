@@ -4,12 +4,15 @@
     <VueIntroduction></VueIntroduction>
     <!-- 数据表格 -->
     <VueTable></VueTable>
+    <!-- 排行榜 -->
+    <VueRankingList></VueRankingList>
   </div>
 </template>
 
 <script setup lang="ts">
 import VueTable from './component/vue-table.vue';
 import VueIntroduction from './component/vue-introduction.vue';
+import VueRankingList from './component/vue-ranking-list.vue';
 </script>
 
 <style lang="scss" scoped>

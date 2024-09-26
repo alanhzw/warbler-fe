@@ -29,3 +29,4 @@ package.json
 tsconfig.json
 tsconfig.node.json
 src/assets/iconfont
+src/views/warbler-chat/datasSource/warblerChat.json

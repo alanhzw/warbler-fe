@@ -52,19 +52,13 @@ const list: NavList = [
   {
     icon: 'https://vuex.vuejs.org/logo.png',
     name: 'Vue Test Utils',
-    link: 'https://test-utils.vuejs.org/',
+    link: 'https://vue-test.nodejs.cn/',
     iconErrorText: '',
   },
   {
     icon: 'https://vueuse.org/favicon-32x32.png',
-    name: 'VueUse 官网',
+    name: 'VueUse',
     link: 'https://vueuse.nodejs.cn/',
-    iconErrorText: '',
-  },
-  {
-    icon: 'https://vueuse.org/favicon-32x32.png',
-    name: 'VueUse 中文',
-    link: 'https://www.vueusejs.com/',
     iconErrorText: '',
   },
   {

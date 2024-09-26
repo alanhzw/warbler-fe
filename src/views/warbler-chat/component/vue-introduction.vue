@@ -8,10 +8,7 @@
         <div class="emoji">👋🏻</div>
       </div>
       <!-- 介绍 -->
-      <div class="introduction">
-        流莺大院是一个摸鱼、聊天、聚会、游戏、结识新朋友的乌托邦，欢迎每一个积极发言、踊跃活动、遵守群规的小伙伴入住
-        ~
-      </div>
+      <div class="introduction">流莺大院是一个摸鱼、聊天、聚会、游戏、结识新朋友的乌托邦，欢迎每一个积极发言、踊跃活动、遵守群规的小伙伴入住 ~</div>
       <!-- 指标 -->
       <div class="indicator-wrapper">
         <!-- 建群时间 -->
@@ -134,6 +131,7 @@ import SvgJoin from '../svg/join.svg';
       border-radius: 4px;
       line-height: 60px;
       transition: all 0.2s ease-in-out;
+      user-select: none;
       &:hover {
         color: #fff !important;
         background-color: #5f61e6;
