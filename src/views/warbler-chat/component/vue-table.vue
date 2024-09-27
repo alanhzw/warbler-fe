@@ -1,5 +1,3 @@
-<!-- @format -->
-
 <template>
   <div class="table-wrap">
     <div class="title">
@@ -7,6 +5,7 @@
       <VueAuthButton></VueAuthButton>
     </div>
     <el-table
+      v-if="showTable"
       ref="singleTableRef"
       :data="dataStore.userChatData"
       highlight-current-row
@@ -118,18 +117,20 @@
         </template>
       </el-table-column>
       <!-- 线下活动次数 -->
-      <el-table-column
-        label="线下活动次数"
-        width="180"
-        align="center"
-        sortable
-        sort-by="joinOfflineActivityCount">
-        <template #default="scope">
-          <div class="base-joinOfflineActivityCount-wrap">
-            {{ scope.row.joinOfflineActivityCount }}
-          </div>
-        </template>
-      </el-table-column>
+      <!--
+        <el-table-column
+          label="线下活动次数"
+          width="180"
+          align="center"
+          sortable
+          sort-by="joinOfflineActivityCount">
+          <template #default="scope">
+            <div class="base-joinOfflineActivityCount-wrap">
+              {{ scope.row.joinOfflineActivityCount }}
+            </div>
+          </template>
+        </el-table-column>
+      -->
       <!-- 最早活跃时间 -->
       <el-table-column label="最早活跃时间" width="180" sortable sort-by="firstSpeakTime">
         <template #default="scope">
@@ -151,7 +152,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import SvgNan from '../svg/nansheng.svg';
 import SvgNv from '../svg/nvsheng.svg';
 import SvgUnknown from '../svg/unkown.svg';
@@ -162,6 +163,12 @@ const dataStore = useDataStore();
 
 // 获取表格高度  100vh - 64px(上下padding) - 200px(上部) - 60px(群标题)
 const tableHeight = computed(() => 'calc(100vh - 64px - 200px - 60px)');
+
+const showTable = ref(false);
+
+onMounted(() => {
+  showTable.value = true;
+});
 </script>
 
 <style lang="scss" scoped>

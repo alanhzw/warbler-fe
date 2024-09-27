@@ -170,6 +170,11 @@ const speakRankList = [
   },
 ];
 
+// 去掉自己的列表
+const userChatDataWithoutMe = [...dataStore.userChatData].filter(
+  (user) => user.userName !== 'wxid_m7u03jjls3ua21',
+);
+
 // 发言榜表格数据
 const speakTableData = computed(() => {
   isShowSpeakTable.value = false;
@@ -177,17 +182,15 @@ const speakTableData = computed(() => {
     isShowSpeakTable.value = true;
   });
   if (activeSpeakRank.value === 1) {
-    const res = [...dataStore.userChatData].sort(
-      (a, b) => b.yesterdaySpeakCount - a.yesterdaySpeakCount,
-    );
+    const res = userChatDataWithoutMe.sort((a, b) => b.yesterdaySpeakCount - a.yesterdaySpeakCount);
     return res.slice(0, 10);
   }
   if (activeSpeakRank.value === 2) {
-    const res = [...dataStore.userChatData].sort((a, b) => b.totalSpeakCount - a.totalSpeakCount);
+    const res = userChatDataWithoutMe.sort((a, b) => b.totalSpeakCount - a.totalSpeakCount);
     return res.slice(0, 10);
   }
   if (activeSpeakRank.value === 3) {
-    const res = [...dataStore.userChatData].sort(
+    const res = userChatDataWithoutMe.sort(
       (a, b) => b.averageDailySpeakCount - a.averageDailySpeakCount,
     );
     return res.slice(0, 10);
@@ -204,15 +207,15 @@ const isShowDayTable = ref(true);
 const dayRankList = [
   {
     key: 1,
-    title: '累计活跃天数',
+    title: '累计活跃',
   },
   {
     key: 2,
-    title: '连续活跃天数',
+    title: '连续活跃',
   },
   {
     key: 3,
-    title: '最大连续活跃天数',
+    title: '最大连续活跃',
   },
 ];
 
@@ -223,19 +226,17 @@ const dayTableData = computed(() => {
     isShowDayTable.value = true;
   });
   if (activeDayRank.value === 1) {
-    const res = [...dataStore.userChatData].sort((a, b) => b.totalSpeakDays - a.totalSpeakDays);
+    const res = userChatDataWithoutMe.sort((a, b) => b.totalSpeakDays - a.totalSpeakDays);
 
     return res.slice(0, 10);
   }
   if (activeDayRank.value === 2) {
-    const res = [...dataStore.userChatData].sort(
-      (a, b) => b.continuousSpeakDays - a.continuousSpeakDays,
-    );
+    const res = userChatDataWithoutMe.sort((a, b) => b.continuousSpeakDays - a.continuousSpeakDays);
 
     return res.slice(0, 10);
   }
   if (activeDayRank.value === 3) {
-    const res = [...dataStore.userChatData].sort(
+    const res = userChatDataWithoutMe.sort(
       (a, b) => b.maxContinuousSpeakDays - a.maxContinuousSpeakDays,
     );
 
