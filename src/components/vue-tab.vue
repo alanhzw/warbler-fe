@@ -56,6 +56,7 @@ const handleChangeTab = (tab: ITab) => {
     display: flex;
     align-items: center;
     gap: 6px;
+
     &:hover {
       background-color: #35365f;
       color: #696cff;

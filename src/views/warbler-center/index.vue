@@ -34,6 +34,7 @@ import WarblerGithub from './component/warbler-github.vue';
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
+  align-content: flex-start;
   gap: 32px;
   overflow: overlay;
   @media (max-width: 700px) {

@@ -22,12 +22,12 @@
             </template>
           </el-table-column>
           <!-- 成员 -->
-          <el-table-column label="成员" width="auto">
+          <el-table-column label="成员" width="280">
             <template #header="scope">
-              <div style="padding-left: 100px">{{ scope.column.label }}</div>
+              <div>{{ scope.column.label }}</div>
             </template>
             <template #default="scope">
-              <div style="padding-left: 100px">
+              <div>
                 <div class="base-info-wrap">
                   <div class="avatar">
                     <img v-if="dataStore.isAuthentication" :src="scope.row.bigHeadImgUrl" />
@@ -42,7 +42,7 @@
             </template>
           </el-table-column>
           <!-- 当日发言数 -->
-          <el-table-column v-if="activeSpeakRank === 1" label="发言数" width="200" align="center">
+          <el-table-column v-if="activeSpeakRank === 1" label="发言数" align="center">
             <template #default="scope">
               <div class="base-yesterdaySpeakCount-wrap">
                 {{ scope.row.yesterdaySpeakCount }}
@@ -50,7 +50,7 @@
             </template>
           </el-table-column>
           <!-- 总发言数 -->
-          <el-table-column v-if="activeSpeakRank === 2" label="发言数" width="200" align="center">
+          <el-table-column v-if="activeSpeakRank === 2" label="发言数" align="center">
             <template #default="scope">
               <div class="base-totalSpeakCount-wrap">
                 {{ scope.row.totalSpeakCount }}
@@ -58,7 +58,7 @@
             </template>
           </el-table-column>
           <!-- 平均发言条数 -->
-          <el-table-column v-if="activeSpeakRank === 3" label="发言数" width="200" align="center">
+          <el-table-column v-if="activeSpeakRank === 3" label="发言数" align="center">
             <template #default="scope">
               <div class="base-averageDailySpeakCount-wrap">
                 {{ scope.row.averageDailySpeakCount }}
@@ -90,12 +90,12 @@
             </template>
           </el-table-column>
           <!-- 成员 -->
-          <el-table-column label="成员" width="auto">
+          <el-table-column label="成员" width="280">
             <template #header="scope">
-              <div style="padding-left: 100px">{{ scope.column.label }}</div>
+              <div>{{ scope.column.label }}</div>
             </template>
             <template #default="scope">
-              <div style="padding-left: 100px">
+              <div>
                 <div class="base-info-wrap">
                   <div class="avatar">
                     <img v-if="dataStore.isAuthentication" :src="scope.row.bigHeadImgUrl" />
@@ -110,7 +110,7 @@
             </template>
           </el-table-column>
           <!-- 累计活跃天数 -->
-          <el-table-column v-if="activeDayRank === 1" label="活跃天数" width="200" align="center">
+          <el-table-column v-if="activeDayRank === 1" label="活跃天数" align="center">
             <template #default="scope">
               <div class="base-totalSpeakDays-wrap">
                 {{ scope.row.totalSpeakDays }}
@@ -118,7 +118,7 @@
             </template>
           </el-table-column>
           <!-- 连续活跃天数 -->
-          <el-table-column v-if="activeDayRank === 2" label="活跃天数" width="200" align="center">
+          <el-table-column v-if="activeDayRank === 2" label="活跃天数" align="center">
             <template #default="scope">
               <div class="base-continuousSpeakDays-wrap">
                 {{ scope.row.continuousSpeakDays }}
@@ -126,7 +126,7 @@
             </template>
           </el-table-column>
           <!-- 最大连续活跃天数 -->
-          <el-table-column v-if="activeDayRank === 3" label="活跃天数" width="200" align="center">
+          <el-table-column v-if="activeDayRank === 3" label="活跃天数" align="center">
             <template #default="scope">
               <div class="base-maxContinuousSpeakDays-wrap">
                 {{ scope.row.maxContinuousSpeakDays }}
@@ -255,6 +255,10 @@ const dayTableData = computed(() => {
   flex-shrink: 0;
   margin-top: 32px;
   gap: 32px;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
   ::v-deep(.el-table) {
     color: initial;

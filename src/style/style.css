@@ -126,3 +126,8 @@ body,
 .cp {
   cursor: pointer;
 }
+
+.el-input {
+  --el-input-focus-border-color: #5f61e6 !important;
+  --el-input-hover-border-color: #a1a1b5 !important;
+}

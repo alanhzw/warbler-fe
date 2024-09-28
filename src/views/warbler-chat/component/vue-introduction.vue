@@ -8,13 +8,16 @@
         <div class="emoji">👋🏻</div>
       </div>
       <!-- 介绍 -->
-      <div class="introduction">流莺大院是一个摸鱼、聊天、聚会、游戏、结识新朋友的乌托邦，欢迎每一个积极发言、踊跃活动、遵守群规的小伙伴入住 ~</div>
+      <div class="introduction">
+        流莺大院是一个摸鱼、聊天、聚会、游戏、结识新朋友的乌托邦，欢迎每一个积极发言、踊跃活动、遵守群规的小伙伴入住
+        ~
+      </div>
       <!-- 指标 -->
       <div class="indicator-wrapper">
         <!-- 建群时间 -->
         <div class="indicator-item">
           <div class="indicator-item-icon" style="background-color: #36483f">
-            <i class="iconfont icon-shijian" style="color: #71dd37"> </i>
+            <i class="iconfont icon-rili" style="color: #71dd37"> </i>
           </div>
           <div class="indicator-item-des">
             <div class="indicator-item-key">已成立</div>
@@ -22,6 +25,16 @@
               303
               <div class="indicator-item-unit">&nbsp;天</div>
             </div>
+          </div>
+        </div>
+        <!-- 数据采集时间 -->
+        <div class="indicator-item">
+          <div class="indicator-item-icon" style="background-color: #591f3487">
+            <i class="iconfont icon-shijian" style="color: #ef3db7"> </i>
+          </div>
+          <div class="indicator-item-des">
+            <div class="indicator-item-key">数据采集时间</div>
+            <div class="indicator-item-value" style="color: #ef3db7">2024-09-27</div>
           </div>
         </div>
         <!-- 群成员数 -->
@@ -52,6 +65,7 @@
         </div>
         <!-- 申请加入 -->
         <div class="apply-join">
+          <i class="iconfont icon-shenqingjiaru-copy"> </i>
           <div class="apply-join-btn">申请加入</div>
         </div>
       </div>
@@ -70,12 +84,16 @@ import SvgJoin from '../svg/join.svg';
 .vue-introduction {
   display: flex;
   justify-content: space-between;
+
   .title {
-    font-size: 32px;
+    font-size: 40px;
     display: flex;
     align-items: flex-end;
+    @media (max-width: 700px) {
+      font-size: 32px;
+    }
     .welcome {
-      font-size: 22px;
+      font-size: 24px;
     }
     .emoji {
       position: relative;
@@ -86,15 +104,19 @@ import SvgJoin from '../svg/join.svg';
   .introduction {
     padding: 20px 0;
     color: #b2b2c4;
+    font-size: 18px;
   }
   .indicator-wrapper {
     display: flex;
     justify-content: flex-start;
     padding: 10px 0 32px 0;
-    gap: 160px;
+    gap: 20px 80px;
+    flex-wrap: wrap;
+
     .indicator-item {
       display: flex;
       gap: 16px;
+
       .indicator-item-icon {
         width: 60px;
         height: 60px;
@@ -107,7 +129,7 @@ import SvgJoin from '../svg/join.svg';
         }
       }
       .indicator-item-des {
-        color: #b2b2c4;
+        color: #fff;
         display: flex;
         flex-direction: column;
         padding: 4px 0;
@@ -123,6 +145,7 @@ import SvgJoin from '../svg/join.svg';
       }
     }
     .apply-join {
+      display: flex;
       cursor: pointer;
       height: 60px;
       padding: 0 16px;
@@ -132,12 +155,22 @@ import SvgJoin from '../svg/join.svg';
       line-height: 60px;
       transition: all 0.2s ease-in-out;
       user-select: none;
+      .iconfont {
+        font-size: 36px;
+      }
+      align-items: center;
+      gap: 8px;
       &:hover {
         color: #fff !important;
         background-color: #5f61e6;
         box-shadow: 0 0.125rem 0.25rem 0 rgba(105, 108, 255, 0.4) !important;
         transform: translateY(-1px);
       }
+    }
+  }
+  .introduction-wrapper-right {
+    @media (max-width: 900px) {
+      display: none;
     }
   }
 }

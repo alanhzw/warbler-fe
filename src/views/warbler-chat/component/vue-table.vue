@@ -1,9 +1,6 @@
 <template>
   <div class="table-wrap">
-    <div class="title">
-      群聊数据
-      <VueAuthButton></VueAuthButton>
-    </div>
+    <div class="title">群聊数据</div>
     <el-table
       v-if="showTable"
       ref="singleTableRef"
@@ -12,9 +9,9 @@
       style="width: 100%"
       :height="tableHeight">
       <!-- 序号 -->
-      <el-table-column fixed type="index" width="60" label="#" align="center" />
+      <el-table-column :fixed="!isSmallScreen" type="index" width="60" label="#" align="center" />
       <!-- 成员 -->
-      <el-table-column label="成员" width="280" fixed>
+      <el-table-column label="成员" width="280" :fixed="!isSmallScreen">
         <template #default="scope">
           <div class="base-info-wrap">
             <div class="avatar">
@@ -156,7 +153,6 @@ import { computed, onMounted, ref } from 'vue';
 import SvgNan from '../svg/nansheng.svg';
 import SvgNv from '../svg/nvsheng.svg';
 import SvgUnknown from '../svg/unkown.svg';
-import VueAuthButton from './vue-auth-button.vue';
 import { useDataStore } from '../store/warbler.js';
 
 const dataStore = useDataStore();
@@ -164,7 +160,11 @@ const dataStore = useDataStore();
 // 获取表格高度  100vh - 64px(上下padding) - 200px(上部) - 60px(群标题)
 const tableHeight = computed(() => 'calc(100vh - 64px - 200px - 60px)');
 
+// 是否展示表格
 const showTable = ref(false);
+
+// 是否小屏幕
+const isSmallScreen = computed(() => document.documentElement.clientWidth < 700);
 
 onMounted(() => {
   showTable.value = true;

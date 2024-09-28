@@ -174,10 +174,12 @@ onBeforeUnmount(() => {
       border-radius: 4px;
       background-color: var(--warbler-bg-card);
       padding: 16px;
-      display: grid;
+      display: flex;
       justify-content: space-between;
-      grid-template-columns: repeat(1, 180px);
-      grid-gap: 16px;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      gap: 16px;
       overflow: auto;
       &::-webkit-scrollbar {
         // 隐藏滚动条

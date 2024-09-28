@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import warblerChatData from '@/views/warbler-chat/datasSource/warblerChat.json';
 
 /**
@@ -9,8 +9,31 @@ export const useDataStore = defineStore('userInfo', () => {
   console.log('🚀🚀 ~ useDataStore ~ warblerChatData:', warblerChatData);
   const { userChatData } = warblerChatData;
   // 群成员认证
-  const isAuthentication = ref(true);
+  const isAuthentication = ref(false);
+  // 未通过权限认证文案
+  const authText = (text: string) => (isAuthentication.value ? text : '暗号认证通过后可查看');
+
   // 权限认证
-  const authText = (text: string) => (isAuthentication.value ? text : '口令认证通过后可查看数据');
-  return { userChatData, isAuthentication, authText };
+  const triggerAuth = (code: string) => {
+    // 暗号列表
+    const codeList = ['一尾流莺', 'warbler', 'boss', '韩志伟'];
+    // 符合暗号即可存入缓存
+    if (codeList.includes(code)) {
+      isAuthentication.value = true;
+      localStorage.setItem('auth', 'true');
+      return true;
+    }
+    return false;
+  };
+
+  // 获取权限
+  onMounted(() => {
+    // 获取权限  认证过的会存在 localStorage 里
+    const auth = localStorage.getItem('auth');
+    if (auth) {
+      isAuthentication.value = true;
+    }
+  });
+
+  return { userChatData, isAuthentication, authText, triggerAuth };
 });
