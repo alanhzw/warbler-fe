@@ -21,7 +21,7 @@
             v-model="code"
             style="width: 100%"
             :maxlength="50"
-            placeholder="请输入暗号"
+            placeholder="输入暗号"
             @keydown.enter="handleConfirm" />
         </div>
       </template>

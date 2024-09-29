@@ -7,7 +7,7 @@
         style="width: 300px"
         clearable
         :maxlength="50"
-        placeholder="请输入微信名或群昵称"
+        placeholder="输入微信名或群昵称查询"
         @input="scrollToSearchResult" />
     </div>
     <el-table
