@@ -49,6 +49,9 @@ import SvgContact from '../svg/contact.svg';
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
+  @media (max-width: 1100px) {
+    height: auto;
+  }
 
   .warbler-center-top-bg {
     width: 100%;
@@ -66,6 +69,9 @@ import SvgContact from '../svg/contact.svg';
     justify-content: space-between;
     padding: 20px;
     gap: 32px;
+    @media (max-width: 1100px) {
+      flex-wrap: wrap;
+    }
     .warbler-center-top-content-avatar {
       margin-top: -70px;
       width: 160px;
@@ -103,10 +109,17 @@ import SvgContact from '../svg/contact.svg';
           display: flex;
           justify-content: space-between;
           align-items: center;
+          @media (max-width: 1100px) {
+            flex-direction: column;
+            align-items: flex-start;
+          }
         }
         .warbler-center-top-content-info-bottom-left {
           display: flex;
           gap: 32px;
+          @media (max-width: 1100px) {
+            flex-direction: column;
+          }
           .info-item {
             display: flex;
             align-items: center;
@@ -117,6 +130,9 @@ import SvgContact from '../svg/contact.svg';
           display: flex;
           justify-content: flex-start;
           gap: 8px;
+          @media (max-width: 1100px) {
+            margin-top: 20px;
+          }
           .contact-me-button {
             background-color: #696cff;
             color: #fff;

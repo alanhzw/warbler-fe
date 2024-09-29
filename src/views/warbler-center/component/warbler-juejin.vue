@@ -21,7 +21,6 @@
   border-radius: 4px;
   background-color: var(--warbler-bg-card);
   padding: 32px;
-  flex-shrink: 0;
   .title {
     font-size: 18px;
   }
@@ -30,6 +29,9 @@
     display: grid;
     justify-content: space-between;
     grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
     grid-gap: 16px;
     font-size: 16px;
   }

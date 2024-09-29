@@ -64,7 +64,7 @@
           </div>
         </div>
         <!-- 申请加入 -->
-        <div class="apply-join">
+        <div class="apply-join" @click="applyJoin">
           <i class="iconfont icon-shenqingjiaru-copy"> </i>
           <div class="apply-join-btn">申请加入</div>
         </div>
@@ -73,11 +73,96 @@
     <div class="introduction-wrapper-right">
       <SvgJoin style="width: 200px; height: 200px"></SvgJoin>
     </div>
+    <VueDrawer
+      ref="applyJoinRef"
+      title="入群申请"
+      :size="dataStore.isSmallScreen ? '100%' : '900'"
+      @submit="handleConfirm"
+      @cancel="handleCancel">
+      <template #default>
+        <div class="tips-content">
+          <div class="tips">
+            <div class="title">
+              <SvgWarn style="color: #03c3ec"></SvgWarn>
+              <div>入群须知</div>
+            </div>
+            <div class="tip">
+              {{ `请添加我微信，备注：进群，通过好友后会发送群聊邀请链接` }}
+            </div>
+            <div class="tip">
+              {{ `本群定位为【聊天、摸鱼、活动】群，免不了经常艾特全体成员，介意的请勿申请` }}
+            </div>
+            <div class="tip">
+              {{ `本群不是技术群，抱着学习知识，解决问题心态的请勿申请` }}
+            </div>
+            <div class="tip">
+              {{
+                `本群建立初衷是给像我一样迷茫，不快乐，现实中没什么朋友的人，一个聊天，游戏，分享生活，参加活动，扩充社交，结识朋友的平台`
+              }}
+            </div>
+            <div class="tip">
+              {{
+                `本群已经组织王者荣耀，金铲铲，英雄联盟，狼人杀等多次线上活动；以及北京、上海、深圳、杭州等地的多次线下聚餐活动`
+              }}
+            </div>
+            <div class="tip">
+              {{
+                `本群已经清理共计几百个僵尸，所以请确认好自己加群的目的，进群之后不看公告，不看全体成员消息，不参与聊天，不参加线上线下活动，甘于社恐的请勿申请`
+              }}
+            </div>
+            <div class="tip">
+              {{ `本人承诺永远不开二群，旨在维护好一个活跃，友爱，有归属感的乌托邦` }}
+            </div>
+            <div class="tip">
+              {{
+                `本群目前已经满员，每加入一个新人，就会清理一个不活跃的人，请珍惜自己在群里的坑位`
+              }}
+            </div>
+            <div class="tip">
+              {{ `本人愿景是有一天已无人可以清理，届时会关闭所有入口` }}
+            </div>
+          </div>
+          <el-checkbox v-model="checked">
+            <div class="checked">
+              我已知晓上述内容，并承诺积极发言，积极参与群活动，坚决不做僵尸
+            </div>
+          </el-checkbox>
+          <div class="wechat">
+            <img v-if="checked" src="@/assets/image/wechat.jpg" />
+          </div>
+        </div>
+      </template>
+    </VueDrawer>
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import SvgJoin from '../svg/join.svg';
+import VueDrawer from '@/components/vue-drawer.vue';
+import { useDataStore } from '../store/warbler.js';
+import SvgWarn from '../svg/warn2.svg';
+
+const dataStore = useDataStore();
+
+// 申请入群弹窗
+const applyJoinRef = ref();
+const applyJoin = () => {
+  applyJoinRef.value.showDrawer();
+};
+
+// 确定
+const handleConfirm = () => {
+  applyJoinRef.value.closeDrawer();
+};
+
+// 取消
+const handleCancel = () => {
+  applyJoinRef.value.closeDrawer();
+};
+
+// 是否勾选协议
+const checked = ref(false);
 </script>
 
 <style lang="scss" scoped>
@@ -171,6 +256,27 @@ import SvgJoin from '../svg/join.svg';
   .introduction-wrapper-right {
     @media (max-width: 900px) {
       display: none;
+    }
+  }
+  .tips-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .title {
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+    }
+    .wechat {
+      width: 300px;
+      margin: 20px;
+      img {
+        width: 300px;
+      }
+    }
+    .checked {
+      white-space: wrap;
+      line-height: 20px;
     }
   }
 }

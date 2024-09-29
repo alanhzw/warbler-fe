@@ -46,11 +46,16 @@ import WarblerGithub from './component/warbler-github.vue';
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 32px;
+    @media (max-width: 700px) {
+      flex-direction: column;
+      gap: 32px;
+    }
     .warbler-center-second-part-left {
-      flex: 0 0 28%;
+      flex: 0 0 30%;
     }
     .warbler-center-second-part-right {
-      flex: 0 0 70%;
+      flex: 1;
       display: flex;
       flex-direction: column;
       gap: 32px;

@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { onMounted, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import warblerChatData from '@/views/warbler-chat/datasSource/warblerChat.json';
 
 /**
@@ -12,7 +12,8 @@ export const useDataStore = defineStore('userInfo', () => {
   const isAuthentication = ref(false);
   // 未通过权限认证文案
   const authText = (text: string) => (isAuthentication.value ? text : '暗号认证通过后可查看');
-
+  // 是否小屏幕
+  const isSmallScreen = computed(() => document.documentElement.clientWidth < 700);
   // 权限认证
   const triggerAuth = (code: string) => {
     // 暗号列表
@@ -35,5 +36,5 @@ export const useDataStore = defineStore('userInfo', () => {
     }
   });
 
-  return { userChatData, isAuthentication, authText, triggerAuth };
+  return { userChatData, isSmallScreen, isAuthentication, authText, triggerAuth };
 });

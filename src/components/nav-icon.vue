@@ -96,8 +96,8 @@
         </a>
         <div class="tooltip">个人中心</div>
       </li>
-      <!-- 脚手架 -->
-      <li class="icon-content" @click="router.push({ path: '/warbler/cli' })">
+      <!-- 脚手架 router.push({ path: '/warbler/cli' }) -->
+      <li class="icon-content" @click="noPass">
         <a aria-label="cli" data-social="cli">
           <div class="filled"></div>
           <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
@@ -130,8 +130,8 @@
         </a>
         <div class="tooltip">&nbsp;脚手架&nbsp;</div>
       </li>
-      <!-- 工具库 -->
-      <li class="icon-content" @click="router.push({ path: '/warbler/js' })">
+      <!-- 工具库 router.push({ path: '/warbler/js' })-->
+      <li class="icon-content" @click="noPass">
         <a aria-label="js" data-social="js">
           <div class="filled"></div>
           <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
@@ -178,6 +178,10 @@ interface IPropType {
 }
 
 defineProps<IPropType>();
+
+const noPass = () => {
+  ElMessage.warning('暂未开放，敬请期待！');
+};
 </script>
 
 <style lang="scss" scoped>

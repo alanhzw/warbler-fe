@@ -6,13 +6,13 @@
       <a class="btn" @click="openAuthDrawer">→前往认证→</a>
     </div>
     <VueDrawer
-      ref="authDrawer"
+      ref="authDrawerRef"
       title="权限认证"
-      size="30%"
+      :size="dataStore.isSmallScreen ? '100%' : '600'"
       @submit="handleConfirm"
       @cancel="handleCancel">
       <template #default>
-        <div class="auth-content">
+        <div class="tips-content">
           <div class="tips">
             <div class="tip">为了保护群成员隐私，只有对上暗号才可以查看数据</div>
             <div class="tip">请联系博主获取暗号</div>
@@ -33,7 +33,7 @@ import VueDrawer from '@/components/vue-drawer.vue';
 const dataStore = useDataStore();
 
 // 权限弹窗
-const authDrawer = ref();
+const authDrawerRef = ref();
 
 // 暗号
 const code = ref('');
@@ -42,7 +42,7 @@ const code = ref('');
 const handleConfirm = () => {
   const isPass = dataStore.triggerAuth(code.value);
   if (isPass) {
-    authDrawer.value.closeDrawer();
+    authDrawerRef.value.closeDrawer();
     ElMessage.success('暗号验证成功，已开启所有权限！');
   } else {
     ElMessage.warning('暗号验证失败，请联系博主获取！');
@@ -53,12 +53,12 @@ const handleConfirm = () => {
 // 取消
 const handleCancel = () => {
   code.value = '';
-  authDrawer.value.closeDrawer();
+  authDrawerRef.value.closeDrawer();
 };
 
 // 打开权限弹窗
 const openAuthDrawer = () => {
-  authDrawer.value.showDrawer();
+  authDrawerRef.value.showDrawer();
 };
 </script>
 
@@ -82,33 +82,11 @@ const openAuthDrawer = () => {
       }
     }
   }
-  .auth-content {
+  .tips-content {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    .tips {
-      color: #696cff;
-      background-color: #35365f;
-      padding: 16px;
-      border-radius: 4px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      .tip {
-        font-size: 16px;
-        &::before {
-          content: '';
-          display: inline-block;
-          width: 5px;
-          height: 5px;
-          border-radius: 50%;
-          background-color: #696cff;
-          vertical-align: middle;
-          transform: translate(-5px, -2px);
-        }
-      }
-    }
   }
 }
 </style>

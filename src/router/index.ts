@@ -50,13 +50,6 @@ const routes = [
     component: () => import(/* webpackChunkName: "warblerCenter" */ '@v/warbler-center/index.vue'),
     children: [],
   },
-  // 联系我 微信
-  {
-    path: '/contact-me',
-    name: 'contactMe',
-    component: () => import(/* webpackChunkName: "contactMe" */ '@v/contact-me/index.vue'),
-    children: [],
-  },
   // 人生小格
   {
     path: '/interesting/life-grid',

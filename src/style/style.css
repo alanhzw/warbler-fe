@@ -131,3 +131,28 @@ body,
   --el-input-focus-border-color: #5f61e6 !important;
   --el-input-hover-border-color: #a1a1b5 !important;
 }
+
+.tips {
+  color: #03c3ec;
+  background-color: #25445c;
+  padding: 16px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.tips .tip {
+  font-size: 16px;
+  padding-left: 10px;
+  line-height: 1.4;
+}
+.tips .tip::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #03c3ec;
+  vertical-align: middle;
+  transform: translate(-5px, -2px);
+}

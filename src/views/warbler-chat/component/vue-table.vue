@@ -9,9 +9,14 @@
       style="width: 100%"
       :height="tableHeight">
       <!-- 序号 -->
-      <el-table-column :fixed="!isSmallScreen" type="index" width="60" label="#" align="center" />
+      <el-table-column
+        :fixed="!dataStore.isSmallScreen"
+        type="index"
+        width="60"
+        label="#"
+        align="center" />
       <!-- 成员 -->
-      <el-table-column label="成员" width="280" :fixed="!isSmallScreen">
+      <el-table-column label="成员" width="280" :fixed="!dataStore.isSmallScreen">
         <template #default="scope">
           <div class="base-info-wrap">
             <div class="avatar">
@@ -162,9 +167,6 @@ const tableHeight = computed(() => 'calc(100vh - 64px - 200px - 60px)');
 
 // 是否展示表格
 const showTable = ref(false);
-
-// 是否小屏幕
-const isSmallScreen = computed(() => document.documentElement.clientWidth < 700);
 
 onMounted(() => {
   showTable.value = true;
