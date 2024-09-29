@@ -1,13 +1,23 @@
 <template>
   <div class="table-wrap">
-    <div class="title">群聊数据</div>
+    <div class="title">
+      <div>群聊数据</div>
+      <el-input
+        v-model="searchContent"
+        style="width: 300px"
+        clearable
+        :maxlength="50"
+        placeholder="请输入微信名或群昵称"
+        @input="scrollToSearchResult" />
+    </div>
     <el-table
       v-if="showTable"
       ref="singleTableRef"
       :data="dataStore.userChatData"
       highlight-current-row
       style="width: 100%"
-      :height="tableHeight">
+      :height="tableHeight"
+      @sort-change="scrollToSearchResult">
       <!-- 序号 -->
       <el-table-column
         :fixed="!dataStore.isSmallScreen"
@@ -163,11 +173,37 @@ import { useDataStore } from '../store/warbler.js';
 
 const dataStore = useDataStore();
 
-// 获取表格高度  100vh - 64px(上下padding) - 200px(上部) - 60px(群标题)
-const tableHeight = computed(() => 'calc(100vh - 64px - 200px - 60px)');
+// 获取表格高度  100vh - 64px(上下padding) - (上部) - 60px(群标题)
+const tableHeight = computed(() => {
+  const ins: HTMLElement = document.querySelector('.vue-introduction')!;
+  return `calc(100vh - 64px - ${ins.offsetHeight}px - 60px)`;
+});
 
 // 是否展示表格
 const showTable = ref(false);
+
+// 表格组件实例
+const singleTableRef = ref();
+
+// 搜索内容
+const searchContent = ref('');
+
+// 搜索定位
+const scrollToSearchResult = () => {
+  // 表格数据
+  const tableData = singleTableRef.value.store.states.data.value;
+  // 查找搜索结果
+  const result = tableData.findIndex(
+    (item: any) =>
+      item.nickName.includes(searchContent.value) ||
+      item.roomNickName.includes(searchContent.value),
+  );
+  if (result > 0) {
+    // 跳转到搜索结果
+    singleTableRef.value.setCurrentRow(tableData[result]);
+    singleTableRef.value.scrollTo({ top: result * 63, behavior: 'smooth' });
+  }
+};
 
 onMounted(() => {
   showTable.value = true;
@@ -181,6 +217,7 @@ onMounted(() => {
   border-radius: 4px;
   overflow: hidden;
   flex-shrink: 0;
+  padding: 0 16px;
 
   .title {
     font-size: 18px;

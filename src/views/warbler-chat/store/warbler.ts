@@ -8,12 +8,13 @@ import warblerChatData from '@/views/warbler-chat/datasSource/warblerChat.json';
 export const useDataStore = defineStore('userInfo', () => {
   // console.log('🚀🚀 ~ useDataStore ~ warblerChatData:', warblerChatData);
   const { userChatData, roomData, dateChatData } = warblerChatData;
+
   // 群成员认证
   const isAuthentication = ref(false);
   // 未通过权限认证文案
   const authText = (text: string) => (isAuthentication.value ? text : '暗号认证通过后可查看');
   // 是否小屏幕
-  const isSmallScreen = computed(() => document.documentElement.clientWidth < 700);
+  const isSmallScreen = computed(() => document.documentElement.clientWidth < 900);
   // 权限认证
   const triggerAuth = (code: string) => {
     // 暗号列表
