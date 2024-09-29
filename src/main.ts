@@ -9,9 +9,6 @@ import router from '@/router/index';
 import 'modern-normalize';
 import '@/style/style.css';
 
-// 字体
-import './assets/iconfont/stylesheet.css';
-
 // 阿里图标库
 import './assets/iconfont/iconfont.css';
 
