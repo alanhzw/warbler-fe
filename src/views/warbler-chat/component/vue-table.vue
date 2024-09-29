@@ -21,7 +21,7 @@
           <div class="base-info-wrap">
             <div class="avatar">
               <img v-if="dataStore.isAuthentication" :src="scope.row.bigHeadImgUrl" />
-              <img v-else src="../svg/zhanwei.svg" />
+              <SvgZhanwei v-else></SvgZhanwei>
             </div>
             <div class="info">
               <div class="name">{{ dataStore.authText(scope.row.nickName) }}</div>
@@ -158,6 +158,7 @@ import { computed, onMounted, ref } from 'vue';
 import SvgNan from '../svg/nansheng.svg';
 import SvgNv from '../svg/nvsheng.svg';
 import SvgUnknown from '../svg/unkown.svg';
+import SvgZhanwei from '../svg/zhanwei.svg';
 import { useDataStore } from '../store/warbler.js';
 
 const dataStore = useDataStore();
@@ -241,7 +242,7 @@ onMounted(() => {
       border-radius: 4px;
       overflow: hidden;
 
-      img {
+      svg {
         width: 100%;
         height: 100%;
       }

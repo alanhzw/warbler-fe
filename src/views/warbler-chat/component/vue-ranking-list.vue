@@ -31,7 +31,7 @@
                 <div class="base-info-wrap">
                   <div class="avatar">
                     <img v-if="dataStore.isAuthentication" :src="scope.row.bigHeadImgUrl" />
-                    <img v-else src="../svg/zhanwei.svg" />
+                    <SvgZhanwei v-else></SvgZhanwei>
                   </div>
                   <div class="info">
                     <div class="name">{{ dataStore.authText(scope.row.nickName) }}</div>
@@ -99,7 +99,7 @@
                 <div class="base-info-wrap">
                   <div class="avatar">
                     <img v-if="dataStore.isAuthentication" :src="scope.row.bigHeadImgUrl" />
-                    <img v-else src="../svg/zhanwei.svg" />
+                    <SvgZhanwei v-else></SvgZhanwei>
                   </div>
                   <div class="info">
                     <div class="name">{{ dataStore.authText(scope.row.nickName) }}</div>
@@ -146,6 +146,7 @@ import { useDataStore } from '../store/warbler.js';
 import SvgJin from '../svg/jinpai.svg';
 import SvgYin from '../svg/yinpai.svg';
 import SvgTong from '../svg/tongpai.svg';
+import SvgZhanwei from '../svg/zhanwei.svg';
 
 const dataStore = useDataStore();
 
@@ -322,7 +323,7 @@ const dayTableData = computed(() => {
       border-radius: 4px;
       overflow: hidden;
 
-      img {
+      svg {
         width: 100%;
         height: 100%;
       }
