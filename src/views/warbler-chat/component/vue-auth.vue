@@ -17,7 +17,12 @@
             <div class="tip">为了保护群成员隐私，只有对上暗号才可以查看数据</div>
             <div class="tip">请联系博主获取暗号</div>
           </div>
-          <el-input v-model="code" style="width: 100%" :maxlength="50" placeholder="请输入暗号" />
+          <el-input
+            v-model="code"
+            style="width: 100%"
+            :maxlength="50"
+            placeholder="请输入暗号"
+            @keydown.enter="handleConfirm" />
         </div>
       </template>
     </VueDrawer>
