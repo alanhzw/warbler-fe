@@ -7,7 +7,7 @@ import warblerChatData from '@/views/warbler-chat/datasSource/warblerChat.json';
  */
 export const useDataStore = defineStore('userInfo', () => {
   console.log('🚀🚀 ~ useDataStore ~ warblerChatData:', warblerChatData);
-  const { userChatData } = warblerChatData;
+  const { userChatData, roomData, dateChatData } = warblerChatData;
   // 群成员认证
   const isAuthentication = ref(false);
   // 未通过权限认证文案
@@ -36,5 +36,13 @@ export const useDataStore = defineStore('userInfo', () => {
     }
   });
 
-  return { userChatData, isSmallScreen, isAuthentication, authText, triggerAuth };
+  return {
+    userChatData,
+    isSmallScreen,
+    isAuthentication,
+    authText,
+    triggerAuth,
+    roomData,
+    dateChatData,
+  };
 });

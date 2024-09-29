@@ -2,14 +2,62 @@
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="https://turbo.build/images/docs/repo/repo-hero-logo-dark.svg" />
+    <link rel="icon" type="image/svg+xml" href="https://turbo.build/images/docs/repo/repo-hero-logo-dark.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Warbler-FE | 让前端再简单一点</title>
-    <script type="module" crossorigin src="/assets/index-2cad31f9.js"></script>
-    <link rel="stylesheet" href="/assets/index-b3cf2009.css">
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        background-color: #232333;
+        overflow: hidden;
+      }
+      .spinner-box {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+      .spinner {
+        height: 50px;
+        width: 50px;
+        background: transparent;
+        border: red 3px solid;
+        border-top: transparent;
+        border-radius: 50%;
+        animation: animate81323 0.8s linear infinite;
+      }
+      @keyframes animate81323 {
+        0% {
+          border: 3px solid rgb(255, 75, 75);
+          border-top: transparent;
+          border-left: transparent;
+          transform: rotate(0deg);
+        }
+
+        50% {
+          border: 3px dashed rgb(240, 41, 240);
+          border-top: transparent;
+          border-left: transparent;
+          transform: rotate(270deg);
+        }
+
+        100% {
+          border: 3px dotted rgb(28, 228, 28);
+          border-top: transparent;
+          border-left: transparent;
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-5f50f60a.js"></script>
+    <link rel="stylesheet" href="/assets/index-1b9e746c.css">
   </head>
   <body>
     <div id="app"></div>

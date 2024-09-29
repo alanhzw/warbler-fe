@@ -22,7 +22,7 @@
           <div class="indicator-item-des">
             <div class="indicator-item-key">已成立</div>
             <div class="indicator-item-value" style="color: #71dd37">
-              303
+              {{ dataStore.roomData.createRoomDateFromToday }}
               <div class="indicator-item-unit">&nbsp;天</div>
             </div>
           </div>
@@ -34,7 +34,9 @@
           </div>
           <div class="indicator-item-des">
             <div class="indicator-item-key">数据采集时间</div>
-            <div class="indicator-item-value" style="color: #ef3db7">2024-09-27</div>
+            <div class="indicator-item-value" style="color: #ef3db7">
+              {{ dataStore.roomData.exportDate }}
+            </div>
           </div>
         </div>
         <!-- 群成员数 -->
@@ -45,7 +47,7 @@
           <div class="indicator-item-des">
             <div class="indicator-item-key">群成员数量</div>
             <div class="indicator-item-value" style="color: #03c3ec">
-              500
+              {{ dataStore.roomData.totalMemberCount }}
               <div class="indicator-item-unit">&nbsp;人</div>
             </div>
           </div>
@@ -58,7 +60,7 @@
           <div class="indicator-item-des">
             <div class="indicator-item-key">发言总数</div>
             <div class="indicator-item-value" style="color: #ffab00">
-              716584
+              {{ dataStore.roomData.speakCount }}
               <div class="indicator-item-unit">&nbsp;条</div>
             </div>
           </div>
