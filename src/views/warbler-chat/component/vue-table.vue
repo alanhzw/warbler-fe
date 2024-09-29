@@ -1,7 +1,7 @@
 <template>
   <div class="table-wrap">
     <div class="title">
-      <div>群聊数据</div>
+      <div class="title-text">群聊数据</div>
       <el-input
         v-model="searchContent"
         style="width: 300px"
@@ -175,6 +175,9 @@ const dataStore = useDataStore();
 
 // 获取表格高度  100vh - 64px(上下padding) - (上部) - 60px(群标题)
 const tableHeight = computed(() => {
+  if (dataStore.isSmallScreen) {
+    return '800px';
+  }
   const ins: HTMLElement = document.querySelector('.vue-introduction')!;
   return `calc(100vh - 64px - ${ins.offsetHeight}px - 60px)`;
 });
@@ -227,6 +230,11 @@ onMounted(() => {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .title-text {
+      @media (max-width: 900px) {
+        display: none;
+      }
+    }
   }
 
   ::v-deep(.el-table) {
