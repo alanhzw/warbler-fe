@@ -50,6 +50,14 @@
           </div>
         </template>
       </el-table-column>
+      <!-- 性别 -->
+      <el-table-column label="城市" width="120" align="center" sortable sort-by="city">
+        <template #default="scope">
+          <div class="base-city-wrap">
+            {{ scope.row.city }}
+          </div>
+        </template>
+      </el-table-column>
       <!-- 总发言数 -->
       <el-table-column
         label="总发言数"
@@ -193,6 +201,7 @@ const searchContent = ref('');
 
 // 搜索定位
 const scrollToSearchResult = () => {
+  const rowHeight: HTMLElement = document.querySelector('.el-table__body .el-table__row')!;
   // 表格数据
   const tableData = singleTableRef.value.store.states.data.value;
   // 查找搜索结果
@@ -204,7 +213,7 @@ const scrollToSearchResult = () => {
   if (result > 0) {
     // 跳转到搜索结果
     singleTableRef.value.setCurrentRow(tableData[result]);
-    singleTableRef.value.scrollTo({ top: result * 63, behavior: 'smooth' });
+    singleTableRef.value.scrollTo({ top: result * rowHeight.offsetHeight, behavior: 'smooth' });
   }
 };
 

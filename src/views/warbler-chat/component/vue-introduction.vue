@@ -85,7 +85,7 @@
         <div class="tips-content">
           <div class="tips">
             <div class="title">
-              <SvgWarn style="color: #03c3ec"></SvgWarn>
+              <SvgWarn style="color: #03c3ec; margin-right: 8px"></SvgWarn>
               <div>入群须知</div>
             </div>
             <div class="tip">
