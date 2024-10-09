@@ -8,6 +8,12 @@
     <VueTable></VueTable>
     <!-- 排行榜 -->
     <VueRankingList></VueRankingList>
+    <div class="gender-and-city-charts">
+      <!-- 性别分布图 -->
+      <ChartGender></ChartGender>
+      <!-- 城市分布图 -->
+      <ChartCity></ChartCity>
+    </div>
   </div>
 </template>
 
@@ -16,6 +22,8 @@ import VueTable from './component/vue-table.vue';
 import VueIntroduction from './component/vue-introduction.vue';
 import VueRankingList from './component/vue-ranking-list.vue';
 import VueAuth from './component/vue-auth.vue';
+import ChartGender from './component/chart-gender.vue';
+import ChartCity from './component/chart-city.vue';
 </script>
 
 <style lang="scss" scoped>
@@ -29,6 +37,18 @@ import VueAuth from './component/vue-auth.vue';
   flex-direction: column;
   @media (max-width: 700px) {
     padding: 16px 40px;
+  }
+  .gender-and-city-charts {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 500px 500px;
+    grid-template-columns: 1fr 1fr;
+    flex-shrink: 0;
+    margin-top: 32px;
+    gap: 32px;
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }
 </style>

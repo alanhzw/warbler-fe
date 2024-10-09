@@ -7,7 +7,7 @@ import warblerChatData from '@/views/warbler-chat/datasSource/warblerChat.json';
  */
 export const useDataStore = defineStore('userInfo', () => {
   console.log('🚀🚀 ~ useDataStore ~ warblerChatData:', warblerChatData);
-  const { userChatData, roomData, dateChatData } = warblerChatData;
+  const { userChatData, roomData, dateChatData, cityData } = warblerChatData;
 
   // 群成员认证
   const isAuthentication = ref(false);
@@ -45,5 +45,6 @@ export const useDataStore = defineStore('userInfo', () => {
     triggerAuth,
     roomData,
     dateChatData,
+    cityData,
   };
 });
