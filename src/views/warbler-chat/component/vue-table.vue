@@ -1,7 +1,20 @@
 <template>
   <div class="table-wrap">
     <div class="title">
-      <div class="title-text">群聊数据</div>
+      <div class="title-text">
+        群聊数据
+        <el-popover
+          content="默认以首次发言时间正序排序"
+          trigger="hover"
+          placement="top"
+          :width="210">
+          <template #reference>
+            <el-icon style="margin-left: 8px; cursor: pointer; font-size: 20px">
+              <QuestionFilled />
+            </el-icon>
+          </template>
+        </el-popover>
+      </div>
       <el-input
         v-model="searchContent"
         style="width: 300px"
@@ -173,6 +186,7 @@
 
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue';
+import { QuestionFilled } from '@element-plus/icons-vue';
 import SvgNan from '../svg/nansheng.svg';
 import SvgNv from '../svg/nvsheng.svg';
 import SvgUnknown from '../svg/unkown.svg';
@@ -240,6 +254,8 @@ onMounted(() => {
     justify-content: space-between;
     align-items: center;
     .title-text {
+      display: flex;
+      align-items: center;
       @media (max-width: 900px) {
         display: none;
       }
@@ -247,7 +263,7 @@ onMounted(() => {
   }
 
   ::v-deep(.el-table) {
-    color: initial;
+    color: #fff;
     --el-table-row-hover-bg-color: rgb(56, 56, 73) !important;
     --el-table-border-color: #4e4f6c;
   }
@@ -261,7 +277,7 @@ onMounted(() => {
   }
 
   ::v-deep(.el-table thead) {
-    color: initial;
+    color: #fff;
 
     font-size: 16px;
   }

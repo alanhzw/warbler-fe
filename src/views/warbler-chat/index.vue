@@ -41,12 +41,13 @@ import ChartCity from './component/chart-city.vue';
   .gender-and-city-charts {
     width: 100%;
     display: grid;
-    grid-template-rows: 500px 500px;
+    grid-template-rows: 500px;
     grid-template-columns: 1fr 1fr;
     flex-shrink: 0;
     margin-top: 32px;
     gap: 32px;
     @media (max-width: 1200px) {
+      grid-template-rows: 500px 500px;
       grid-template-columns: repeat(1, 1fr);
     }
   }

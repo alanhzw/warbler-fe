@@ -262,7 +262,7 @@ const dayTableData = computed(() => {
   }
 
   ::v-deep(.el-table) {
-    color: initial;
+    color: #fff;
     --el-table-row-hover-bg-color: rgb(56, 56, 73) !important;
     --el-table-border-color: transparent;
   }
@@ -276,7 +276,7 @@ const dayTableData = computed(() => {
   }
 
   ::v-deep(.el-table thead) {
-    color: initial;
+    color: #fff;
 
     font-size: 16px;
   }
