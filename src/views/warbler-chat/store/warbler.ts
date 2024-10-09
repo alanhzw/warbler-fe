@@ -18,7 +18,7 @@ export const useDataStore = defineStore('userInfo', () => {
   // 权限认证
   const triggerAuth = (code: string) => {
     // 暗号列表
-    const codeList = ['一尾流莺', 'warbler', 'boss', '韩志伟'];
+    const codeList = ['一尾流莺', 'warbler', 'boss', '韩志伟', '韩志伟最帅', '我爱韩志伟'];
     // 符合暗号即可存入缓存
     if (codeList.includes(code)) {
       isAuthentication.value = true;

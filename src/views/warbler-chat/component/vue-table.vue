@@ -218,6 +218,11 @@ const scrollToSearchResult = () => {
   const rowHeight: HTMLElement = document.querySelector('.el-table__body .el-table__row')!;
   // 表格数据
   const tableData = singleTableRef.value.store.states.data.value;
+  if (!searchContent.value) {
+    singleTableRef.value.setCurrentRow(tableData[0]);
+    singleTableRef.value.scrollTo({ top: 0, behavior: 'smooth' });
+    return;
+  }
   // 查找搜索结果
   const result = tableData.findIndex(
     (item: any) =>
