@@ -23,20 +23,75 @@
             </div>
             <div class="warbler-center-top-content-info-bottom-contactme">
               <div class="contact-me-button"><SvgContact></SvgContact>查看简历</div>
-              <div class="contact-me-button"><SvgContact></SvgContact>联系我</div>
+              <div class="contact-me-button" @click="applyJoin">
+                <SvgContact></SvgContact>联系我
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <VueDrawer
+      ref="applyJoinRef"
+      title="入群申请"
+      :size="isSmallScreen ? '100%' : '900'"
+      @submit="handleConfirm"
+      @cancel="handleCancel">
+      <template #default>
+        <div class="tips-content">
+          <div class="tips">
+            <div class="title">
+              <SvgWarn style="color: #03c3ec; margin-right: 8px"></SvgWarn>
+              <div>入群须知</div>
+            </div>
+            <div class="tip">
+              {{ `想加入摸鱼大群的备注【大院】` }}
+            </div>
+            <div class="tip">
+              {{ `想参加桌游狼人杀活动的备注【狼人杀】` }}
+            </div>
+            <div class="tip">
+              {{ `想获得流莺 CMS 体验资格的备注【CMS】` }}
+            </div>
+            <div class="tip">
+              {{ `有其他需求的直接备注加我的目的` }}
+            </div>
+          </div>
+          <div class="wechat">
+            <img src="@/assets/image/wechat.jpg" />
+          </div>
+        </div>
+      </template>
+    </VueDrawer>
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref, computed } from 'vue';
 import SvgCity from '../svg/city.svg';
 import SvgPosition from '../svg/position.svg';
 import SvgWorktime from '../svg/worktime.svg';
 import SvgContact from '../svg/contact.svg';
+import VueDrawer from '@/components/vue-drawer.vue';
+
+// 是否小屏幕
+const isSmallScreen = computed(() => document.documentElement.clientWidth < 900);
+
+// 申请入群弹窗
+const applyJoinRef = ref();
+const applyJoin = () => {
+  applyJoinRef.value.showDrawer();
+};
+
+// 确定
+const handleConfirm = () => {
+  applyJoinRef.value.closeDrawer();
+};
+
+// 取消
+const handleCancel = () => {
+  applyJoinRef.value.closeDrawer();
+};
 </script>
 
 <style lang="scss" scoped>
@@ -145,6 +200,23 @@ import SvgContact from '../svg/contact.svg';
             gap: 8px;
           }
         }
+      }
+    }
+  }
+  .tips-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .title {
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+    }
+    .wechat {
+      width: 300px;
+      margin: 20px;
+      img {
+        width: 300px;
       }
     }
   }
