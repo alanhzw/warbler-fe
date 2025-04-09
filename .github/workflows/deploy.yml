@@ -10,9 +10,9 @@ on:
     paths:
       - 'dist/**'
       - '.github/workflows/*'
+      - 'Docker/**'
       # - 'husky/**'
       # - '.vscode/**'
-      # - 'Docker/**'
       # - 'public/**'
       # - 'src/**'
       #
