@@ -139,6 +139,12 @@ const list: NavList = [
     link: 'https://quasar.dev/',
     iconErrorText: '',
   },
+  {
+    icon: 'https://motion.unovue.com/logo.svg',
+    name: 'Motion for Vue',
+    link: 'https://motion.unovue.com/',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

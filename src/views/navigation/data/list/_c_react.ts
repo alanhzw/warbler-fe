@@ -56,12 +56,6 @@ const list: NavList = [
     iconErrorText: '',
   },
   {
-    icon: 'https://ahooks.gitee.io/simple-logo.svg',
-    name: 'ahooks',
-    link: 'https://ahooks.gitee.io/zh-CN',
-    iconErrorText: '',
-  },
-  {
     icon: 'https://img.alicdn.com/imgextra/i3/O1CN01XtT3Tv1Wd1b5hNVKy_!!6000000002810-55-tps-360-360.svg',
     name: 'Alibaba Formily',
     link: 'https://v2.formilyjs.org/zh-CN',

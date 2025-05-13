@@ -127,6 +127,12 @@ const list: NavList = [
     link: 'https://leafletjs.cn/reference.html',
     iconErrorText: '',
   },
+  {
+    icon: 'https://pixijs.huashengweilai.com/favicon.png',
+    name: 'Pixi.js',
+    link: 'https://pixijs.huashengweilai.com/',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

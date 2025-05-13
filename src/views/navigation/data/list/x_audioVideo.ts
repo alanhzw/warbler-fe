@@ -2,35 +2,15 @@ import type { NavList } from '../index';
 
 const list: NavList = [
   {
-    icon: 'https://www.nkvod.com/mxtheme/images/favicon.png',
-    name: '耐看点播',
-    link: 'https://www.nkvod.com/',
-    iconErrorText: '',
-  },
-
-  {
-    icon: '',
-    name: 'VIP视频在线解析',
-    link: 'https://www.yijingying.com/html/video/',
-    iconErrorText: '',
-  },
-
-  {
-    icon: 'https://www.manmankan.com/favicon.ico',
-    name: '漫漫看',
-    link: 'https://www.manmankan.com/dy2013/',
+    icon: 'https://zhuijulo.cc/upload/mxcms/20250215-1/d7c64825c4eec950f0a61dcee6d6d015.png',
+    name: '追剧咯',
+    link: 'https://zhuijulo.cc/',
     iconErrorText: '',
   },
   {
     icon: 'https://www.meijutt.tv/favicon.ico',
     name: '美剧天堂',
     link: 'https://www.meijutt.tv/',
-    iconErrorText: '',
-  },
-  {
-    icon: 'https://img95.699pic.com/xsj/03/gv/6e.jpg%21/fw/700/watermark/url/L3hzai93YXRlcl9kZXRhaWwyLnBuZw/align/southeast',
-    name: '电影天堂',
-    link: 'https://dy.dytt8.net/index2.htm',
     iconErrorText: '',
   },
   {
@@ -94,7 +74,7 @@ const list: NavList = [
     iconErrorText: '',
   },
   {
-    icon: 'https://flac.life/favicon.png',
+    icon: 'https://flac.life/img/logo.png',
     name: '无损音乐下载',
     link: 'https://flac.life/',
     iconErrorText: '',

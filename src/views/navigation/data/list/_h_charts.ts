@@ -31,12 +31,7 @@ const list: NavList = [
     link: 'http://fabricjs.com/',
     iconErrorText: '',
   },
-  {
-    icon: 'https://s1.jscdn.com.cn/highcharts/images/favicon.ico',
-    name: 'Highcharts',
-    link: 'https://www.hcharts.cn/',
-    iconErrorText: '',
-  },
+
   {
     icon: 'https://mdn.alipayobjects.com/huamei_qa8qxu/afts/img/A*7svFR6wkPMoAAAAAAAAAAAAADmJ7AQ/original',
     name: 'AntV',
@@ -65,12 +60,6 @@ const list: NavList = [
     icon: 'https://lf-dp.bytetos.com/obj/dp-open-internet-cn/visactor-site/bytedance/client/img/favicon.png',
     name: 'VisActor',
     link: 'https://visactor.io/',
-    iconErrorText: '',
-  },
-  {
-    icon: 'https://madeapie.com/favicon.ico',
-    name: 'Made A Pie',
-    link: 'https://madeapie.com/#/',
     iconErrorText: '',
   },
   {

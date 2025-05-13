@@ -85,6 +85,12 @@ const list: NavList = [
     link: 'https://crawlee.dev/docs/quick-start',
     iconErrorText: '',
   },
+  {
+    icon: 'https://hono.dev/favicon.ico',
+    name: 'Hono',
+    link: 'https://hono.dev/',
+    iconErrorText: '',
+  },
 ];
 
 const listData = {

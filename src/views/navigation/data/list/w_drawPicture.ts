@@ -74,7 +74,7 @@ const list: NavList = [
     iconErrorText: '',
   },
   {
-    icon: 'https://www.fontspace.com/favicon.ico',
+    icon: 'https://www.fontspace.com/apple-touch-icon.png?v=00Bdv4Q5g6',
     name: '免费字体',
     link: 'https://www.fontspace.com/',
     iconErrorText: '',
@@ -125,6 +125,18 @@ const list: NavList = [
     icon: 'https://htmlrev.com/images/favicon.png',
     name: 'HTML参考模板',
     link: 'https://htmlrev.com/',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://www.iloveimg.com/img/favicons-img/favicon-16x16.png',
+    name: 'I Love Img',
+    link: 'https://www.iloveimg.com/zh-cn',
+    iconErrorText: '',
+  },
+  {
+    icon: 'https://www.uugai.com/favicon.ico',
+    name: '免费 Logo 制作',
+    link: 'https://www.uugai.com/',
     iconErrorText: '',
   },
 ];

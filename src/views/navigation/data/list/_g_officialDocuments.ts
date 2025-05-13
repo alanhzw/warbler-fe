@@ -16,9 +16,9 @@ const list: NavList = [
   },
 
   {
-    icon: 'https://www.sveltejs.cn/favicon.ico',
+    icon: 'https://svelte.nodejs.cn/favicon.png',
     name: 'Svelte',
-    link: 'https://www.sveltejs.cn/',
+    link: 'https://svelte.nodejs.cn/',
     iconErrorText: '',
   },
   {
@@ -94,13 +94,6 @@ const list: NavList = [
     link: 'https://www.dartcn.com/',
     iconErrorText: '',
   },
-  {
-    icon: 'https://quarkc.hellobike.com/assets/favicon.7b83b3c2.ico',
-    name: 'Quarkc',
-    link: 'https://quarkc.hellobike.com/#/',
-    iconErrorText: '',
-  },
-
   {
     icon: 'https://astro.build/favicon.svg',
     name: 'Astro',
